@@ -1,0 +1,13 @@
+You can find more details on the shader inside BubbleR documentation.pdf or on the online version (https://docs.google.com/document/d/1pTfaVmR4zWn3Co2JehOIPm0HrSo7WXT3e_6WW9DKR7A/edit?usp=sharing)
+
+You can use BubbleR for bubbles, spells, barriers and other similar effects.
+
+The package is really straightforward, not much to say. Just create a material with the "BubbleR/StandardBubble" shader (or you can use one of the preset materials), assign to a sphere object, and tweak the settings.
+
+You can use the material on particle systems too.
+
+You can enable "Custom Vertex Streams" in the Renderer tab of the particle system, and assign AgePercent on TEXCOORD0.z, if you want the bubble animation to reduce over the particle lifetime.
+
+If you encounter any problem, or you want to suggest something, you can contact me via email.
+
+Email: rompipapera@gmail.com
