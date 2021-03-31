@@ -8,7 +8,7 @@ using UnityEngine;
 public class bolhaController : MonoBehaviour
 {
     private Vector3 swipeDirection;
-    private int velocidade = 60;
+    private int velocidade = 100;
     [SerializeField] private Collider2D colisorMouse;
 
     
