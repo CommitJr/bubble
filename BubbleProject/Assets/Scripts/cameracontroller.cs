@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameracontroller : MonoBehaviour
 {
 
-    public GameObject personagem;
+    public GameObject bolha;
     public GameObject cameraPositionAtual;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class cameracontroller : MonoBehaviour
     {
         Vector3 cameraNovaPosition = cameraPositionAtual.transform.position;
 
-        cameraNovaPosition.y = personagem.transform.position.y;
+        cameraNovaPosition.y = bolha.transform.position.y;
 
         cameraPositionAtual.transform.position = cameraNovaPosition;
 

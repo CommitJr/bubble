@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ using UnityEngine;
 public class onda : MonoBehaviour
 {
     private Collider2D colisor;
-    public GameObject objeto;
+    public GameObject wavePropagation;
     void Start()
     {
         colisor = GetComponent<Collider2D>();
@@ -18,11 +18,13 @@ public class onda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
+            
             Vector3 ponto = Camera.main.ScreenToWorldPoint(Input.mousePosition, Camera.MonoOrStereoscopicEye.Mono);
-            Vector3 pontoZ = new Vector3(ponto.x, ponto.y, objeto.transform.position.z);
+            Vector3 pontoZ = new Vector3(ponto.x-2, ponto.y, wavePropagation.transform.position.z); //-2 para centralizar o mouse
             transform.position = pontoZ;
+            
 
             colisor.enabled = true;
            
