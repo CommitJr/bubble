@@ -14,12 +14,12 @@ public class bolhaController : MonoBehaviour
     
     void Update(){
         colisorMouse = GetComponent<Collider2D>();
-        swipeDirection = new Vector3(colisorMouse.transform.position.x, colisorMouse.transform.position.y, 0f);
+        swipeDirection = new Vector3(-colisorMouse.transform.position.x, -colisorMouse.transform.position.y, -colisorMouse.transform.position.z);
         swipeDirection.Normalize();
     }
 
     void OnTriggerEnter2D(Collider2D objetoQualquer){
         if(objetoQualquer.gameObject.CompareTag("wave"))
-            GetComponent<Rigidbody2D>().AddForce(-swipeDirection * velocidade);
+            GetComponent<Rigidbody2D>().AddForce(swipeDirection * velocidade);
     }
 }
