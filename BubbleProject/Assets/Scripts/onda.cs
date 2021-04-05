@@ -18,21 +18,17 @@ public class onda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
+        if (Input.GetKey(KeyCode.Mouse0)){
             
             Vector3 ponto = Camera.main.ScreenToWorldPoint(Input.mousePosition, Camera.MonoOrStereoscopicEye.Mono);
             Vector3 pontoZ = new Vector3(ponto.x, ponto.y, wavePropagation.transform.position.z); //-2 para centralizar o mouse
             transform.position = pontoZ;
             
-
             colisor.enabled = true;
            
             print("colisor");
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-           
+        if (Input.GetKeyUp(KeyCode.Mouse0)){
             colisor.enabled = false;
             print(" não colisor");
         }
