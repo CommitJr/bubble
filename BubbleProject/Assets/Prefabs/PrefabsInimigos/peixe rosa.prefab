@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 161312637163745349}
   - component: {fileID: 161312637163745354}
   - component: {fileID: 5250205019353717928}
-  - component: {fileID: 4289885800475644908}
   - component: {fileID: 859509207917245083}
+  - component: {fileID: 958420957482556875}
   m_Layer: 9
   m_Name: peixe rosa
   m_TagString: Peixes
@@ -98,22 +98,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 0.5
   inimigoRb: {fileID: 859509207917245083}
---- !u!58 &4289885800475644908
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161312637163745348}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.25643212, y: -0.22619563}
-  serializedVersion: 2
-  m_Radius: 2.003211
 --- !u!50 &859509207917245083
 Rigidbody2D:
   serializedVersion: 4
@@ -135,3 +119,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 2
+--- !u!70 &958420957482556875
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161312637163745348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5625736, y: -0.46006978}
+  m_Size: {x: 3.3475108, y: 2.4642808}
+  m_Direction: 1
