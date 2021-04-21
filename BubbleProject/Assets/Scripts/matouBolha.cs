@@ -26,7 +26,6 @@ public class matouBolha : MonoBehaviour
             animator.SetTrigger("estoura");
 
             StartCoroutine(Aguarde());
-
         }  
 
     }
