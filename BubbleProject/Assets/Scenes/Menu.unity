@@ -254,9 +254,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139839897}
   m_CullTransparentMesh: 0
---- !u!114 &326665171 stripped
+--- !u!114 &179208754 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3262860100285747464, guid: 50fc04aaa777a404aa43d1454407d1a9,
+  m_CorrespondingSourceObject: {fileID: 7918595127638260234, guid: 50fc04aaa777a404aa43d1454407d1a9,
     type: 3}
   m_PrefabInstance: {fileID: 1227382867}
   m_PrefabAsset: {fileID: 0}
@@ -266,6 +266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1a0cd6ae344494cbc9f3fdd35fcaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &179208755 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7918595127638260235, guid: 50fc04aaa777a404aa43d1454407d1a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1227382867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &484093458
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransicaoObjeto
       objectReference: {fileID: 0}
+    - target: {fileID: 7918595126046652799, guid: 50fc04aaa777a404aa43d1454407d1a9,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2128146037}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50fc04aaa777a404aa43d1454407d1a9, type: 3}
 --- !u!1 &1430314922
@@ -840,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1a0cd6ae344494cbc9f3fdd35fcaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 179208755}
 --- !u!114 &1430314925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,7 +895,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 326665171}
+      - m_Target: {fileID: 179208754}
         m_MethodName: Sair
         m_Mode: 1
         m_Arguments:
@@ -1014,7 +1025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 326665171}
+      - m_Target: {fileID: 179208754}
         m_MethodName: IniciaTransicao
         m_Mode: 3
         m_Arguments:
@@ -1025,13 +1036,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 326665171}
+      - m_Target: {fileID: 179208754}
         m_MethodName: MudaCena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1126,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.28627452, g: 0.78039217, b: 1, a: 1}
+  m_Color: {r: 0.5589281, g: 0.35635456, b: 0.9811321, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

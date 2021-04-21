@@ -21,13 +21,15 @@ public class colisaoBolha : MonoBehaviour
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   
+        /*
         if (collision.gameObject.tag == "matabolha") {
-            
+            //ta errado
             scripttcena.IniciaTransicao(0);
+            
             scripttcena.MudaCena();
 
-        }
+        }*/
 
         if(collision.gameObject.tag == "end"){
 
