@@ -25,12 +25,11 @@ public class onda : MonoBehaviour
             transform.position = pontoZ;
             
             colisor.enabled = true;
-           
-            print("colisor");
+
         }
         if (Input.GetKeyUp(KeyCode.Mouse0)){
             colisor.enabled = false;
-            print(" não colisor");
+
         }
     }
 

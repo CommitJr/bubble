@@ -28,7 +28,6 @@ public class movimento : MonoBehaviour
     private void Move()
     {
         inimigoRb.velocity = new Vector2(velocidade * direcao, inimigoRb.velocity.y);
-        print("MOVE PRAGA");
     }
     void OnCollisionEnter2D(Collision2D parede)
     {
@@ -40,7 +39,6 @@ public class movimento : MonoBehaviour
             {
                 transform.eulerAngles = new Vector2(0f, 0);
             }
-            print(direcao);
         }
     }
 }

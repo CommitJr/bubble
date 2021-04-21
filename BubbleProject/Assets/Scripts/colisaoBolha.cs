@@ -7,22 +7,33 @@ public class colisaoBolha : MonoBehaviour
 {
     // Start is called before the first frame update
 
-
+    
+    public GameObject tcena;
+    trocacena scripttcena;
 
     void Start(){
-        
+        scripttcena = tcena.GetComponent<trocacena>();
     }
 
     void Update(){
 
-
+        
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 9)
-        {
-            print("bolha estourou");
+        if (collision.gameObject.tag == "matabolha") {
+            
+            scripttcena.IniciaTransicao(0);
+            scripttcena.MudaCena();
+
+        }
+
+        if(collision.gameObject.tag == "end"){
+
+            scripttcena.IniciaTransicao(0);
+            scripttcena.MudaCena();
+
         }
     }
 }
