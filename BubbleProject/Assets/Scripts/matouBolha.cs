@@ -8,20 +8,31 @@ public class matouBolha : MonoBehaviour
     
     public GameObject tcena;
     trocacena scripttcena;
+    [SerializeField] private Animator animator;
 
     void Start(){
         scripttcena = tcena.GetComponent<trocacena>();       
     }
 
+    void Update(){
+    
+    }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {   
-
+     
         if (collision.gameObject.tag == "Player") {
 
+            animator.SetTrigger("estoura");
+            StartCoroutine(Aguarde());
             scripttcena.IniciaTransicao(0);
             scripttcena.MudaCena();
 
-        }
+        }  
 
+    }
+
+    IEnumerator Aguarde(){
+        yield return new WaitForSeconds(5.0f);
     }
 }
