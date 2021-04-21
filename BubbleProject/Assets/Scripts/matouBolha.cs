@@ -24,15 +24,17 @@ public class matouBolha : MonoBehaviour
         if (collision.gameObject.tag == "Player") {
 
             animator.SetTrigger("estoura");
+
             StartCoroutine(Aguarde());
-            scripttcena.IniciaTransicao(0);
-            scripttcena.MudaCena();
 
         }  
 
     }
 
     IEnumerator Aguarde(){
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(3.0f);
+        scripttcena.IniciaTransicao(0);
+        scripttcena.MudaCena();
+
     }
 }
