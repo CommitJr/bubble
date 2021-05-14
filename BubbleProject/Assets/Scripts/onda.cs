@@ -21,7 +21,7 @@ public class onda : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0)){
             
             Vector3 ponto = Camera.main.ScreenToWorldPoint(Input.mousePosition, Camera.MonoOrStereoscopicEye.Mono);
-            Vector3 pontoZ = new Vector3(ponto.x, ponto.y, wavePropagation.transform.position.z); //-2 para centralizar o mouse
+            Vector3 pontoZ = new Vector3(ponto.x, ponto.y, wavePropagation.transform.position.z);
             transform.position = pontoZ;
             
             colisor.enabled = true;
