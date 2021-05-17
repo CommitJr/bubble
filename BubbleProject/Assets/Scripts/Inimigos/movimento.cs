@@ -31,7 +31,7 @@ public class movimento : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D parede)
     {
-        if (parede.transform.tag == "parede")
+        if (parede.transform.tag == "parede" || parede.transform.tag == "Pedras")
         {
             direcao *= -1;
             transform.eulerAngles = new Vector2(0f, 180);
