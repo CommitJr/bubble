@@ -16,7 +16,7 @@ public class colisaoBolha : MonoBehaviour
         scripttcena = tcena.GetComponent<trocacena>();       
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+   /* public void OnCollisionEnter2D(Collision2D collision)
     {   
         if(collision.gameObject.tag == "end"){
 
@@ -24,5 +24,5 @@ public class colisaoBolha : MonoBehaviour
             scripttcena.MudaCena();
 
         }
-    }
+    }*/
 }
