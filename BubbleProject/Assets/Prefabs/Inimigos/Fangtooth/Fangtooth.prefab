@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6528743300129147341}
   - component: {fileID: 7081818679242442106}
   - component: {fileID: 4761282037772001620}
-  - component: {fileID: 4706662729927944916}
+  - component: {fileID: 1397093273884734997}
   m_Layer: 0
   m_Name: Fangtooth
   m_TagString: Untagged
@@ -193,8 +193,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &4706662729927944916
-PolygonCollider2D:
+--- !u!58 &1397093273884734997
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,33 +206,9 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.4785654, y: 0.5147193}
-      - {x: -0.23011005, y: 0.7267444}
-      - {x: -0.8026556, y: 0.5731604}
-      - {x: -1.008584, y: 0.122052506}
-      - {x: -0.41870266, y: -0.14844124}
-      - {x: 0.030635774, y: -0.5789069}
-      - {x: -0.66267073, y: -0.68722486}
-      - {x: -1.0517492, y: -0.50699735}
-      - {x: -1.1589612, y: -0.5927444}
-      - {x: -0.49420375, y: -0.95583063}
-      - {x: 0.15364224, y: -0.85264695}
-      - {x: 0.8380855, y: -0.45249408}
-      - {x: 0.9366109, y: -0.3119107}
-      - {x: 0.97278357, y: -0.03785944}
-      - {x: 0.83600134, y: 0.17958021}
+  m_Offset: {x: -0.12357676, y: -0.1163075}
+  serializedVersion: 2
+  m_Radius: 0.84165335
 --- !u!1 &2219537268231150899
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +794,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2384949251086155583}
   - component: {fileID: 6860581451383703319}
-  - component: {fileID: 6479179713135744027}
   m_Layer: 9
   m_Name: tail
   m_TagString: Peixes
@@ -893,42 +868,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &6479179713135744027
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5369523685208690340}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.006549202, y: 0.7276787}
-      - {x: 0.16986507, y: 0.7707323}
-      - {x: 0.10774895, y: 0.8415142}
-      - {x: -0.046009675, y: 0.8777092}
-      - {x: -0.18700515, y: 0.79025674}
-      - {x: -0.37256104, y: 0.83092386}
-      - {x: -0.37217396, y: 0.56624866}
-      - {x: -0.19648355, y: 0.53748477}
-      - {x: -0.048719395, y: 0.3847757}
-      - {x: 0.0650461, y: 0.4684836}
-      - {x: -0.012119487, y: 0.6439595}
 --- !u!1 &5393532150374313227
 GameObject:
   m_ObjectHideFlags: 0
