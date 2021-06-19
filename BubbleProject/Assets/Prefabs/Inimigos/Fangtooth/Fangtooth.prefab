@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7081818679242442106}
   - component: {fileID: 4761282037772001620}
   - component: {fileID: 1397093273884734997}
+  - component: {fileID: 6034325424801444079}
   m_Layer: 0
   m_Name: Fangtooth
   m_TagString: Untagged
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953021214246110207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29057cbd56052f946a172cddc7956ad4, type: 3}
   m_Name: 
@@ -209,6 +210,20 @@ CircleCollider2D:
   m_Offset: {x: -0.12357676, y: -0.1163075}
   serializedVersion: 2
   m_Radius: 0.84165335
+--- !u!114 &6034325424801444079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953021214246110207}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1ff462ab8bb0d45b29171dc7ac8e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 1.75
+  inimigoRb: {fileID: 6528743300129147341}
 --- !u!1 &2219537268231150899
 GameObject:
   m_ObjectHideFlags: 0
