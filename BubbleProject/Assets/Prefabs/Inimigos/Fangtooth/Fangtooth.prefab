@@ -91,12 +91,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921582897067932235}
-  - component: {fileID: 6599863887835008799}
   - component: {fileID: 6528743300129147341}
   - component: {fileID: 7081818679242442106}
   - component: {fileID: 4761282037772001620}
   - component: {fileID: 1397093273884734997}
-  - component: {fileID: 6034325424801444079}
+  - component: {fileID: 3776541172930798069}
   m_Layer: 0
   m_Name: Fangtooth
   m_TagString: Untagged
@@ -124,20 +123,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6599863887835008799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953021214246110207}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29057cbd56052f946a172cddc7956ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidade: 1.75
-  inimigoRb: {fileID: 6528743300129147341}
 --- !u!50 &6528743300129147341
 Rigidbody2D:
   serializedVersion: 4
@@ -210,19 +195,20 @@ CircleCollider2D:
   m_Offset: {x: -0.12357676, y: -0.1163075}
   serializedVersion: 2
   m_Radius: 0.84165335
---- !u!114 &6034325424801444079
+--- !u!114 &3776541172930798069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953021214246110207}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1ff462ab8bb0d45b29171dc7ac8e96, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bc0ea1602d24c94f9487d06174467ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 1.75
+  speed: 1
+  amplitude: 2
   inimigoRb: {fileID: 6528743300129147341}
 --- !u!1 &2219537268231150899
 GameObject:
