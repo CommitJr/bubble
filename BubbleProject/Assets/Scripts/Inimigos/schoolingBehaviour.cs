@@ -8,15 +8,17 @@ public class schoolingBehaviour : MonoBehaviour
     private GameObject fish;
     [SerializeField]
     private static int numFish;
-  
-    public GameObject[] fishes = new GameObject[numFish];
+
+    public GameObject[] fishes;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < numFish; i++)
+        fishes = new GameObject[numFish];
+        for (int i = 0; i < numFish; i++)
         {
             Vector2 pos = new Vector2(Random.Range(-2, 2), Random.Range(-2, 2));
             fishes[i] = (GameObject)Instantiate(fish, pos, Quaternion.identity);
+            print(fishes);
         }
     }
 
