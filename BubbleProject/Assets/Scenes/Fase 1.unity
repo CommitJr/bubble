@@ -647,31 +647,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 026e2ca0bf8ee4a45be6ed20ef2d4876, type: 3}
---- !u!1 &592981300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6301878972893131609, guid: 7a64017e632ef8947bc2fefc528f47ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 1457024572}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &592981301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6301878972893131606, guid: 7a64017e632ef8947bc2fefc528f47ce,
     type: 3}
   m_PrefabInstance: {fileID: 1457024572}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &592981302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592981300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d3d226b885c094418c3aaef78952ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  system: {fileID: 8917501117826266558, guid: 340f8dbd584b4d642bd0ba90712514ab, type: 3}
 --- !u!1 &657846029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1195692086569570825, guid: e16e4a72062f24e4d92e54215e8561bf,
@@ -1925,9 +1906,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 954751728}
     m_Modifications:
-    - target: {fileID: 6301878972893131605, guid: 7a64017e632ef8947bc2fefc528f47ce,
+    - target: {fileID: 5672262128591217208, guid: 7a64017e632ef8947bc2fefc528f47ce,
         type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_LocalPosition.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672262128591217208, guid: 7a64017e632ef8947bc2fefc528f47ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932248864037261170, guid: 7a64017e632ef8947bc2fefc528f47ce,
+        type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932248864037261170, guid: 7a64017e632ef8947bc2fefc528f47ce,
+        type: 3}
+      propertyPath: CollisionModule.enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6301878972893131606, guid: 7a64017e632ef8947bc2fefc528f47ce,
@@ -1938,12 +1934,12 @@ PrefabInstance:
     - target: {fileID: 6301878972893131606, guid: 7a64017e632ef8947bc2fefc528f47ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3085403
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 6301878972893131606, guid: 7a64017e632ef8947bc2fefc528f47ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 110.337
+      value: 1.81
       objectReference: {fileID: 0}
     - target: {fileID: 6301878972893131606, guid: 7a64017e632ef8947bc2fefc528f47ce,
         type: 3}
@@ -1990,8 +1986,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pelicano
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6301878972893131605, guid: 7a64017e632ef8947bc2fefc528f47ce, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a64017e632ef8947bc2fefc528f47ce, type: 3}
 --- !u!1 &1494715924 stripped
 GameObject:

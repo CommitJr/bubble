@@ -19,7 +19,7 @@ public class eletricalAttack : MonoBehaviour
     void Update()
     {
         direction = (player.transform.position - transform.position);
-        if (direction.magnitude < 10)
+        if (direction.magnitude < 40)
         {
             system.Play();
         }
@@ -27,5 +27,6 @@ public class eletricalAttack : MonoBehaviour
         {
             system.Stop();
         }
+        Debug.Log(direction.magnitude);
     }
 }
