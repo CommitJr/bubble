@@ -2,32 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sinudalMoviment : MonoBehaviour
+public class circleMoviment : MonoBehaviour
 {
     [Header("Movimento")]
     private int direcao = -1;
     public float speed;
 
-    public float amplitude;
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
-    
 
-    float startingVal;
+
+    float startingValy, startingValx;
 
     void Start()
     {
-        startingVal = transform.position.y;
+        startingValy = transform.position.y;
+        startingValx = transform.position.x;
     }
-    
+
     void Update()
     {
-       
+
     }
     private void FixedUpdate()
     {
         Move();
-        Sine(speed, amplitude);
+        Circle(speed);
     }
     private void Move()
     {
@@ -47,12 +47,12 @@ public class sinudalMoviment : MonoBehaviour
     }
 
 
-    void Sine(float Speed, float Amplitude)
+    void Circle(float Speed)
     {
-        float x = transform.position.x;
-        float z = transform.position.z;
-        float y = Mathf.Sin(Time.time * Speed) * Amplitude;
+        float x = Mathf.Cos(Time.time * Speed);
+        float z = 0;
+        float y = Mathf.Sin(Time.time * Speed);
 
-        transform.position = new Vector3(x, startingVal + y, z);
+        transform.position = new Vector3(startingValx + x, startingValy + y, z);
     }
 }
