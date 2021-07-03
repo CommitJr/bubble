@@ -19,4 +19,14 @@ public class loadScenes : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void goMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
