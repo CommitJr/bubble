@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6301878972893131607}
   - component: {fileID: 1837934212472637135}
   - component: {fileID: 592981302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pelicano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301878972893131609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d3d226b885c094418c3aaef78952ead, type: 3}
   m_Name: 
@@ -114,6 +114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589628067437992488, guid: 340f8dbd584b4d642bd0ba90712514ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7432395920368310516, guid: 340f8dbd584b4d642bd0ba90712514ab,
         type: 3}
@@ -170,6 +175,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8917501117826266558, guid: 340f8dbd584b4d642bd0ba90712514ab,
+        type: 3}
+      propertyPath: TriggerModule.enter
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917501117826266558, guid: 340f8dbd584b4d642bd0ba90712514ab,
+        type: 3}
+      propertyPath: TriggerModule.inside
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917501117826266558, guid: 340f8dbd584b4d642bd0ba90712514ab,
+        type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917501117826266558, guid: 340f8dbd584b4d642bd0ba90712514ab,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917501117826266558, guid: 340f8dbd584b4d642bd0ba90712514ab,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340f8dbd584b4d642bd0ba90712514ab, type: 3}
 --- !u!4 &5672262128591217208 stripped
@@ -211,6 +241,16 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.y
       value: 0.275
       objectReference: {fileID: 0}
+    - target: {fileID: -4309202047858275857, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4248813422253995385, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -3622569726530730843, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -240,6 +280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pelicano 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2552110194361695937, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -1682701457749009976, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
         type: 3}
@@ -361,6 +406,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -758622268537228502, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -716636038332225644, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -396,6 +446,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -399240200423133922, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -260225349186724368, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328949390648769077, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852061191933941751, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884001492628292712, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329824086365006030, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4026657567891980235, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -430,6 +510,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388439777545762203, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4915018069209520258, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
         type: 3}
@@ -520,6 +605,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898345419180440905, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238136620657066757, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8856453467864501308, guid: 9dcf954a1d99b7847a23dedd8ce7a334,
         type: 3}

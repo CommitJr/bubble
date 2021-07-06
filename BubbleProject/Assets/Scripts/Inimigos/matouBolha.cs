@@ -11,7 +11,8 @@ public class matouBolha : MonoBehaviour
     [SerializeField] private Animator animator;
 
     void Start(){
-        scripttcena = tcena.GetComponent<trocacena>();       
+        scripttcena = tcena.GetComponent<trocacena>();
+        animator = GetComponent<Animator>();
     }
 
     void Update(){
@@ -21,10 +22,10 @@ public class matouBolha : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {   
      
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Dentes") {
 
             animator.SetTrigger("estoura");
-
+            print("bolha estourou");
             StartCoroutine(Aguarde());
         }  
 

@@ -8,7 +8,7 @@ public class contadorPontuacao : MonoBehaviour
     private int seconds = 0;
     private int minutes = 0;
 
-    private int stars = 0;
+    public int stars = 0;
 
     public int timeAlto;
     public int timeMedio;

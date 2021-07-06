@@ -8,21 +8,29 @@ public class colisaoBolha : MonoBehaviour
     // Start is called before the first frame update
 
     
-    public GameObject tcena;
-    trocacena scripttcena;
+    //public GameObject tcena;
+  //  trocacena scripttcena;
 
 
     void Start(){
-        scripttcena = tcena.GetComponent<trocacena>();       
+   //     scripttcena = tcena.GetComponent<trocacena>();       
     }
 
-   /* public void OnCollisionEnter2D(Collision2D collision)
-    {   
-        if(collision.gameObject.tag == "end"){
+    /* public void OnCollisionEnter2D(Collision2D collision)
+     {   
+         if(collision.gameObject.tag == "end"){
 
-            scripttcena.IniciaTransicao(0);
-            scripttcena.MudaCena();
+             scripttcena.IniciaTransicao(0);
+             scripttcena.MudaCena();
 
-        }
-    }*/
+         }
+     }*/
+    void OnParticleCollsion(GameObject other)
+    {
+        print("acertou a bolha");
+        
+        //   GameObject.Find("Player").GetComponent(bolhaController).enabled = false;
+       // GetComponent(bolhaController).enabled = false;
+
+    }
 }

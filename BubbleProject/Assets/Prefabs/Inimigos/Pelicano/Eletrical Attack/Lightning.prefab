@@ -3797,8 +3797,8 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -3973,22 +3973,22 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 2048
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
-    collisionShape0: {fileID: 0}
+    enabled: 1
+    collisionShape0: {fileID: 7432395920368310516}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
-    inside: 1
+    inside: 0
     outside: 0
     enter: 0
     exit: 0

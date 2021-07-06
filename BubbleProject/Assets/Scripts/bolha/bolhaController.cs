@@ -38,16 +38,6 @@ public class bolhaController : MonoBehaviour
         if (GetComponent<Rigidbody2D>().velocity.y < -velocidadeLimite){
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, -velocidadeLimite);
         }
-
-
-    /*    if (GetComponent<Rigidbody2D>().velocity.y == 0 || GetComponent<Rigidbody2D>().velocity.x == 0)
-        {
-            animator.SetBool("Moving", false);
-        }
-        else
-        {
-            animator.SetBool("Moving", true);
-        }*/
     }
 
     void OnTriggerEnter2D(Collider2D objetoQualquer){
