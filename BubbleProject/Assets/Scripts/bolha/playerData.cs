@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class playerData {
 
     public int level;
@@ -9,8 +10,13 @@ public class playerData {
     public float[] position;
     public float score;
     
-    public playerData(Bolha bolha)
+    public playerData(bolha player)
     {
-      //  level = 
+        level = player.level;
+        health = player.health;
+
+        position = new float[2];
+        position[0] = player.transform.position.x;
+        position[1] = player.transform.position.y;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bolha : MonoBehaviour
 {
@@ -8,12 +9,26 @@ public class bolha : MonoBehaviour
     public GameObject tcena;
     trocacena scripttcena;
     [SerializeField] private Animator animator;
-    public int level;
+    public int level = 1;
     public int health = 3;
+
+
     void Start()
     {
         scripttcena = tcena.GetComponent<trocacena>();
         animator = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SavePlayer();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadPlayer();
+        }
     }
 
     #region colisoes  
@@ -62,8 +77,6 @@ public class bolha : MonoBehaviour
         scripttcena.MudaCena();
     }
 
-    #endregion
-
     #region colisao eletrica
     void OnParticleCollsion(GameObject other)
     {
@@ -75,7 +88,27 @@ public class bolha : MonoBehaviour
     }
     #endregion
 
-   
+    #endregion
 
+    #region carrega e salva
+
+    public void SavePlayer()
+    {
+        saveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        playerData data = saveSystem.LoadPlayer();
+
+        level = data.level;
+        health = data.health;
+
+        Vector2 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        transform.position = position;
+    }
+    #endregion
 }
 
