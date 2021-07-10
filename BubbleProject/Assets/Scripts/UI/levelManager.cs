@@ -7,17 +7,21 @@ using UnityEngine.UI;
 public class levelManager : MonoBehaviour
 {
     [SerializeField] public Button[] levelButtons;
+    [SerializeField] public GameObject[] levelLockers;
     [SerializeField] public int sceneInitial;
 
     private void Update()
     {
-        for(int i = 0; i < levelButtons.Length; i++)
+        for(int i = 0; i <= levelButtons.Length; i++)
         {
-            if (i + sceneInitial > PlayerPrefs.GetInt("levelCompleted")) 
+           
+            if (i + sceneInitial > PlayerPrefs.GetInt("levelCompleted"))
             {
                 levelButtons[i].interactable = false;
+                levelLockers[i].SetActive(true);
+
             }
-            
+
         }
     }
 }
