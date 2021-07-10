@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6848984635361137260}
   - component: {fileID: 6848984635361137261}
-  - component: {fileID: 6848984635361137234}
   m_Layer: 13
   m_Name: colliderInterno
   m_TagString: Untagged
@@ -48,19 +47,6 @@ CircleCollider2D:
   m_Offset: {x: -0.19768724, y: 0.4733054}
   serializedVersion: 2
   m_Radius: 0.81685835
---- !u!114 &6848984635361137234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6848984635361137263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eaf9c0aaf2fb2d478e7c1b1a00ba749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tcena: {fileID: 0}
 --- !u!1 &6848984637334847691
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,6 +62,7 @@ GameObject:
   - component: {fileID: 6848984637334847688}
   - component: {fileID: 3834550225294885417}
   - component: {fileID: 3007773605954001270}
+  - component: {fileID: 5401670679444077684}
   m_Layer: 14
   m_Name: Bolha
   m_TagString: Player
@@ -228,9 +215,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6848984637334847691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97cfe34d0ef658b47b767e2574ed219d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tcena: {fileID: 6848984637334847691}
+  animator: {fileID: 6848984637334847688}
+--- !u!114 &5401670679444077684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848984637334847691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e62e21e41de2a5488466bc6a30621d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tcena: {fileID: 6848984637334847691}

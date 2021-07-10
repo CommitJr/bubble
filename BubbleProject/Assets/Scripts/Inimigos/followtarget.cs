@@ -20,7 +20,7 @@ public class followtarget : MonoBehaviour
     void Update()
     {
         direction = (player.transform.position - transform.position);
-        Debug.Log(direction.magnitude);
+     //   Debug.Log(direction.magnitude);
         if (direction.magnitude < 10)
         {
             direction = direction.normalized;

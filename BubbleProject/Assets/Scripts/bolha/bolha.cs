@@ -1,0 +1,81 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class bolha : MonoBehaviour
+{
+
+    public GameObject tcena;
+    trocacena scripttcena;
+    [SerializeField] private Animator animator;
+    public int level;
+    public int health = 3;
+    void Start()
+    {
+        scripttcena = tcena.GetComponent<trocacena>();
+        animator = GetComponent<Animator>();
+    }
+
+    #region colisoes  
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        #region colisao fatal
+        if (collision.gameObject.tag == "Dentes")
+        {
+
+         //   animator.SetTrigger("estoura");
+            print("bolha estourou");
+            StartCoroutine(Aguarde());
+            health = 0;
+        }
+        #endregion
+
+        #region colisao normal
+        else if (collision.gameObject.tag == "Corpo")
+        {
+            print("bolha perdeu uma vida");
+            health--;
+        }
+        #endregion
+
+        #region troca de fase
+
+        else if (collision.gameObject.tag == "end")
+        {
+            print("trocou a fase");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))
+            {
+                PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.Save();
+            }
+            //PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex);
+            level++;
+        }
+        #endregion
+    }
+
+    IEnumerator Aguarde()
+    {
+        yield return new WaitForSeconds(3.0f);
+        scripttcena.IniciaTransicao(0);
+        scripttcena.MudaCena();
+    }
+
+    #endregion
+
+    #region colisao eletrica
+    void OnParticleCollsion(GameObject other)
+    {
+        print("acertou a bolha");
+
+        //   GameObject.Find("Player").GetComponent(bolhaController).enabled = false;
+        // GetComponent(bolhaController).enabled = false;
+
+    }
+    #endregion
+
+   
+
+}
+
