@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class contadorPontuacao : MonoBehaviour
 {
@@ -16,10 +17,12 @@ public class contadorPontuacao : MonoBehaviour
     private int timeTotal; 
 
     bool isRunning = true;
+
+    private TextMeshProUGUI text;
     // Start is called before the first frame update
     void Start()
     {
-
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -29,7 +32,7 @@ public class contadorPontuacao : MonoBehaviour
         {
             miliseconds += Time.deltaTime * 1000;
 
-            // GetComponent<Text>().text = "Tempo: " + Mathf.RoundToInt(timer).ToString() + " s";
+           // GetComponent<Text>().text = "Tempo: " + Mathf.RoundToInt(timer).ToString() + " s";
             if (miliseconds >= 1000)
             {
                 seconds++;
@@ -71,11 +74,13 @@ public class contadorPontuacao : MonoBehaviour
         {
             if (seconds <= 9)
             {
-                GUI.Label(new Rect(10, 10, 100, 20), "Tempo  0" + minutes + ":0" + seconds + " | " + stars + " estrelas");
+               text.SetText("0{0}:0{1}", minutes, seconds);
+                //    GUI.Label(new Rect(10, 10, 100, 20), "Tempo  0" + minutes + ":0" + seconds + " | " + stars + " estrelas");
             }
             else
             {
-                GUI.Label(new Rect(10, 10, 100, 20), "Tempo  0" + minutes + ":" + seconds + " | " + stars + " estrelas");
+                text.SetText("0{0}:{1}", minutes, seconds);
+                // GUI.Label(new Rect(10, 10, 100, 20), "Tempo  0" + minutes + ":" + seconds + " | " + stars + " estrelas");
             }
         }
         else
@@ -84,11 +89,13 @@ public class contadorPontuacao : MonoBehaviour
             {
                 if (seconds <= 9)
                 {
-                    GUI.Label(new Rect(10, 10, 100, 20), "Tempo  " + minutes + ":0" + seconds + " | " + stars + " estrelas");
+                    text.SetText("{0}:0{1}", minutes, seconds);
+                    //  GUI.Label(new Rect(10, 10, 100, 20), "Tempo  " + minutes + ":0" + seconds + " | " + stars + " estrelas");
                 }
                 else
                 {
-                    GUI.Label(new Rect(10, 10, 100, 20), "Tempo  " + minutes + ":" + seconds + " | " + stars + " estrelas");
+                    text.SetText("{0}:0{1}", minutes, seconds);
+                  //  GUI.Label(new Rect(10, 10, 100, 20), "Tempo  " + minutes + ":" + seconds + " | " + stars + " estrelas");
                 }
             }
         }

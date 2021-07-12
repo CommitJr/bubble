@@ -61,7 +61,6 @@ GameObject:
   - component: {fileID: 6848984637334847689}
   - component: {fileID: 6848984637334847688}
   - component: {fileID: 3834550225294885417}
-  - component: {fileID: 3007773605954001270}
   - component: {fileID: 5401670679444077684}
   m_Layer: 14
   m_Name: Bolha
@@ -208,20 +207,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3007773605954001270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6848984637334847691}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97cfe34d0ef658b47b767e2574ed219d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tcena: {fileID: 6848984637334847691}
-  animator: {fileID: 6848984637334847688}
 --- !u!114 &5401670679444077684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tcena: {fileID: 6848984637334847691}
   animator: {fileID: 6848984637334847688}
+  level: 1
+  health: 3
 --- !u!1 &7091479571426719941
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+
+
 public class pauseSystem : MonoBehaviour
 {
     public static bool pausa = false;
     public GameObject pausaMenuUI;
     // Update is called once per frame
-    void Update()
+    void OnMouseDown()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           
-            if (pausa)
-            {
+         if (pausa)
+        { 
                 Resumo();
             }
-            else
-            {
-                Pause();
-            }
-        }
+          else
+          {
+              Pause();
+         }
+        
     }
     public void Resumo()
     {
