@@ -6,17 +6,24 @@ using UnityEngine.UI;
 
 public class worldManager : MonoBehaviour
 {
-    public Button[] worldButtons;
+    [SerializeField] public Button[] worldButtons;
+    [SerializeField] public GameObject[] levelLockers;
+    int sceneInitial;
 
-    private void Update()
+    void Start()
     {
+        sceneInitial = PlayerPrefs.GetInt("layerCompleted", 1);
+    
         for (int i = 0; i < worldButtons.Length; i++)
         {
-            if (i + 2 > PlayerPrefs.GetInt("levelCompleted"))
-            {
-                worldButtons[i].interactable = false;
-            }
+            worldButtons[i].interactable = false;
+            levelLockers[i].SetActive(true);
+        }
 
+        for (int i = 0; i < sceneInitial; i++)
+        {
+            worldButtons[i].interactable = true;
+            levelLockers[i].SetActive(false);
         }
     }
 }

@@ -12,6 +12,7 @@ public class showScore : MonoBehaviour
     [SerializeField]
     private Image shell3;
     contadorPontuacao score;
+
     // Start is called before the first frame update
     void Start()
     {

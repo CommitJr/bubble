@@ -8,7 +8,10 @@ public class bolha : MonoBehaviour
 
     public GameObject tcena;
     trocacena scripttcena;
+    contadorPontuacao score;
+
     [SerializeField] private Animator animator;
+
     public int level = 1;
     public int health = 3;
 
@@ -16,6 +19,7 @@ public class bolha : MonoBehaviour
     void Start()
     {
         scripttcena = tcena.GetComponent<trocacena>();
+        
         animator = GetComponent<Animator>();
     }
 
@@ -57,15 +61,25 @@ public class bolha : MonoBehaviour
 
         else if (collision.gameObject.tag == "end")
         {
-            print("trocou a fase");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))
+            print("chegou ao fim da fase");
+
+            if (score.stars == 0) {
+                SceneManager.LoadScene("Perdeu");
+            }
+            else {
+                SceneManager.LoadScene("Ganhou");
+                PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.Save();
+                level++;
+            }
+             
+
+            /*if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))
             {
                 PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
                 PlayerPrefs.Save();
-            }
-            //PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex);
-            level++;
+            }*/
+            
         }
         #endregion
     }

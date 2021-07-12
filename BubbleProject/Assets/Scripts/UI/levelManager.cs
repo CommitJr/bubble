@@ -8,20 +8,22 @@ public class levelManager : MonoBehaviour
 {
     [SerializeField] public Button[] levelButtons;
     [SerializeField] public GameObject[] levelLockers;
-    [SerializeField] public int sceneInitial;
+    int sceneInitial;
 
-    private void Update()
+    void Start()
     {
-        for(int i = 0; i <= levelButtons.Length; i++)
+        sceneInitial = PlayerPrefs.GetInt("levelCompleted", 1);
+        print(sceneInitial);
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-           
-            if (i + sceneInitial > PlayerPrefs.GetInt("levelCompleted"))
-            {
-                levelButtons[i].interactable = false;
-                levelLockers[i].SetActive(true);
+            levelButtons[i].interactable = false;
+             levelLockers[i].SetActive(true);
+        }
 
-            }
-
+        for (int i = 0; i < sceneInitial; i++)
+        {
+            levelButtons[i].interactable = true;
+            levelLockers[i].SetActive(false);
         }
     }
 }
