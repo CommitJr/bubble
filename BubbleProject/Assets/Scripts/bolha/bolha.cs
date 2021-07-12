@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class bolha : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class bolha : MonoBehaviour
     contadorPontuacao score;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private Image[] lives;
 
     public int level = 1;
     public int health = 3;
@@ -33,6 +35,32 @@ public class bolha : MonoBehaviour
         {
             LoadPlayer();
         }
+
+        // live counter
+        switch (health)
+        {
+            case 3:
+                lives[2].enabled = true;
+                lives[1].enabled = true;
+                lives[0].enabled = true;
+                break;
+            case 2:
+                lives[2].enabled = true;
+                lives[1].enabled = false;
+                lives[0].enabled = false;
+                break;
+            case 1:
+                lives[2].enabled = true;
+                lives[1].enabled = false;
+                lives[0].enabled = false;
+                break;
+            case 0:
+                lives[2].enabled = false;
+                lives[1].enabled = false;
+                lives[0].enabled = false;
+                SceneManager.LoadScene("Perdeu");
+                break;
+        }
     }
 
     #region colisoes  
@@ -44,7 +72,7 @@ public class bolha : MonoBehaviour
 
          //   animator.SetTrigger("estoura");
             print("bolha estourou");
-            StartCoroutine(Aguarde());
+       //     StartCoroutine(Aguarde());
             health = 0;
         }
         #endregion
@@ -84,12 +112,12 @@ public class bolha : MonoBehaviour
         #endregion
     }
 
-    IEnumerator Aguarde()
+  /*  IEnumerator Aguarde()
     {
         yield return new WaitForSeconds(3.0f);
         scripttcena.IniciaTransicao(0);
         scripttcena.MudaCena();
-    }
+    }*/
 
     #region colisao eletrica
     void OnParticleCollsion(GameObject other)

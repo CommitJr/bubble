@@ -22,7 +22,7 @@ public class loadScenes : MonoBehaviour
 
     public void restartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void goMenu()
