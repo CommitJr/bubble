@@ -9,7 +9,7 @@ public class bolha : MonoBehaviour
 
     public GameObject tcena;
     trocacena scripttcena;
-    contadorPontuacao score;
+    [SerializeField] contadorPontuacao score;
 
     [SerializeField] private Animator animator;
     [SerializeField] private Image[] lives;
@@ -92,11 +92,13 @@ public class bolha : MonoBehaviour
             print("chegou ao fim da fase");
 
             if (score.stars == 0) {
-                SceneManager.LoadScene("Perdeu");
+                //     SceneManager.LoadScene("Perdeu");
+                PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.Save();
             }
             else {
                 SceneManager.LoadScene("Ganhou");
-                PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.SetInt("levelCompleted", level);
                 PlayerPrefs.Save();
                 level++;
             }
