@@ -17,6 +17,8 @@ public class bolha : MonoBehaviour
     public int level = 1;
     public int health = 3;
 
+    [SerializeField] private GameObject WinUI;
+    [SerializeField] private GameObject DefeatUI;
 
     void Start()
     {
@@ -58,7 +60,7 @@ public class bolha : MonoBehaviour
                 lives[2].enabled = false;
                 lives[1].enabled = false;
                 lives[0].enabled = false;
-                SceneManager.LoadScene("Perdeu");
+                DefeatUI.SetActive(true);
                 break;
         }
     }
@@ -92,12 +94,11 @@ public class bolha : MonoBehaviour
             print("chegou ao fim da fase");
 
             if (score.stars == 0) {
-                //     SceneManager.LoadScene("Perdeu");
-                PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
-                PlayerPrefs.Save();
+                DefeatUI.SetActive(true);
+
             }
             else {
-                SceneManager.LoadScene("Ganhou");
+                WinUI.SetActive(true);
                 PlayerPrefs.SetInt("levelCompleted", level);
                 PlayerPrefs.Save();
                 level++;

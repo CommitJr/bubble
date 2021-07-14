@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class pauseSystem : MonoBehaviour
 {
     public static bool pausa = false;
-    public GameObject pausaMenuUI;
+    [SerializeField] private GameObject pausaMenuUI;
     // Update is called once per frame
     void OnMouseDown()
     {

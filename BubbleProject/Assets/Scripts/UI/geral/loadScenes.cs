@@ -10,11 +10,6 @@ public class loadScenes : MonoBehaviour
         SceneManager.LoadScene(nome);
     }
 
-    public void restartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void nextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
@@ -22,7 +17,7 @@ public class loadScenes : MonoBehaviour
 
     public void restartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void goMenu()
