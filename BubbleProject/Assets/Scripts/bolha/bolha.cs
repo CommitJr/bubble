@@ -61,6 +61,7 @@ public class bolha : MonoBehaviour
                 lives[1].enabled = false;
                 lives[0].enabled = false;
                 DefeatUI.SetActive(true);
+                Time.timeScale = 0f;
                 break;
         }
     }
@@ -95,10 +96,12 @@ public class bolha : MonoBehaviour
 
             if (score.stars == 0) {
                 DefeatUI.SetActive(true);
+                Time.timeScale = 0f;
 
             }
             else {
                 WinUI.SetActive(true);
+                Time.timeScale = 0f;
                 PlayerPrefs.SetInt("levelCompleted", level);
                 PlayerPrefs.Save();
                 level++;
