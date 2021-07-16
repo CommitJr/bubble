@@ -37,7 +37,7 @@ public class bolha : MonoBehaviour
         {
             LoadPlayer();
         }
-
+        print(health);
         // live counter
         switch (health)
         {
