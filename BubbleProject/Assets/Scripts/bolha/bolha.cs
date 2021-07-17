@@ -61,7 +61,6 @@ public class bolha : MonoBehaviour
                 lives[1].enabled = false;
                 lives[0].enabled = false;
                 DefeatUI.SetActive(true);
-                Time.timeScale = 0f;
                 break;
         }
     }
