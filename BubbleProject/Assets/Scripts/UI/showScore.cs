@@ -6,23 +6,18 @@ using UnityEngine.UI;
 public class showScore : MonoBehaviour
 {
     [SerializeField]
-    private Image shell1;
+    private GameObject shell1;
     [SerializeField]
-    private Image shell2;
+    private GameObject shell2;
     [SerializeField]
-    private Image shell3;
+    private GameObject shell3;
     [SerializeField] contadorPontuacao score;
 
     // Start is called before the first frame update
     void Start()
-    {
-        shell1 = GetComponent<Image>();
-        shell2 = GetComponent<Image>();
-        shell3 = GetComponent<Image>();
-
-        shell1.enabled = false;
-        shell2.enabled = false;
-        shell3.enabled = false;
+    { 
+        
+        Debug.Log("passou aqui");
     }
 
     // Update is called once per frame
@@ -30,28 +25,32 @@ public class showScore : MonoBehaviour
     {
         if (score.stars == 3)
         {
-            shell1.enabled = true;
-            shell2.enabled = false;
-            shell3.enabled = false;
+            shell1.SetActive(false);
+            shell2.SetActive(false);
+            shell3.SetActive(true);
+            print("3 estrelas");
         }
 
         else if (score.stars == 2)
         {
-            shell1.enabled = false;
-            shell2.enabled = true;
-            shell3.enabled = false;
+            shell1.SetActive(false);
+            shell2.SetActive(true);
+            shell3.SetActive(false);
+            print("2 estrelas");
         }
         else if (score.stars == 1)
         {
-            shell1.enabled = false;
-            shell2.enabled = false;
-            shell3.enabled = true;
+            shell1.SetActive(false);
+            shell2.SetActive(false);
+            shell3.SetActive(true);
+            print("1 estrelas");
         }
         else
         {
-            shell1.enabled = false;
-            shell2.enabled = false;
-            shell3.enabled = false;
+            shell1.SetActive(false);
+            shell2.SetActive(false);
+            shell3.SetActive(false);
+            print("0 estrelas");
         }
 
     }
