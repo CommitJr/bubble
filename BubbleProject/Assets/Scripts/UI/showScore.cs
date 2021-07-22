@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class showScore : MonoBehaviour
 {
     [SerializeField]
+    private GameObject shell0;
+    [SerializeField]
     private GameObject shell1;
     [SerializeField]
     private GameObject shell2;
@@ -25,6 +27,7 @@ public class showScore : MonoBehaviour
     {
         if (score.stars == 3)
         {
+            shell0.SetActive(false);
             shell1.SetActive(false);
             shell2.SetActive(false);
             shell3.SetActive(true);
@@ -33,6 +36,7 @@ public class showScore : MonoBehaviour
 
         else if (score.stars == 2)
         {
+            shell0.SetActive(false);
             shell1.SetActive(false);
             shell2.SetActive(true);
             shell3.SetActive(false);
@@ -40,13 +44,15 @@ public class showScore : MonoBehaviour
         }
         else if (score.stars == 1)
         {
-            shell1.SetActive(false);
+            shell0.SetActive(false);
+            shell1.SetActive(true);
             shell2.SetActive(false);
-            shell3.SetActive(true);
+            shell3.SetActive(false);
             print("1 estrelas");
         }
         else
         {
+            shell0.SetActive(true);
             shell1.SetActive(false);
             shell2.SetActive(false);
             shell3.SetActive(false);

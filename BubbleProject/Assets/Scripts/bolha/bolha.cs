@@ -93,18 +93,11 @@ public class bolha : MonoBehaviour
         {
             print("chegou ao fim da fase");
 
-            if (score.stars == 0) {
-                DefeatUI.SetActive(true);
-                Time.timeScale = 0f;
-
-            }
-            else {
-                WinUI.SetActive(true);
-                Time.timeScale = 0f;
-                PlayerPrefs.SetInt("levelCompleted", level);
-                PlayerPrefs.Save();
-                level++;
-            }
+            WinUI.SetActive(true);
+            Time.timeScale = 0f;
+            PlayerPrefs.SetInt("levelCompleted", level);
+            PlayerPrefs.Save();
+            level++;
              
 
             /*if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))

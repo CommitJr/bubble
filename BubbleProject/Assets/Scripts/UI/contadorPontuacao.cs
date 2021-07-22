@@ -6,8 +6,8 @@ using TMPro;
 public class contadorPontuacao : MonoBehaviour
 {
     private float miliseconds = 0;
-    private int seconds = 0;
-    private int minutes = 0;
+    public int seconds = 0;
+    public int minutes = 0;
 
     public int stars;
 
