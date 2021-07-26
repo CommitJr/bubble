@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,18 +26,22 @@ public class bolha : MonoBehaviour
         scripttcena = tcena.GetComponent<trocacena>();
         
         animator = GetComponent<Animator>();
+
+        playerData data = saveSystem.LoadPlayer();
+
+        level = data.level;
+        health = data.health;
+
+    /*    Vector2 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        transform.position = position;
+    */
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SavePlayer();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadPlayer();
-        }
+        
         print(health);
         // live counter
         switch (health)
@@ -102,17 +106,18 @@ public class bolha : MonoBehaviour
 
             WinUI.SetActive(true);
             Time.timeScale = 0f;
-            PlayerPrefs.SetInt("levelCompleted", level);
+        /*    PlayerPrefs.SetInt("levelCompleted", level);
             PlayerPrefs.Save();
+        */
             level++;
-             
+            saveSystem.SavePlayer(this);
 
             /*if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))
             {
                 PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
                 PlayerPrefs.Save();
             }*/
-            
+
         }
         #endregion
     }
@@ -137,25 +142,6 @@ public class bolha : MonoBehaviour
 
     #endregion
 
-    #region carrega e salva
-
-    public void SavePlayer()
-    {
-        saveSystem.SavePlayer(this);
-    }
-
-    public void LoadPlayer()
-    {
-        playerData data = saveSystem.LoadPlayer();
-
-        level = data.level;
-        health = data.health;
-
-        Vector2 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        transform.position = position;
-    }
-    #endregion
+   
 }
 
