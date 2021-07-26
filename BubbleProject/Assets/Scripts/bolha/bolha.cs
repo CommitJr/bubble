@@ -88,6 +88,7 @@ public class bolha : MonoBehaviour
 
     void defeatTime() {
         DefeatUI.SetActive(true);
+        Destroy(GameObject.FindWithTag("death"));
     }
 
     #region colisoes  
