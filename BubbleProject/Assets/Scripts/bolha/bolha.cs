@@ -63,9 +63,13 @@ public class bolha : MonoBehaviour
                 lives[0].enabled = false;
                 Instantiate(death, transform.position, transform.rotation);
                 gameObject.SetActive(false);
-                DefeatUI.SetActive(true);
+                Invoke("defeatTime", 0.99f);
                 break;
         }
+    }
+
+    void defeatTime() {
+        DefeatUI.SetActive(true);
     }
 
     #region colisoes  
