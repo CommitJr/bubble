@@ -8,7 +8,10 @@ public class bolha : MonoBehaviour
 {
 
     public GameObject tcena;
+
     trocacena scripttcena;
+    loadScenes restart;
+
     [SerializeField] contadorPontuacao score;
 
     [SerializeField] private Animator animator;
@@ -16,6 +19,9 @@ public class bolha : MonoBehaviour
 
     public int level = 1;
     public int health = 3;
+    public int world = 1;
+
+    [SerializeField] public int numFases;
 
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject DefeatUI;
@@ -26,11 +32,19 @@ public class bolha : MonoBehaviour
         scripttcena = tcena.GetComponent<trocacena>();
         
         animator = GetComponent<Animator>();
-
         playerData data = saveSystem.LoadPlayer();
-
-        level = data.level;
-        health = data.health;
+        if(restart == false)
+        {
+            level = data.level;
+            health = data.health;
+            world = data.world;
+        }
+        else
+        {
+            level = data.level;
+            world = data.world;
+        }
+        
 
     /*    Vector2 position;
         position.x = data.position[0];
@@ -109,7 +123,11 @@ public class bolha : MonoBehaviour
         /*    PlayerPrefs.SetInt("levelCompleted", level);
             PlayerPrefs.Save();
         */
-            level++;
+            level ++;
+            if(level == numFases)
+            {
+                world++;
+            }
             saveSystem.SavePlayer(this);
 
             /*if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))

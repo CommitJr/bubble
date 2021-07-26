@@ -8,11 +8,21 @@ public class worldManager : MonoBehaviour
 {
     [SerializeField] public Button[] worldButtons;
     [SerializeField] public GameObject[] levelLockers;
-    int sceneInitial;
+    int world;
 
     void Start()
     {
-        sceneInitial = PlayerPrefs.GetInt("layerCompleted", 1);
+        playerData data = saveSystem.LoadPlayer();
+        if (data == null)
+        {
+            world = 1;
+        }
+        else
+        {
+            world = data.world;
+        }
+        Debug.Log("nivel " + world);
+
     
         for (int i = 0; i < worldButtons.Length; i++)
         {
@@ -20,7 +30,7 @@ public class worldManager : MonoBehaviour
             levelLockers[i].SetActive(true);
         }
 
-        for (int i = 0; i < sceneInitial; i++)
+        for (int i = 0; i < world; i++)
         {
             worldButtons[i].interactable = true;
             levelLockers[i].SetActive(false);

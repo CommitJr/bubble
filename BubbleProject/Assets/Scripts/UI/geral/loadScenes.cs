@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class loadScenes : MonoBehaviour
 {
+    public static bool restart;
+
     public void loadScene(string nome)
     {
         SceneManager.LoadScene(nome);
@@ -18,6 +20,7 @@ public class loadScenes : MonoBehaviour
     public void restartLevel()
     {
         Time.timeScale = 1f;
+        restart = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

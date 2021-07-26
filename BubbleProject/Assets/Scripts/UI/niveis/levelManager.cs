@@ -9,7 +9,7 @@ public class levelManager : MonoBehaviour
     [SerializeField] public Button[] levelButtons;
     [SerializeField] public GameObject[] levelLockers;
     public int level;
-    private int nivel;
+   
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class levelManager : MonoBehaviour
         {
             level = data.level;
         }
-        Debug.Log("nivel "+ level);
+        Debug.Log("camada "+ level);
         for (int i = 0; i < levelButtons.Length; i++)
         {
             levelButtons[i].interactable = false;
