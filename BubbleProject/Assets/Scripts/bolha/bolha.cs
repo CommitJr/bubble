@@ -19,6 +19,7 @@ public class bolha : MonoBehaviour
 
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject DefeatUI;
+    [SerializeField] private GameObject death;
 
     void Start()
     {
@@ -60,6 +61,8 @@ public class bolha : MonoBehaviour
                 lives[2].enabled = false;
                 lives[1].enabled = false;
                 lives[0].enabled = false;
+                Instantiate(death, transform.position, transform.rotation);
+                gameObject.SetActive(false);
                 DefeatUI.SetActive(true);
                 break;
         }
