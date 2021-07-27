@@ -114,9 +114,9 @@ public class bolha : MonoBehaviour
         if (collision.gameObject.tag == "Dentes")
         {
 
-         //   animator.SetTrigger("estoura");
+            //   animator.SetTrigger("estoura");
             print("bolha estourou");
-       //     StartCoroutine(Aguarde());
+            //     StartCoroutine(Aguarde());
             health = 0;
         }
         #endregion
@@ -155,11 +155,11 @@ public class bolha : MonoBehaviour
                     level2++;
                     break;
                 case 1:                     // camada 5
-                    level1 ++;
+                    level1++;
                     break;
             }
 
-            if(level1 == numFases)
+            if (level1 == numFases)
             {
                 world++;
             }
@@ -185,13 +185,17 @@ public class bolha : MonoBehaviour
 
         }
         #endregion
+
+        
+
     }
-
-
     #region colisao eletrica
-    void OnParticleCollsion(GameObject other)
+    public void OnParticleCollsion(GameObject other)
     {
-        print("acertou a bolha");
+        if (other.gameObject.tag == "ataque")
+        {
+            print("acertou a bolha");
+        }
 
         //   GameObject.Find("Player").GetComponent(bolhaController).enabled = false;
         // GetComponent(bolhaController).enabled = false;
