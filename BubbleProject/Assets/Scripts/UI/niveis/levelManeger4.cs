@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class levelManager : MonoBehaviour
+public class levelManeger4 : MonoBehaviour
 {
     [SerializeField] public Button[] levelButtons;
     [SerializeField] public GameObject[] levelLockers;
@@ -12,23 +12,24 @@ public class levelManager : MonoBehaviour
 
     void Start()
     {
-        
+
         playerData data = saveSystem.LoadPlayer();
         if (data == null)
         {
             level = 1;
-            
+
         }
         else
         {
-            level = data.level1;
-           
+            level = data.level2;
+
+
         }
-        
+
         for (int i = 0; i < levelButtons.Length; i++)
         {
             levelButtons[i].interactable = false;
-             levelLockers[i].SetActive(true);
+            levelLockers[i].SetActive(true);
         }
 
         for (int i = 0; i < level; i++)

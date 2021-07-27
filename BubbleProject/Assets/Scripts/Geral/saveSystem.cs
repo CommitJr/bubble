@@ -7,7 +7,7 @@ public static class saveSystem {
     public static void SavePlayer(bolha player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.c";
+        string path = Application.persistentDataPath + "/player.n";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         playerData data = new playerData(player);
@@ -20,7 +20,7 @@ public static class saveSystem {
     }
     public static playerData LoadPlayer()
     {
-        string path = Application.persistentDataPath + "/player.c";
+        string path = Application.persistentDataPath + "/player.n";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

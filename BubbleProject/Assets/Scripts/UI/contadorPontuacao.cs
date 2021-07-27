@@ -50,7 +50,7 @@ public class contadorPontuacao : MonoBehaviour
         }
         
         timeTotal = minutes * 60 + seconds;
-        Debug.Log(stars);
+        //   Debug.Log(stars);
         if(timeTotal <= timeAlto)
         {
             stars = 3;

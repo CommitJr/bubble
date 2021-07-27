@@ -17,7 +17,12 @@ public class bolha : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Image[] lives;
 
-    public int level = 1;
+    public int level5 = 1;
+    public int level4 = 1;
+    public int level3 = 1;
+    public int level2 = 1;
+    public int level1 = 1;
+
     public int health = 3;
     public int world = 1;
 
@@ -35,13 +40,24 @@ public class bolha : MonoBehaviour
         playerData data = saveSystem.LoadPlayer();
         if(restart == false)
         {
-            level = data.level;
+            level5 = data.level5;
+            level4 = data.level4;
+            level3 = data.level3;
+            level2 = data.level2;
+            level1 = data.level1;
+
             health = data.health;
+
             world = data.world;
         }
         else
         {
-            level = data.level;
+            level5 = data.level5;
+            level4 = data.level4;
+            level3 = data.level3;
+            level2 = data.level2;
+            level1 = data.level1;
+
             world = data.world;
         }
         
@@ -121,32 +137,56 @@ public class bolha : MonoBehaviour
 
             WinUI.SetActive(true);
             Time.timeScale = 0f;
-        /*    PlayerPrefs.SetInt("levelCompleted", level);
-            PlayerPrefs.Save();
-        */
-            level ++;
-            if(level == numFases)
+
+            // magica, não mexer
+
+            switch (world)
+            {
+                case 5:
+                    level5++;
+                    break;
+                case 4:
+                    level4++;
+                    break;
+                case 3:
+                    level3++;
+                    break;
+                case 2:
+                    level2++;
+                    break;
+                case 1:                     // camada 5
+                    level1 ++;
+                    break;
+            }
+
+            if(level1 == numFases)
             {
                 world++;
             }
+            if (level2 == numFases)
+            {
+                world++;
+            }
+            if (level3 == numFases)
+            {
+                world++;
+            }
+            if (level4 == numFases)
+            {
+                world++;
+            }
+            if (level5 == numFases)
+            {
+                world++;
+
+            }
             saveSystem.SavePlayer(this);
 
-            /*if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("levelCompleted"))
-            {
-                PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex);
-                PlayerPrefs.Save();
-            }*/
 
         }
         #endregion
     }
 
-  /*  IEnumerator Aguarde()
-    {
-        yield return new WaitForSeconds(3.0f);
-        scripttcena.IniciaTransicao(0);
-        scripttcena.MudaCena();
-    }*/
 
     #region colisao eletrica
     void OnParticleCollsion(GameObject other)

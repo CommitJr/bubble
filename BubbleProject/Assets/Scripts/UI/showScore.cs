@@ -19,7 +19,7 @@ public class showScore : MonoBehaviour
     void Start()
     { 
         
-        Debug.Log("passou aqui");
+     
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class showScore : MonoBehaviour
             shell1.SetActive(false);
             shell2.SetActive(false);
             shell3.SetActive(true);
-            print("3 estrelas");
+         //   print("3 estrelas");
         }
 
         else if (score.stars == 2)
@@ -40,7 +40,7 @@ public class showScore : MonoBehaviour
             shell1.SetActive(false);
             shell2.SetActive(true);
             shell3.SetActive(false);
-            print("2 estrelas");
+         //   print("2 estrelas");
         }
         else if (score.stars == 1)
         {
@@ -48,7 +48,7 @@ public class showScore : MonoBehaviour
             shell1.SetActive(true);
             shell2.SetActive(false);
             shell3.SetActive(false);
-            print("1 estrelas");
+         //   print("1 estrelas");
         }
         else
         {
@@ -56,7 +56,7 @@ public class showScore : MonoBehaviour
             shell1.SetActive(false);
             shell2.SetActive(false);
             shell3.SetActive(false);
-            print("0 estrelas");
+         //   print("0 estrelas");
         }
 
     }
