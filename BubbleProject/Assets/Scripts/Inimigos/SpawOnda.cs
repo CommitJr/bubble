@@ -24,7 +24,8 @@ public class SpawOnda : MonoBehaviour
     }
 
     private void CriaOnda(){
-        Instantiate(ondaPrefab, spawnPosition.position, Quaternion.identity);
+        spawnPosition.eulerAngles = gameObject.GetComponent<Transform>().eulerAngles;
+        Instantiate(ondaPrefab, spawnPosition.position, spawnPosition.rotation);
     }
 
     
