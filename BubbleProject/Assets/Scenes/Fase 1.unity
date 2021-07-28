@@ -121,6 +121,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12220696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2765140296266676375, guid: 45be991894f65fc4e8ea24b592952c96,
+    type: 3}
+  m_PrefabInstance: {fileID: 1981241561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &12220700
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12220696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2947505, y: -0.02}
+  serializedVersion: 2
+  m_Radius: 0.20524949
 --- !u!1 &42867659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,7 +3254,7 @@ PrefabInstance:
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.5
+      value: -5.71
       objectReference: {fileID: 0}
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
@@ -4076,7 +4098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288448450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 1.7000008, z: -10}
+  m_LocalPosition: {x: 0.6, y: 2.4900007, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 842727746}
@@ -5654,6 +5676,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611076599}
   m_CullTransparentMesh: 0
+--- !u!1 &1670382748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6969644621510823294, guid: 7ebb0725d16851545b369e6530a26d8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 797535724891805206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1670382749 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7653674982306124731, guid: 7ebb0725d16851545b369e6530a26d8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 797535724891805206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1670382750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670382748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d894c6794dd3bca4b82469fec777779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 2
+  inimigoRb: {fileID: 1670382749}
 --- !u!1 &1674793775
 GameObject:
   m_ObjectHideFlags: 0
@@ -6464,6 +6512,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 954751728}
     m_Modifications:
+    - target: {fileID: 2765140296266676371, guid: 45be991894f65fc4e8ea24b592952c96,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765140296266676371, guid: 45be991894f65fc4e8ea24b592952c96,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2765140296266676372, guid: 45be991894f65fc4e8ea24b592952c96,
         type: 3}
       propertyPath: m_RootOrder
@@ -6472,12 +6530,12 @@ PrefabInstance:
     - target: {fileID: 2765140296266676372, guid: 45be991894f65fc4e8ea24b592952c96,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.32567
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 2765140296266676372, guid: 45be991894f65fc4e8ea24b592952c96,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.798965
+      value: 39.36
       objectReference: {fileID: 0}
     - target: {fileID: 2765140296266676372, guid: 45be991894f65fc4e8ea24b592952c96,
         type: 3}
@@ -6523,6 +6581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dumbo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765140296266676375, guid: 45be991894f65fc4e8ea24b592952c96,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dentes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45be991894f65fc4e8ea24b592952c96, type: 3}
@@ -6823,12 +6886,12 @@ PrefabInstance:
     - target: {fileID: 3378880609660845782, guid: 7ebb0725d16851545b369e6530a26d8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5226893
+      value: 7.7
       objectReference: {fileID: 0}
     - target: {fileID: 3378880609660845782, guid: 7ebb0725d16851545b369e6530a26d8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 48.5
+      value: 91.9
       objectReference: {fileID: 0}
     - target: {fileID: 3378880609660845782, guid: 7ebb0725d16851545b369e6530a26d8c,
         type: 3}
@@ -6875,7 +6938,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: vibora
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6969644621510823294, guid: 7ebb0725d16851545b369e6530a26d8c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dentes
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2690770173388700687, guid: 7ebb0725d16851545b369e6530a26d8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ebb0725d16851545b369e6530a26d8c, type: 3}
 --- !u!4 &2735189685618223296 stripped
 Transform:

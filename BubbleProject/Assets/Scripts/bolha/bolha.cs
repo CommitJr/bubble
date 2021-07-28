@@ -71,8 +71,6 @@ public class bolha : MonoBehaviour
 
     void Update()
     {
-        
-        print(health);
         // live counter
         switch (health)
         {
@@ -113,10 +111,6 @@ public class bolha : MonoBehaviour
         #region colisao fatal
         if (collision.gameObject.tag == "Dentes")
         {
-
-            //   animator.SetTrigger("estoura");
-            print("bolha estourou");
-            //     StartCoroutine(Aguarde());
             health = 0;
         }
         #endregion
@@ -124,7 +118,6 @@ public class bolha : MonoBehaviour
         #region colisao normal
         else if (collision.gameObject.tag == "Corpo")
         {
-            print("bolha perdeu uma vida");
             health--;
         }
         #endregion
