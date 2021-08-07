@@ -81,7 +81,7 @@ public class bolha : MonoBehaviour
                 break;
             case 2:
                 lives[2].enabled = true;
-                lives[1].enabled = false;
+                lives[1].enabled = true;
                 lives[0].enabled = false;
                 break;
             case 1:
@@ -109,7 +109,7 @@ public class bolha : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         #region colisao fatal
-        if (collision.gameObject.tag == "Dentes")
+        if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras")
         {
             health = 0;
         }
@@ -119,6 +119,7 @@ public class bolha : MonoBehaviour
         else if (collision.gameObject.tag == "Corpo")
         {
             health--;
+            Debug.Log("bateu no corpo");
         }
         #endregion
 
@@ -129,7 +130,7 @@ public class bolha : MonoBehaviour
             print("chegou ao fim da fase");
 
             WinUI.SetActive(true);
-            Time.timeScale = 0f;
+          //  Time.timeScale = 0f;
 
             // magica, não mexer
 
