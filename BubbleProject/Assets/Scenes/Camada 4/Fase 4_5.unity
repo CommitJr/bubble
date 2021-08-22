@@ -4089,7 +4089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322283978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.200001, z: -10}
+  m_LocalPosition: {x: -0.8, y: 59.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 785022698}
@@ -4379,6 +4379,7 @@ GameObject:
   - component: {fileID: 1342076121}
   - component: {fileID: 1342076120}
   - component: {fileID: 1342076119}
+  - component: {fileID: 1342076122}
   m_Layer: 20
   m_Name: Torpedo antigo
   m_TagString: Untagged
@@ -4394,7 +4395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342076116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.40357, y: 1.341362, z: -46.24831}
+  m_LocalPosition: {x: -49.7, y: 0.3, z: -45.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152085162}
@@ -4594,6 +4595,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0e93105827f414e9820306615397ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1342076122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342076116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f2dd510aef1324684f2e9d6d979097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
+  exp: {fileID: 0}
+  radius: 1
 --- !u!1 &1379919155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,12 +5337,12 @@ PrefabInstance:
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 51.7
       objectReference: {fileID: 0}
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
