@@ -22,7 +22,7 @@ public class Falling : MonoBehaviour
           direction = (player.transform.position - transform.position);
           if (direction.magnitude < 20)
           {
-                rb.gravityScale = 1f;
+                rb.gravityScale = 0.5f;
         }
     }
 }

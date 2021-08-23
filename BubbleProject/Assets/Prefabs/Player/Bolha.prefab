@@ -44,9 +44,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19768724, y: 0.4733054}
+  m_Offset: {x: -0.23315713, y: 0.47330508}
   serializedVersion: 2
-  m_Radius: 0.81685835
+  m_Radius: 0.5567464
 --- !u!1 &6848984637334847691
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,9 +220,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tcena: {fileID: 6848984637334847691}
+  score: {fileID: 0}
   animator: {fileID: 6848984637334847688}
-  level: 1
+  lives: []
+  level5: 1
+  level4: 1
+  level3: 1
+  level2: 1
+  level1: 1
   health: 3
+  world: 1
+  numFases: 0
+  WinUI: {fileID: 0}
+  DefeatUI: {fileID: 0}
+  death: {fileID: 0}
 --- !u!1 &7091479571426719941
 GameObject:
   m_ObjectHideFlags: 0

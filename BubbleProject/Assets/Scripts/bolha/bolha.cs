@@ -109,9 +109,16 @@ public class bolha : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         #region colisao fatal
-        if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras")
+        if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras" || collision.gameObject.tag == "Helice")
         {
             health = 0;
+        }
+        #endregion
+
+        #region colisão torpedo
+        if (collision.gameObject.tag == "Torpedo")
+        {
+           health = 0;
         }
         #endregion
 
@@ -130,7 +137,7 @@ public class bolha : MonoBehaviour
             print("chegou ao fim da fase");
 
             WinUI.SetActive(true);
-          //  Time.timeScale = 0f;
+            //  Time.timeScale = 0f;
 
             // magica, não mexer
 
