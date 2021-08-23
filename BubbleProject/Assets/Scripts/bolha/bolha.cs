@@ -32,6 +32,8 @@ public class bolha : MonoBehaviour
     [SerializeField] private GameObject DefeatUI;
     [SerializeField] private GameObject death;
 
+    bool hasHit = false;
+
     void Start()
     {
         scripttcena = tcena.GetComponent<trocacena>();
@@ -132,7 +134,7 @@ public class bolha : MonoBehaviour
 
         #region troca de fase
 
-        else if (collision.gameObject.tag == "end")
+        else if (collision.gameObject.tag == "end" && !hasHit)
         {
             print("chegou ao fim da fase");
 
@@ -182,8 +184,9 @@ public class bolha : MonoBehaviour
 
             }
             saveSystem.SavePlayer(this);
-
-
+            Debug.Log("fase num = " + level1);
+            Debug.Log("camada num = " + world);
+            hasHit = true;
         }
         #endregion
 
