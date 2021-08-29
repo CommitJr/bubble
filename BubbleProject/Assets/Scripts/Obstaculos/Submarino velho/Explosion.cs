@@ -15,11 +15,6 @@ public class Explosion : MonoBehaviour
         countdown = delay;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void Explode()
     {
         Instantiate(exp, transform.position, transform.rotation);
@@ -36,11 +31,10 @@ public class Explosion : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("BOOOM");
-            Explode();
-           
+        Explode();      
     }
 }
 

@@ -9,18 +9,7 @@ public class movimento : MonoBehaviour
     private int direcao = -1;
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
     private void FixedUpdate()
     {
         Move();

@@ -10,17 +10,6 @@ public class movimentoFlipado : MonoBehaviour
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
     private void FixedUpdate()
     {
         Move();

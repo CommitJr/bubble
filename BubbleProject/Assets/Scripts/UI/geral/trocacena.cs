@@ -22,6 +22,4 @@ public class trocacena : MonoBehaviour
     public void Sair(){
         Application.Quit();
     }
-
-  
 }

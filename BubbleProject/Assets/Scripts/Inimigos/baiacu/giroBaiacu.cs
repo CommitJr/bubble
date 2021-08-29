@@ -5,11 +5,6 @@ using UnityEngine;
 public class giroBaiacu : MonoBehaviour
 {
     [SerializeField] private GameObject baiacu;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,7 +16,6 @@ public class giroBaiacu : MonoBehaviour
     {
         transform.eulerAngles = new Vector3(transform.rotation.x, transform.rotation.y, transform.eulerAngles.z + 0.5f);
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

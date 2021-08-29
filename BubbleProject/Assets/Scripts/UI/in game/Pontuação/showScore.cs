@@ -15,13 +15,6 @@ public class showScore : MonoBehaviour
     private GameObject shell3;
     [SerializeField] contadorPontuacao score;
 
-    // Start is called before the first frame update
-    void Start()
-    { 
-        
-     
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -31,16 +24,13 @@ public class showScore : MonoBehaviour
             shell1.SetActive(false);
             shell2.SetActive(false);
             shell3.SetActive(true);
-         //   print("3 estrelas");
         }
-
         else if (score.stars == 2)
         {
             shell0.SetActive(false);
             shell1.SetActive(false);
             shell2.SetActive(true);
             shell3.SetActive(false);
-         //   print("2 estrelas");
         }
         else if (score.stars == 1)
         {
@@ -48,7 +38,6 @@ public class showScore : MonoBehaviour
             shell1.SetActive(true);
             shell2.SetActive(false);
             shell3.SetActive(false);
-         //   print("1 estrelas");
         }
         else
         {
@@ -56,8 +45,6 @@ public class showScore : MonoBehaviour
             shell1.SetActive(false);
             shell2.SetActive(false);
             shell3.SetActive(false);
-         //   print("0 estrelas");
         }
-
     }
 }

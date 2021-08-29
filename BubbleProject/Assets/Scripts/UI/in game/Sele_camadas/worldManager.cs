@@ -21,9 +21,7 @@ public class worldManager : MonoBehaviour
         {
             world = data.world;
         }
-        Debug.Log("nivel " + world);
 
-    
         for (int i = 0; i < worldButtons.Length; i++)
         {
             worldButtons[i].interactable = false;

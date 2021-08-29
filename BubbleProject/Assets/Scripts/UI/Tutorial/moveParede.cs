@@ -7,11 +7,6 @@ public class moveParede : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] tutorial;
     private int contTutorial = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-   
-    }
 
     // Update is called once per frame
     void Update()
@@ -47,10 +42,6 @@ public class moveParede : MonoBehaviour
             case 4:
                 gameObject.SetActive(false);
                 break;
-
-        }
-
-        print(contTutorial);
-  
+            }
     }
 }

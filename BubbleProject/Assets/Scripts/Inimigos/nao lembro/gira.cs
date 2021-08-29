@@ -8,7 +8,6 @@ public class gira : MonoBehaviour
     [SerializeField] private float angulacao = 1;
     [Header("Componentes")]
     [SerializeField] private Transform inimigoT;
-    
 
     void OnCollisionEnter2D(Collision2D parede)
     {

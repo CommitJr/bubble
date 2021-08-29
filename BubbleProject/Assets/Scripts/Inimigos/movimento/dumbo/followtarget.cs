@@ -20,7 +20,6 @@ public class followtarget : MonoBehaviour
     void Update()
     {
         direction = (player.transform.position - transform.position);
-     //Debug.Log(direction.magnitude);
         if (direction.magnitude < 10 && direction.magnitude > 0.2)
         {
             direction = direction.normalized;
@@ -34,5 +33,4 @@ public class followtarget : MonoBehaviour
             rg2D.velocity = Vector2.zero;
         } 
     }
-
 }

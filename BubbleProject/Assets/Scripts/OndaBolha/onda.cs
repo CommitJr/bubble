@@ -14,7 +14,6 @@ public class onda : MonoBehaviour
         colisor = GetComponent<Collider2D>();
     }
 
-  
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +31,4 @@ public class onda : MonoBehaviour
 
         }
     }
-
-
 }

@@ -11,7 +11,6 @@ public class circleMoviment : MonoBehaviour
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
 
-
     float startingValy, startingValx;
 
     void Start()
@@ -20,10 +19,6 @@ public class circleMoviment : MonoBehaviour
         startingValx = transform.position.x;
     }
 
-    void Update()
-    {
-
-    }
     private void FixedUpdate()
     {
         Move();
@@ -45,7 +40,6 @@ public class circleMoviment : MonoBehaviour
             }
         }
     }
-
 
     void Circle(float Speed)
     {

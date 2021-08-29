@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class teste : MonoBehaviour
 {
-    private Vector3 ponto;
     private Collider2D colisor;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,5 @@ public class teste : MonoBehaviour
             colisor.enabled = !colisor.enabled;
         
         }
-      
     }
-
 }

@@ -9,12 +9,7 @@ public class BaiacuAttack : MonoBehaviour
     private int direcao = -1;
     public float velocidadeNormal;
     public float velocidadeInchado;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+ 
     // Update is called once per frame
     void Update()
     {
@@ -30,10 +25,7 @@ public class BaiacuAttack : MonoBehaviour
         else
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadeNormal * direcao, GetComponent<Rigidbody2D>().velocity.y);
-        }
-        
-
-        
+        } 
     }
 
     void OnCollisionEnter2D(Collision2D objeto)

@@ -15,26 +15,18 @@ public class matouBolha : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update(){
-    
-    }
-
     public void OnCollisionEnter2D(Collision2D collision)
     {   
-     
         if (collision.gameObject.tag == "Dentes") {
 
             animator.SetTrigger("estoura");
-            print("bolha estourou");
             StartCoroutine(Aguarde());
         }  
-
     }
 
     IEnumerator Aguarde(){
         yield return new WaitForSeconds(3.0f);
         scripttcena.IniciaTransicao(0);
         scripttcena.MudaCena();
-
     }
 }

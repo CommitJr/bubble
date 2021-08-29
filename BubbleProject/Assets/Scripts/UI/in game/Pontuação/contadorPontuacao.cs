@@ -19,6 +19,7 @@ public class contadorPontuacao : MonoBehaviour
     bool isRunning = true;
 
     private TextMeshProUGUI text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,6 @@ public class contadorPontuacao : MonoBehaviour
         {
             miliseconds += Time.deltaTime * 1000;
 
-           // GetComponent<Text>().text = "Tempo: " + Mathf.RoundToInt(timer).ToString() + " s";
             if (miliseconds >= 1000)
             {
                 seconds++;
@@ -50,7 +50,7 @@ public class contadorPontuacao : MonoBehaviour
         }
         
         timeTotal = minutes * 60 + seconds;
-        //   Debug.Log(stars);
+
         if(timeTotal <= timeAlto)
         {
             stars = 3;

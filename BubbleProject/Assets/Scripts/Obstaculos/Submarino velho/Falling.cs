@@ -23,6 +23,6 @@ public class Falling : MonoBehaviour
           if (direction.magnitude < 20)
           {
                 rb.gravityScale = 0.5f;
-        }
+          }
     }
 }

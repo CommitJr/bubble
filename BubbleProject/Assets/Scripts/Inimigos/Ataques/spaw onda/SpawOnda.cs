@@ -27,7 +27,4 @@ public class SpawOnda : MonoBehaviour
         spawnPosition.eulerAngles = gameObject.GetComponent<Transform>().eulerAngles;
         Instantiate(ondaPrefab, spawnPosition.position, spawnPosition.rotation);
     }
-
-    
-
 }

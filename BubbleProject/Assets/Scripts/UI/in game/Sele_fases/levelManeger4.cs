@@ -12,18 +12,14 @@ public class levelManeger4 : MonoBehaviour
 
     void Start()
     {
-
         playerData data = saveSystem.LoadPlayer();
         if (data == null)
         {
             level = 1;
-
         }
         else
         {
             level = data.level2;
-
-
         }
 
         for (int i = 0; i < levelButtons.Length; i++)

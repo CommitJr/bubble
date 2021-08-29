@@ -11,6 +11,7 @@ public class metersCounter : MonoBehaviour
 
     private int metros;
     private TextMeshProUGUI text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,6 @@ public class metersCounter : MonoBehaviour
         }
         else {
             text.SetText("0{0} metros restantes", metros);
-        }
-        
+        }   
     }
-
 }

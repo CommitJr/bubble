@@ -14,9 +14,6 @@ public static class saveSystem {
 
         formatter.Serialize(stream, data);
         stream.Close();
-
-        Debug.Log("salvou");
-
     }
     public static playerData LoadPlayer()
     {
@@ -29,10 +26,7 @@ public static class saveSystem {
             playerData data = formatter.Deserialize(stream) as playerData;
             stream.Close();
 
-            Debug.Log("carregou");
-
             return data;
-
         }
         else{
             Debug.LogError("Arquivo não encontrado em " + path);

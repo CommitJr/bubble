@@ -193,22 +193,6 @@ public class bolha : MonoBehaviour
         
 
     }
-    #region colisao eletrica
-    public void OnParticleCollsion(GameObject other)
-    {
-        if (other.gameObject.tag == "ataque")
-        {
-            print("acertou a bolha");
-        }
-
-        //   GameObject.Find("Player").GetComponent(bolhaController).enabled = false;
-        // GetComponent(bolhaController).enabled = false;
-
-    }
     #endregion
-
-    #endregion
-
-   
 }
 

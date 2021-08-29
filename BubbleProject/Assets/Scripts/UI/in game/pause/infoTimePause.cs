@@ -8,6 +8,7 @@ public class infoTimePause : MonoBehaviour
 {
     [SerializeField] private GameObject time;
     private TextMeshProUGUI ptext;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -12,7 +12,6 @@ public class sinusoidalMoviment : MonoBehaviour
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
 
-
     float startingVal;
 
     void Start()
@@ -20,19 +19,17 @@ public class sinusoidalMoviment : MonoBehaviour
         startingVal = transform.position.y;
     }
 
-    void Update()
-    {
-
-    }
     private void FixedUpdate()
     {
         Move();
         Sine(speed, amplitude);
     }
+
     private void Move()
     {
         inimigoRb.velocity = new Vector2(speed * direcao, inimigoRb.velocity.y);
     }
+
     void OnCollisionEnter2D(Collision2D parede)
     {
         if (parede.transform.tag == "parede" || parede.transform.tag == "Pedras")
@@ -45,7 +42,6 @@ public class sinusoidalMoviment : MonoBehaviour
             }
         }
     }
-
 
     void Sine(float Speed, float Amplitude)
     {
