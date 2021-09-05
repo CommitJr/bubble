@@ -89,8 +89,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3378880609660845782}
-  - component: {fileID: 2690770173388700687}
   - component: {fileID: 7653674982306124731}
+  - component: {fileID: 9073484368891512800}
   m_Layer: 9
   m_Name: vibora
   m_TagString: Untagged
@@ -113,20 +113,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2690770173388700687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969644621510823294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29057cbd56052f946a172cddc7956ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidade: 2
-  inimigoRb: {fileID: 7653674982306124731}
 --- !u!50 &7653674982306124731
 Rigidbody2D:
   serializedVersion: 4
@@ -148,6 +134,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &9073484368891512800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969644621510823294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d894c6794dd3bca4b82469fec777779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 2
+  inimigoRb: {fileID: 7653674982306124731}
 --- !u!1001 &6234847451622231906
 PrefabInstance:
   m_ObjectHideFlags: 0
