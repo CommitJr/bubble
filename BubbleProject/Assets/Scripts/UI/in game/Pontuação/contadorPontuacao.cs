@@ -29,6 +29,11 @@ public class contadorPontuacao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        contaTempo();
+    }
+
+    private void contaTempo()
+    {
         if (isRunning)
         {
             miliseconds += Time.deltaTime * 1000;
@@ -48,10 +53,10 @@ public class contadorPontuacao : MonoBehaviour
             if (seconds < 0)
                 isRunning = false;
         }
-        
+
         timeTotal = minutes * 60 + seconds;
 
-        if(timeTotal <= timeAlto)
+        if (timeTotal <= timeAlto)
         {
             stars = 3;
         }
@@ -59,7 +64,7 @@ public class contadorPontuacao : MonoBehaviour
         {
             stars = 2;
         }
-        else if(timeTotal <= timeBaixo)
+        else if (timeTotal <= timeBaixo)
         {
             stars = 1;
         }

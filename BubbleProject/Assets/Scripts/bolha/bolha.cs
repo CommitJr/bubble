@@ -17,7 +17,6 @@ public class bolha : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Image[] lives;
 
-  
     public int level = 1;
     public int level5 = 1;
     public int level4 = 1;
@@ -25,10 +24,9 @@ public class bolha : MonoBehaviour
     public int level2 = 1;
     public int level1 = 1;
 
-    public int health = 3;
     public int world = 1;
 
-    [SerializeField] public int numFases;
+    public int health = 3;
 
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject DefeatUI;
@@ -38,10 +36,14 @@ public class bolha : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+
         scripttcena = tcena.GetComponent<trocacena>();        
         animator = GetComponent<Animator>();
 
         playerData data = saveSystem.LoadPlayer();
+
+
         if(restart == false)
         {
 
@@ -55,6 +57,7 @@ public class bolha : MonoBehaviour
             health = data.health;
 
             world = data.world;
+
         }
         else
         {
@@ -64,6 +67,7 @@ public class bolha : MonoBehaviour
             level3 = data.level3;
             level2 = data.level2;
             level1 = data.level1;
+
 
             world = data.world;
         }
@@ -143,49 +147,7 @@ public class bolha : MonoBehaviour
         {
             WinUI.SetActive(true);
 
-            switch (world)
-            {
-                case 5:
-                    level5++;
-                    break;
-                case 4:
-                    level4++;
-                    break;
-                case 3:
-                    level3++;
-                    break;
-                case 2:
-                    level2++;
-                    break;
-                case 1:                     // camada 5
-                    level1++;
-                    break;
-            }
-
-            if (level1 == numFases)
-            {
-                world++;
-            }
-            if (level2 == numFases)
-            {
-                world++;
-            }
-            if (level3 == numFases)
-            {
-                world++;
-            }
-            if (level4 == numFases)
-            {
-                world++;
-            }
-            if (level5 == numFases)
-            {
-                world++;
-
-            }
-
-
-
+            Time.timeScale = 0f;
 
             saveSystem.SavePlayer(this);
             hasHit = true;
