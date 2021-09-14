@@ -17,11 +17,7 @@ public class bolha : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Image[] lives;
 
-    public int level5 = 1;
-    public int level4 = 1;
-    public int level3 = 1;
-    public int level2 = 1;
-    public int level1 = 1;
+    public int level = 1;
 
     public int health = 3;
     public int world = 1;
@@ -40,25 +36,18 @@ public class bolha : MonoBehaviour
         
         animator = GetComponent<Animator>();
         playerData data = saveSystem.LoadPlayer();
+
         if(restart == false)
         {
-            level5 = data.level5;
-            level4 = data.level4;
-            level3 = data.level3;
-            level2 = data.level2;
-            level1 = data.level1;
-
+            
+            level = data.level;
             health = data.health;
 
             world = data.world;
         }
         else
         {
-            level5 = data.level5;
-            level4 = data.level4;
-            level3 = data.level3;
-            level2 = data.level2;
-            level1 = data.level1;
+            level = data.level;
 
             world = data.world;
         }
@@ -136,56 +125,23 @@ public class bolha : MonoBehaviour
 
         else if (collision.gameObject.tag == "end" && !hasHit)
         {
-            print("chegou ao fim da fase");
-
             WinUI.SetActive(true);
-            //  Time.timeScale = 0f;
 
-            // magica, não mexer
-
-            switch (world)
+            // o nível atual é diferente do nível salvo? ou é igual ao primeiro nível? --> tentativa de evitar o burlamento
+            if(level != level || level == 1)
             {
-                case 5:
-                    level5++;
-                    break;
-                case 4:
-                    level4++;
-                    break;
-                case 3:
-                    level3++;
-                    break;
-                case 2:
-                    level2++;
-                    break;
-                case 1:                     // camada 5
-                    level1++;
-                    break;
+                level++;
+            // chegou no final da fase de cada camada? atualiza o mundo e "zera" o nivel pra outra contagem
+                if(level == numFases)
+                {
+                    world++;
+                    level = 1;
+                }
             }
 
-            if (level1 == numFases)
-            {
-                world++;
-            }
-            if (level2 == numFases)
-            {
-                world++;
-            }
-            if (level3 == numFases)
-            {
-                world++;
-            }
-            if (level4 == numFases)
-            {
-                world++;
-            }
-            if (level5 == numFases)
-            {
-                world++;
 
-            }
+
             saveSystem.SavePlayer(this);
-            Debug.Log("fase num = " + level1);
-            Debug.Log("camada num = " + world);
             hasHit = true;
         }
         #endregion

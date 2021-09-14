@@ -19,7 +19,7 @@ public class levelManeger4 : MonoBehaviour
         }
         else
         {
-            level = data.level2;
+            level = data.level;
         }
 
         for (int i = 0; i < levelButtons.Length; i++)

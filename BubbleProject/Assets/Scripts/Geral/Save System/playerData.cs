@@ -5,24 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class playerData {
 
-    public int level5;
-    public int level4;
-    public int level3;
-    public int level2;
-    public int level1;
-
+    public int level;
+    public int world;
+    
     public int health;
     public float[] position;
     public float score;
-    public int world;
+    
 
     public playerData(bolha player)
     {
-        level5 = player.level5;
-        level4 = player.level4;
-        level3 = player.level3;
-        level2 = player.level2;
-        level1 = player.level1;
+        level = player.level;
 
         health = player.health;
         world = player.world;
