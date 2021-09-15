@@ -5,18 +5,22 @@ using UnityEngine;
 public class eletricalAttack : MonoBehaviour
 {
     [SerializeField]
-    private ParticleSystem system;
-    private Vector2 direction;
+    private ParticleSystem part;
+    private List<ParticleCollisionEvent> collisionEvents;
 
     private int aux = 0;
     // Start is called before the first frame update
     void Start()
     {
-        ParticleSystem system = GetComponent<ParticleSystem>();
+        ParticleSystem part = GetComponent<ParticleSystem>();
+        collisionEvents = new List<ParticleCollisionEvent>();
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnParticleCollison(GameObject other)
     {
-        aux = 1;         
+        int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+        Destroy(other);
+       
+            
     }
 }

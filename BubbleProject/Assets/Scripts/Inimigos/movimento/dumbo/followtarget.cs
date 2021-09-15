@@ -6,6 +6,7 @@ public class followtarget : MonoBehaviour
 {
     private Vector2 direction;
     private Transform player;
+    [SerializeField] private Transform centro;
     [SerializeField] private float velocity;
     private float angle;
     private Rigidbody2D rg2D;
@@ -19,18 +20,15 @@ public class followtarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = (player.position - transform.position);
+        direction = (player.position - centro.position);
 
-        if ( Vector2.Distance(transform.position, player.position) < 10)
+        if ( Vector2.Distance(centro.position, player.position) < 10)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, velocity * Time.deltaTime);
-
-            direction = direction;
+            direction = direction.normalized;
             direction *= velocity;
             angle = Vector2.SignedAngle(Vector2.up, direction);
             transform.rotation = Quaternion.Euler(0, 0, angle);
-            Debug.Log("diretion" + direction);
-            Debug.Log("angle" + angle);
+            rg2D.velocity = direction;
         }
         
         else
