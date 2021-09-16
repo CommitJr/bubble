@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class eletricalAttack : MonoBehaviour
 {
-    [SerializeField]
+   
     private ParticleSystem part;
     private List<ParticleCollisionEvent> collisionEvents;
 
@@ -16,10 +16,11 @@ public class eletricalAttack : MonoBehaviour
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
-    private void OnParticleCollison(GameObject other)
+    private void OnParticleCollision(GameObject other)
     {
-        int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-        Destroy(other);
+      //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+        if(other.tag == "Player")
+            Debug.Log("bateu");
        
             
     }
