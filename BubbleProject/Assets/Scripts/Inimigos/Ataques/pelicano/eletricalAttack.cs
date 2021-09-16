@@ -6,9 +6,9 @@ public class eletricalAttack : MonoBehaviour
 {
    
     private ParticleSystem part;
+    [SerializeField] private GameObject wave;
     private List<ParticleCollisionEvent> collisionEvents;
 
-    private int aux = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +18,19 @@ public class eletricalAttack : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-      //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-        if(other.tag == "Player")
+        //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+        if (other.tag == "Player")
+        {
             Debug.Log("bateu");
-       
-            
+            //other
+            wave.SetActive(false); 
+            Invoke("choque", 3f);
+        }
+    }
+
+    
+    void choque()
+    {
+        wave.SetActive(true);
     }
 }
