@@ -143,7 +143,7 @@ public class bolha : MonoBehaviour
 
         #region troca de fase
 
-        else if (collision.gameObject.tag == "end" && !hasHit)
+        else if (collision.gameObject.tag == "End" && !hasHit)
         {
             WinUI.SetActive(true);
 
