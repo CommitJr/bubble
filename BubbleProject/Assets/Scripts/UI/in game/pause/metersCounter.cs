@@ -6,8 +6,8 @@ using TMPro;
 
 public class metersCounter : MonoBehaviour
 {
-    [SerializeField]private GameObject player;
-    [SerializeField]private GameObject endGame;
+    private GameObject player;
+    private GameObject endGame;
 
     private int metros;
     private TextMeshProUGUI text;
@@ -17,6 +17,8 @@ public class metersCounter : MonoBehaviour
     {
         metros = 0;
         text = GetComponent<TextMeshProUGUI>();
+        player = GameObject.FindWithTag("BolhaRastreio");
+        endGame = GameObject.FindWithTag("End");
     }
 
     private void Update()
