@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -258,7 +258,8 @@ PrefabInstance:
         type: 3}
       propertyPath: WinUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4598945329544492809, guid: 6d3cef390461bf14d9a67c57eca0e99a,
+        type: 3}
     - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: death
@@ -2245,6 +2246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: goMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178601028860488542, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.00003
       objectReference: {fileID: 0}
     - target: {fileID: 4178601028860488543, guid: 2c227ed00eddbe645a8d233bb8f2f990,
         type: 3}

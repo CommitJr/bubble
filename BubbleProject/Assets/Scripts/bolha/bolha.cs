@@ -1,4 +1,4 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,6 +28,8 @@ public class bolha : MonoBehaviour
 
     public int health = 3;
 
+    [SerializeField] private int numFases;
+
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject DefeatUI;
     [SerializeField] private GameObject death;
@@ -38,13 +40,13 @@ public class bolha : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        scripttcena = tcena.GetComponent<trocacena>();        
+        scripttcena = tcena.GetComponent<trocacena>();
         animator = GetComponent<Animator>();
 
         playerData data = saveSystem.LoadPlayer();
 
 
-        if(restart == false)
+        if (restart == false)
         {
 
             level = data.level;
@@ -71,13 +73,13 @@ public class bolha : MonoBehaviour
 
             world = data.world;
         }
-        
 
-    /*    Vector2 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        transform.position = position;
-    */
+
+        /*    Vector2 position;
+            position.x = data.position[0];
+            position.y = data.position[1];
+            transform.position = position;
+        */
     }
 
     void Update()
@@ -111,7 +113,8 @@ public class bolha : MonoBehaviour
         }
     }
 
-    void defeatTime() {
+    void defeatTime()
+    {
         DefeatUI.SetActive(true);
         Destroy(GameObject.FindWithTag("death"));
     }
@@ -129,7 +132,7 @@ public class bolha : MonoBehaviour
         #region colisão torpedo
         if (collision.gameObject.tag == "Torpedo")
         {
-           health = 0;
+            health = 0;
         }
         #endregion
 
@@ -145,16 +148,77 @@ public class bolha : MonoBehaviour
 
         else if (collision.gameObject.tag == "End" && !hasHit)
         {
+
+
+            if (SceneManager.GetActiveScene().buildIndex - 3 >= level)
+            {
+                switch (world)
+                {
+                    case 5:
+                        level5++;
+                        level++;
+                        break;
+                    case 4:
+                        level4++;
+                        level++;
+                        break;
+                    case 3:
+                        level3++;
+                        level++;
+                        break;
+                    case 2:
+                        level2++;
+                        level++;
+                        break;
+                    case 1:                     // camada 5
+                        level1++;
+                        level++;
+                        break;
+                }
+
+                if (level1 == numFases)
+                {
+                    level = 1;
+                    world++;
+                }
+                if (level2 == numFases)
+                {
+                    level = 1;
+                    world++;
+                }
+                if (level3 == numFases)
+                {
+                    level = 1;
+                    world++;
+                }
+                if (level4 == numFases)
+                {
+                    level = 1;
+                    world++;
+                }
+                if (level5 == numFases)
+                {
+                    level = 1;
+                    world++;
+
+                }
+                Debug.Log("atualizou o nivel");
+            }
+
+            Debug.Log("level = " + level);
+            Debug.Log("index = " + SceneManager.GetActiveScene().buildIndex);
+
+            saveSystem.SavePlayer(this);
+
             WinUI.SetActive(true);
 
             Time.timeScale = 0f;
 
-            saveSystem.SavePlayer(this);
             hasHit = true;
         }
         #endregion
 
-        
+
 
     }
     #endregion
