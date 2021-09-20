@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2106,12 +2106,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322283978}
   m_Enabled: 1
---- !u!1 &1397657569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4178601029058749147, guid: 2c227ed00eddbe645a8d233bb8f2f990,
-    type: 3}
-  m_PrefabInstance: {fileID: 1933532143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1415084888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2403,7 +2397,7 @@ PrefabInstance:
         type: 3}
       propertyPath: WinUI
       value: 
-      objectReference: {fileID: 1397657569}
+      objectReference: {fileID: 0}
     - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: death
@@ -2805,6 +2799,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: goMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4178601028860488542, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 4178601028892629550, guid: 2c227ed00eddbe645a8d233bb8f2f990,
         type: 3}
       propertyPath: player
@@ -2834,7 +2833,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1322283980}
+      objectReference: {fileID: 0}
     - target: {fileID: 4178601029313329954, guid: 2c227ed00eddbe645a8d233bb8f2f990,
         type: 3}
       propertyPath: m_RenderMode
@@ -2995,6 +2994,11 @@ PrefabInstance:
       propertyPath: endGame
       value: 
       objectReference: {fileID: 724304297}
+    - target: {fileID: 7927862293850281905, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c227ed00eddbe645a8d233bb8f2f990, type: 3}
 --- !u!114 &1949714729 stripped

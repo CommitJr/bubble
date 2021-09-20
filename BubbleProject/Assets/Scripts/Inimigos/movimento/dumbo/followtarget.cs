@@ -13,7 +13,7 @@ public class followtarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Colisor Interno").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
     }
 

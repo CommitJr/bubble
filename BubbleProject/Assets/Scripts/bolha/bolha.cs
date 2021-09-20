@@ -148,9 +148,9 @@ public class bolha : MonoBehaviour
 
         else if (collision.gameObject.tag == "End" && !hasHit)
         {
+            WinUI.SetActive(true);
 
-
-            if (SceneManager.GetActiveScene().buildIndex - 3 >= level)
+            if (SceneManager.GetActiveScene().buildIndex - 3 > level)
             {
                 switch (world)
                 {
@@ -210,7 +210,7 @@ public class bolha : MonoBehaviour
 
             saveSystem.SavePlayer(this);
 
-            WinUI.SetActive(true);
+            
 
             Time.timeScale = 0f;
 

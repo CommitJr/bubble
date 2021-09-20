@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -822,17 +822,17 @@ PrefabInstance:
         type: 3}
       propertyPath: lives.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 557000930}
     - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: lives.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1936969020}
     - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: lives.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1198996058}
     - target: {fileID: 5496985640838592634, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_RootOrder
@@ -1251,6 +1251,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &557000930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601029847235731, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 749299855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &588525575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1887,6 +1899,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4178601028860488542, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 4178601029313329953, guid: 2c227ed00eddbe645a8d233bb8f2f990,
         type: 3}
       propertyPath: m_Name
@@ -1896,7 +1913,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 499658404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4178601029313329965, guid: 2c227ed00eddbe645a8d233bb8f2f990,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2000,6 +2017,11 @@ PrefabInstance:
     - target: {fileID: 4178601029313329965, guid: 2c227ed00eddbe645a8d233bb8f2f990,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927862293850281905, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2392,6 +2414,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1198996058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601029747616615, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 749299855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1199386770
@@ -3256,6 +3290,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1936969020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601028786786763, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 749299855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5173720809029292353
 PrefabInstance:
   m_ObjectHideFlags: 0
