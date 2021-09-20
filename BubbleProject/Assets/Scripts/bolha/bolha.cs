@@ -30,6 +30,8 @@ public class bolha : MonoBehaviour
 
     [SerializeField] private int numFases;
 
+    private GameObject cineMachine;
+
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject DefeatUI;
     [SerializeField] private GameObject death;
@@ -45,6 +47,7 @@ public class bolha : MonoBehaviour
 
         playerData data = saveSystem.LoadPlayer();
 
+        cineMachine = GameObject.FindGameObjectWithTag("cineMachine");
 
         if (restart == false)
         {
@@ -119,6 +122,82 @@ public class bolha : MonoBehaviour
         Destroy(GameObject.FindWithTag("death"));
     }
 
+    private void atualiza()
+    {
+        WinUI.SetActive(true);
+
+        if (SceneManager.GetActiveScene().buildIndex - 3 > level)
+        {
+            switch (world)
+            {
+                case 5:
+                    level5++;
+                    level++;
+                    break;
+                case 4:
+                    level4++;
+                    level++;
+                    break;
+                case 3:
+                    level3++;
+                    level++;
+                    break;
+                case 2:
+                    level2++;
+                    level++;
+                    break;
+                case 1:                     // camada 5
+                    level1++;
+                    level++;
+                    break;
+            }
+
+            if (level1 == numFases)
+            {
+                level = 1;
+                world++;
+            }
+            if (level2 == numFases)
+            {
+                level = 1;
+                world++;
+            }
+            if (level3 == numFases)
+            {
+                level = 1;
+                world++;
+            }
+            if (level4 == numFases)
+            {
+                level = 1;
+                world++;
+            }
+            if (level5 == numFases)
+            {
+                level = 1;
+                world++;
+
+            }
+            Debug.Log("atualizou o nivel");
+        }
+
+        Debug.Log("level = " + level);
+        Debug.Log("index = " + SceneManager.GetActiveScene().buildIndex);
+
+        saveSystem.SavePlayer(this);
+
+        Time.timeScale = 0f;
+
+    }
+
+    private void prepararParaOFim(){
+
+        // entrar linha que impede movimentos do jogador ( ta na enguia )
+        // levar a bolha suavemente para o centro
+        // subir a bolha -- a gravidade faz isso
+        
+        cineMachine.SetActive(false);
+    }
     #region colisoes  
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -148,72 +227,8 @@ public class bolha : MonoBehaviour
 
         else if (collision.gameObject.tag == "End" && !hasHit)
         {
-            WinUI.SetActive(true);
-
-            if (SceneManager.GetActiveScene().buildIndex - 3 > level)
-            {
-                switch (world)
-                {
-                    case 5:
-                        level5++;
-                        level++;
-                        break;
-                    case 4:
-                        level4++;
-                        level++;
-                        break;
-                    case 3:
-                        level3++;
-                        level++;
-                        break;
-                    case 2:
-                        level2++;
-                        level++;
-                        break;
-                    case 1:                     // camada 5
-                        level1++;
-                        level++;
-                        break;
-                }
-
-                if (level1 == numFases)
-                {
-                    level = 1;
-                    world++;
-                }
-                if (level2 == numFases)
-                {
-                    level = 1;
-                    world++;
-                }
-                if (level3 == numFases)
-                {
-                    level = 1;
-                    world++;
-                }
-                if (level4 == numFases)
-                {
-                    level = 1;
-                    world++;
-                }
-                if (level5 == numFases)
-                {
-                    level = 1;
-                    world++;
-
-                }
-                Debug.Log("atualizou o nivel");
-            }
-
-            Debug.Log("level = " + level);
-            Debug.Log("index = " + SceneManager.GetActiveScene().buildIndex);
-
-            saveSystem.SavePlayer(this);
-
-            
-
-            Time.timeScale = 0f;
-
+            atualiza();
+            prepararParaOFim();
             hasHit = true;
         }
         #endregion
