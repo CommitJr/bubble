@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class bolha : MonoBehaviour
 {
-
+    private Vector2 direction;
     public GameObject tcena;
-
+    private Rigidbody2D rg2D;
     trocacena scripttcena;
     loadScenes restart;
 
@@ -31,6 +31,9 @@ public class bolha : MonoBehaviour
     [SerializeField] private int numFases;
 
     private GameObject cineMachine;
+    private GameObject wave;
+    private Transform target;
+    private float speed;
 
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject DefeatUI;
@@ -48,6 +51,9 @@ public class bolha : MonoBehaviour
         playerData data = saveSystem.LoadPlayer();
 
         cineMachine = GameObject.FindGameObjectWithTag("cineMachine");
+        wave = GameObject.FindGameObjectWithTag("wave");
+        target = GameObject.FindGameObjectWithTag("perda de controle").GetComponent<Transform>();
+        rg2D = GetComponent<Rigidbody2D>();
 
         if (restart == false)
         {
@@ -192,12 +198,24 @@ public class bolha : MonoBehaviour
 
     private void prepararParaOFim(){
 
-        // entrar linha que impede movimentos do jogador ( ta na enguia )
-        // levar a bolha suavemente para o centro
-        // subir a bolha -- a gravidade faz isso
+        wave.SetActive(false);
         
         cineMachine.SetActive(false);
+        Invoke("move2End", 0.99f);
     }
+
+    void move2End()
+    {
+        direction = (target.position - transform.position);
+
+        direction = direction.normalized;
+        direction *= 1;
+        rg2D.velocity = direction;
+        
+        Debug.Log(target.position);
+        Debug.Log(transform.position);
+    }
+
     #region colisoes  
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -227,15 +245,25 @@ public class bolha : MonoBehaviour
 
         else if (collision.gameObject.tag == "End" && !hasHit)
         {
+            Debug.Log("UI");
             atualiza();
-            prepararParaOFim();
+            
             hasHit = true;
         }
+
+
         #endregion
 
-
-
     }
-    #endregion
-}
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "perda de controle")
+        {
+            Debug.Log("Preparando para o fim");
+            prepararParaOFim();
+        }
+    }
+        #endregion
+    }
 
