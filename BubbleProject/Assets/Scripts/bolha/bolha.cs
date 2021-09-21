@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class bolha : MonoBehaviour
 {
+    #region declarações
+
     private Vector2 direction;
     public GameObject tcena;
     private Rigidbody2D rg2D;
@@ -41,6 +43,8 @@ public class bolha : MonoBehaviour
 
     bool hasHit = false;
 
+    #endregion
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -48,12 +52,18 @@ public class bolha : MonoBehaviour
         scripttcena = tcena.GetComponent<trocacena>();
         animator = GetComponent<Animator>();
 
-        playerData data = saveSystem.LoadPlayer();
-
+        #region preparar para o final do nível
+       
         cineMachine = GameObject.FindGameObjectWithTag("cineMachine");
         wave = GameObject.FindGameObjectWithTag("wave");
         target = GameObject.FindGameObjectWithTag("perda de controle").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
+
+        #endregion
+
+        #region carregando e salvando dados
+
+        playerData data = saveSystem.LoadPlayer();
 
         if (restart == false)
         {
@@ -83,6 +93,7 @@ public class bolha : MonoBehaviour
             world = data.world;
         }
 
+        #endregion
 
         /*    Vector2 position;
             position.x = data.position[0];
@@ -121,6 +132,8 @@ public class bolha : MonoBehaviour
                 break;
         }
     }
+
+    #region métodos
 
     void defeatTime()
     {
@@ -216,6 +229,8 @@ public class bolha : MonoBehaviour
         Debug.Log(transform.position);
     }
 
+    #endregion
+
     #region colisoes  
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -256,6 +271,7 @@ public class bolha : MonoBehaviour
 
     }
 
+    #region preparar para o fim
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "perda de controle")
@@ -264,6 +280,8 @@ public class bolha : MonoBehaviour
             prepararParaOFim();
         }
     }
-        #endregion
-    }
+    #endregion
+   
+    #endregion
+}
 
