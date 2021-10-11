@@ -11,16 +11,16 @@ public class dragonFire : MonoBehaviour
 
     void Start()
     {
-        ParticleSystem part = GetComponent<ParticleSystem>();
+        part = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+        part.Stop();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-
-        if (Vector2.Distance(centro.position, player.position) < 10)
+        if (Vector2.Distance(centro.position, player.position) < 3)
         {
             part.Play();
         }
