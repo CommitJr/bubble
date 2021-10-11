@@ -31,6 +31,19 @@ Transform:
   m_Father: {fileID: 8895631592578089327}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7562956258910486980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738077619569252647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b649c8f17cfcb45ad825ffeb2ca69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centro: {fileID: 8752669139876461158}
 --- !u!1 &748172627412830812
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +410,36 @@ Transform:
   m_Father: {fileID: 751108018362167559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.3790002}
+--- !u!1 &4484088356585924305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8752669139876461158}
+  m_Layer: 0
+  m_Name: centro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8752669139876461158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4484088356585924305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.22, y: 7.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7702555975529032263}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4843250399325481982
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1037,7 @@ Transform:
   - {fileID: 787593790956652004}
   - {fileID: 5741277437627506043}
   - {fileID: 6649820967431918395}
+  - {fileID: 8752669139876461158}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1125,6 +1169,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: fogo
       objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.98254395
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.5384598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 1.074837
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: -1.0334355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 1.074837
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.327511
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: -1.0334355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265390442414021108, guid: 07f24625b516f204082d2f362e4326dd,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0.25764188
+      objectReference: {fileID: 0}
     - target: {fileID: 7623417086939017005, guid: 07f24625b516f204082d2f362e4326dd,
         type: 3}
       propertyPath: m_RootOrder
@@ -1182,6 +1276,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07f24625b516f204082d2f362e4326dd, type: 3}
+--- !u!1 &738077619569252647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4592849374417691953, guid: 07f24625b516f204082d2f362e4326dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3855988941670710294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6649820967431918395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7623417086939017005, guid: 07f24625b516f204082d2f362e4326dd,
