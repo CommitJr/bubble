@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -128,6 +128,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 9070781621299053506, guid: bc546678647d06c4a9a509d74db87c3e,
+        type: 3}
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1393396839}
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: numFases
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: lives.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: lives.Array.data[0]
+      value: 
+      objectReference: {fileID: 1499010641}
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: lives.Array.data[1]
+      value: 
+      objectReference: {fileID: 437825010}
+    - target: {fileID: 5401670679444077684, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: lives.Array.data[2]
+      value: 
+      objectReference: {fileID: 1974141277}
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_RootOrder
@@ -141,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 42.7
       objectReference: {fileID: 0}
     - target: {fileID: 6848984636496978328, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
@@ -183,6 +219,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6848984637334847689, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2059597978}
+    - target: {fileID: 6848984637334847689, guid: 03d2d22c806fa674fafc508dcbe5585d,
+        type: 3}
+      propertyPath: colisorMouse
+      value: 
+      objectReference: {fileID: 474421160}
     - target: {fileID: 6848984637334847691, guid: 03d2d22c806fa674fafc508dcbe5585d,
         type: 3}
       propertyPath: m_Name
@@ -256,6 +302,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -959,6 +1015,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &125192228
@@ -1249,6 +1315,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a55a1c3b5b01f9478590e77203e95a2, type: 3}
 --- !u!4 &381691782 stripped
@@ -1257,11 +1333,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1432045322}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &437825010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601028786786763, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 125192228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &447086114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 248722449638902850, guid: affd9deacadd5c14fb909c774d0b41b1,
     type: 3}
   m_PrefabInstance: {fileID: 536864327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &474421160 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6808510670107446190, guid: 391033928497345498deb883d9653a48,
+    type: 3}
+  m_PrefabInstance: {fileID: 747794541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &497035331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5375165386164593310, guid: 17f9b4e149fea7848a1c2c46d16a4543,
+    type: 3}
+  m_PrefabInstance: {fileID: 963232212}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &536864327
 PrefabInstance:
@@ -1329,6 +1429,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -1405,6 +1515,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &664586912
@@ -1473,6 +1593,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -1543,6 +1673,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &722580811
@@ -1565,7 +1705,7 @@ PrefabInstance:
     - target: {fileID: 7822451120256039757, guid: 5bd86db650b6802438e657c79e5029ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -52.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7822451120873320588, guid: 5bd86db650b6802438e657c79e5029ab,
         type: 3}
@@ -1585,7 +1725,7 @@ PrefabInstance:
     - target: {fileID: 7822451120873320589, guid: 5bd86db650b6802438e657c79e5029ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.200001
+      value: 50.9
       objectReference: {fileID: 0}
     - target: {fileID: 7822451120873320589, guid: 5bd86db650b6802438e657c79e5029ab,
         type: 3}
@@ -1691,6 +1831,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6808510670107446185, guid: 391033928497345498deb883d9653a48,
+        type: 3}
+      propertyPath: wavePropagation
+      value: 
+      objectReference: {fileID: 497035331}
     - target: {fileID: 6808510670107446191, guid: 391033928497345498deb883d9653a48,
         type: 3}
       propertyPath: m_Name
@@ -1765,6 +1910,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &774699897
@@ -1833,6 +1988,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -1903,6 +2068,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDREGULHO 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6758153987295875018, guid: 0975e965cde517f4b979f432e4a6b751,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758153987295875018, guid: 0975e965cde517f4b979f432e4a6b751,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0975e965cde517f4b979f432e4a6b751, type: 3}
 --- !u!1001 &807985084
@@ -1971,6 +2146,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -2041,6 +2226,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &853663557
@@ -2109,6 +2304,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a55a1c3b5b01f9478590e77203e95a2, type: 3}
@@ -2217,6 +2422,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &947738879
@@ -2285,6 +2500,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a55a1c3b5b01f9478590e77203e95a2, type: 3}
@@ -2424,6 +2649,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!4 &1025437325 stripped
@@ -2510,6 +2745,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a55a1c3b5b01f9478590e77203e95a2, type: 3}
@@ -2622,6 +2867,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &1304998443
@@ -2691,6 +2946,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!4 &1307348265 stripped
@@ -2711,6 +2976,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2000525765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393396839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601029034833207, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 125192228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888de90c10e5bd746ae27951e9a5e72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1432045322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2777,6 +3054,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -2847,6 +3134,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!4 &1481396771 stripped
@@ -2855,6 +3152,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 774699897}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1499010641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601029847235731, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 125192228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1507204849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2921,6 +3230,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a55a1c3b5b01f9478590e77203e95a2, type: 3}
@@ -2991,6 +3310,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
 --- !u!1001 &1586879650
@@ -3059,6 +3388,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515017313829475051, guid: 6a55a1c3b5b01f9478590e77203e95a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a55a1c3b5b01f9478590e77203e95a2, type: 3}
@@ -3140,6 +3479,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PEDRAS (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
@@ -3552,6 +3901,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 798512089}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1974141277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178601029747616615, guid: 2c227ed00eddbe645a8d233bb8f2f990,
+    type: 3}
+  m_PrefabInstance: {fileID: 125192228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1990896481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,8 +4013,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: PEDRAS (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 248722449638902876, guid: affd9deacadd5c14fb909c774d0b41b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pedras
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affd9deacadd5c14fb909c774d0b41b1, type: 3}
+--- !u!95 &2059597978 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6848984637334847688, guid: 03d2d22c806fa674fafc508dcbe5585d,
+    type: 3}
+  m_PrefabInstance: {fileID: 14299459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1985797805685955114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3661,6 +4038,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1990896482}
     m_Modifications:
+    - target: {fileID: 532284072365198708, guid: 486d279a310d46c4ba4a3d5689f1215c,
+        type: 3}
+      propertyPath: velocity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2395337261394033717, guid: 486d279a310d46c4ba4a3d5689f1215c,
         type: 3}
       propertyPath: m_Name
@@ -3796,8 +4178,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 630232648666864857, guid: 3ce231e4dd5932940a4e3d743b418d97, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce231e4dd5932940a4e3d743b418d97, type: 3}
 --- !u!4 &2947127799204304772 stripped
 Transform:
@@ -3805,31 +4186,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2947127799204304771}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2947127799204304773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1600133216493365696, guid: 3ce231e4dd5932940a4e3d743b418d97,
-    type: 3}
-  m_PrefabInstance: {fileID: 2947127799204304771}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2947127799204304774
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2947127799204304773}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 337f485d0f72bfe429b6c8580e36241e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7205871706218241326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3905,28 +4261,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7205871706218241326}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7205871706218241328 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4971193868360959733, guid: 40d7f8c7821e8514b9b6c0e285bb0aac,
-    type: 3}
-  m_PrefabInstance: {fileID: 7205871706218241326}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &7205871706218241329
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7205871706218241328}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4045b1848c2d394b942caf355599c5f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

@@ -5,7 +5,6 @@ using UnityEngine;
 public class dragonFire : MonoBehaviour
 {
     private ParticleSystem part;
-    private Vector2 direction;
     private Transform player;
     [SerializeField] private Transform centro;
 
@@ -19,7 +18,7 @@ public class dragonFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = (player.position - centro.position);
+        
 
         if (Vector2.Distance(centro.position, player.position) < 10)
         {

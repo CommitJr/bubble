@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8723175761607078448}
   - component: {fileID: 1030107347874190926}
   - component: {fileID: 6973486726890679091}
+  - component: {fileID: 532284072365198708}
   m_Layer: 9
   m_Name: rosa
   m_TagString: Corpo
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2395337261394033717}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.44127685, y: -0.20418215, z: 39.56594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -184,7 +185,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -209,3 +210,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &532284072365198708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395337261394033717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b23988f359e1714abc2fbf3a947a1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centro: {fileID: 0}
+  velocity: 0
