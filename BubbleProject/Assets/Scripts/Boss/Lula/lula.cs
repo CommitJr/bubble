@@ -14,7 +14,6 @@ public class lula : MonoBehaviour
 
     void Start()
     {
-        rate = 1f;
         next = Time.time;
     }
     void Update()

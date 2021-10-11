@@ -235,7 +235,9 @@ public class bolha : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         #region colisao fatal
-        if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras" || collision.gameObject.tag == "Helice")
+        if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras" 
+            || collision.gameObject.tag == "Helice" || collision.gameObject.tag == "oleo"
+            || collision.gameObject.tag == "fogo")
         {
             health = 0;
         }

@@ -21,7 +21,7 @@ public class projetil : MonoBehaviour
 
         Debug.Log(diretion);
 
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 5f);
                 
     }
 
