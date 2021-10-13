@@ -144,8 +144,8 @@ public class bolha : MonoBehaviour
     private void atualiza()
     {
         WinUI.SetActive(true);
-
-        if (SceneManager.GetActiveScene().buildIndex - 3 > level)
+        //esttava 3, mudei pra 6
+        if (SceneManager.GetActiveScene().buildIndex - 6 > level)
         {
             switch (world)
             {
@@ -171,37 +171,19 @@ public class bolha : MonoBehaviour
                     break;
             }
 
-            if (level1 == numFases)
+            if (level >= numFases)
             {
                 level = 1;
                 world++;
             }
-            if (level2 == numFases)
-            {
-                level = 1;
-                world++;
-            }
-            if (level3 == numFases)
-            {
-                level = 1;
-                world++;
-            }
-            if (level4 == numFases)
-            {
-                level = 1;
-                world++;
-            }
-            if (level5 == numFases)
-            {
-                level = 1;
-                world++;
-
-            }
+            
             Debug.Log("atualizou o nivel");
+
         }
 
+        Debug.Log("numFases = " + numFases);
+        Debug.Log("mundo = " + world);
         Debug.Log("level = " + level);
-        Debug.Log("index = " + SceneManager.GetActiveScene().buildIndex);
 
         saveSystem.SavePlayer(this);
 
