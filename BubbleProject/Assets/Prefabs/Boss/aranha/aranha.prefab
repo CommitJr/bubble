@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4745508539375542064}
   - component: {fileID: 561362885259332480}
+  - component: {fileID: 2093096949}
   m_Layer: 9
   m_Name: bone_33
   m_TagString: Dentes
@@ -41,7 +42,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -61,6 +62,20 @@ PolygonCollider2D:
       - {x: -0.035795867, y: -0.09623146}
       - {x: 0.23101965, y: -0.06732631}
       - {x: 0.52308875, y: -0.0056630373}
+--- !u!114 &2093096949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175275289698219350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: -2, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &214726308164530812
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +138,36 @@ Transform:
   m_Father: {fileID: 832454882792315662}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &258353206936341086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6094456380982954609}
+  m_Layer: 9
+  m_Name: Centro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6094456380982954609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258353206936341086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: 5.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6079895796984226042}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271970841337435913
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3541342577887622619}
   - component: {fileID: 6440637578894689387}
+  - component: {fileID: 212910468}
   m_Layer: 9
   m_Name: bone_54
   m_TagString: Dentes
@@ -147,13 +193,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271970841337435913}
-  m_LocalRotation: {x: 0, y: 0, z: 0.14265642, w: 0.98977226}
+  m_LocalRotation: {x: -0, y: -0, z: 0.14722382, w: 0.9891032}
   m_LocalPosition: {x: 2.4176393, y: -0.00000005298403, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2755201688519078677}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.932001}
 --- !u!60 &6440637578894689387
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -164,7 +210,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -184,6 +230,20 @@ PolygonCollider2D:
       - {x: -0.053937137, y: -0.09791559}
       - {x: 1.0282109, y: -0.0802626}
       - {x: 2.0467029, y: -0.0077342987}
+--- !u!114 &212910468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271970841337435913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 200, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &321589771708620461
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,8 +346,8 @@ MonoBehaviour:
   - {fileID: 8384547161470566004}
   - {fileID: 6911994840769428647}
   m_Bounds:
-    m_Center: {x: -0.003344655, y: 0.0035398006, z: 0}
-    m_Extent: {x: 1.4683449, y: 2.48146, z: 0}
+    m_Center: {x: 0.0010765791, y: 0.0033667088, z: 0}
+    m_Extent: {x: 1.4639237, y: 2.4816337, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &474868353287710594
@@ -300,6 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5482843456426976061}
   - component: {fileID: 6043473904132949428}
+  - component: {fileID: 2040267917}
   m_Layer: 9
   m_Name: bone_50
   m_TagString: Dentes
@@ -314,13 +375,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474868353287710594}
-  m_LocalRotation: {x: 0, y: 0, z: 0.18967931, w: 0.98184615}
+  m_LocalRotation: {x: -0, y: -0, z: 0.19420956, w: 0.9809601}
   m_LocalPosition: {x: 0.9336976, y: 0.000000096214336, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 8878882249256911763}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.397001}
 --- !u!60 &6043473904132949428
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -331,7 +392,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -351,6 +412,20 @@ PolygonCollider2D:
       - {x: -0.056282938, y: -0.057508826}
       - {x: 0.5435852, y: -0.06163907}
       - {x: 1.2866005, y: -0.0037991107}
+--- !u!114 &2040267917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474868353287710594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 200, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &481552184547891267
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +533,7 @@ MonoBehaviour:
   - {fileID: 543783337001649989}
   - {fileID: 5406579208096914799}
   m_Bounds:
-    m_Center: {x: -0.0007305145, y: 0.0027041435, z: 0}
+    m_Center: {x: -0.00073075294, y: 0.0027042627, z: 0}
     m_Extent: {x: 1.1842692, y: 1.4272957, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -472,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2434141857537445817}
   - component: {fileID: 5817942588463368376}
-  - component: {fileID: 3457917292132967177}
+  - component: {fileID: 1207602621216796925}
   m_Layer: 9
   m_Name: bone_37
   m_TagString: Dentes
@@ -504,7 +579,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -525,27 +600,19 @@ PolygonCollider2D:
       - {x: 0.25429556, y: -0.03872019}
       - {x: 0.5132468, y: -0.0012817383}
       - {x: 0.30532122, y: 0.06499618}
---- !u!50 &3457917292132967177
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1207602621216796925
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655315602062368086}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d36f71df9829e4991b29a1ccbd4e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1870652885}
 --- !u!1 &751129326254836543
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +714,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 18
   m_Sprite: {fileID: -4059104045567877143, guid: 4879812ec5b67004095a959b5b4c70a3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -683,8 +750,8 @@ MonoBehaviour:
   - {fileID: 8488445138347839717}
   - {fileID: 808295340169048795}
   m_Bounds:
-    m_Center: {x: -0.0019756556, y: -0.0010592341, z: 0}
-    m_Extent: {x: 0.843025, y: 0.6872298, z: 0}
+    m_Center: {x: -0.0019757152, y: -0.0010591149, z: 0}
+    m_Extent: {x: 0.8430251, y: 0.68722993, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1050616073283681260
@@ -943,8 +1010,8 @@ MonoBehaviour:
   - {fileID: 6104142798784099264}
   - {fileID: 3060567984363333610}
   m_Bounds:
-    m_Center: {x: -0.0056253374, y: -0.0018650293, z: 0}
-    m_Extent: {x: 0.3787251, y: 1.3022054, z: 0}
+    m_Center: {x: -0.005625367, y: -0.0018650293, z: 0}
+    m_Extent: {x: 0.3787251, y: 1.3022056, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1448985479459140894
@@ -988,6 +1055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6408292537332766438}
   - component: {fileID: 3436109584311463570}
+  - component: {fileID: 185115103516177178}
   m_Layer: 9
   m_Name: bone_62
   m_TagString: Dentes
@@ -1019,7 +1087,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1039,6 +1107,19 @@ PolygonCollider2D:
       - {x: -0.06199038, y: -0.10560334}
       - {x: 0.25604677, y: -0.046778023}
       - {x: 0.45273936, y: -0.016576588}
+--- !u!114 &185115103516177178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579925665637011746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d36f71df9829e4991b29a1ccbd4e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1870652885}
 --- !u!1 &1658889494690564887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1223,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6079895796984226042}
   - component: {fileID: 3388601586774055215}
+  - component: {fileID: 1870652885}
+  - component: {fileID: 1870652888}
   m_Layer: 9
   m_Name: aranha
   m_TagString: Untagged
@@ -1158,7 +1241,7 @@ Transform:
   m_GameObject: {fileID: 1898734286471060939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3, y: -5.06, z: 0}
-  m_LocalScale: {x: 4, y: 6, z: 1}
+  m_LocalScale: {x: 3, y: 6, z: 1}
   m_Children:
   - {fileID: 755780879041220471}
   - {fileID: 5251265606063582084}
@@ -1186,6 +1269,7 @@ Transform:
   - {fileID: 4333556743676673291}
   - {fileID: 2482325864397930190}
   - {fileID: 981363558164572444}
+  - {fileID: 6094456380982954609}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1208,6 +1292,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1870652885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898734286471060939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298eefeeccb54924dab699653735beb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3388601586774055215}
+  centro: {fileID: 6094456380982954609}
+  velocity: 2
+  maxCounter: 2
+  distance: 2
+  attackRange: 4
+  sideAttackRange: 1
+--- !u!50 &1870652888
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898734286471060939}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2271317069139876172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,8 +1467,8 @@ MonoBehaviour:
   - {fileID: 5406579208096914799}
   - {fileID: 8540972015185600336}
   m_Bounds:
-    m_Center: {x: 0.00051528215, y: 0.00000035762787, z: 0}
-    m_Extent: {x: 0.37945443, y: 1.0849997, z: 0}
+    m_Center: {x: 0.00051525235, y: 0.00000047683716, z: 0}
+    m_Extent: {x: 0.37945446, y: 1.0849998, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2354083703424867728
@@ -1357,6 +1481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6219256004969799345}
   - component: {fileID: 2388879210744449000}
+  - component: {fileID: 8907540603859704885}
   m_Layer: 9
   m_Name: bone_15
   m_TagString: Dentes
@@ -1388,7 +1513,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1408,6 +1533,19 @@ PolygonCollider2D:
       - {x: -0.08379692, y: -0.051213443}
       - {x: 0.2400249, y: -0.05693537}
       - {x: 0.48783153, y: -0.011502296}
+--- !u!114 &8907540603859704885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354083703424867728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d36f71df9829e4991b29a1ccbd4e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1870652885}
 --- !u!1 &2516261598060212914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,8 +1681,8 @@ MonoBehaviour:
   - {fileID: 7573279989267887729}
   - {fileID: 5406579208096914799}
   m_Bounds:
-    m_Center: {x: 0.008609533, y: 0.009934664, z: 0}
-    m_Extent: {x: 1.2783201, y: 1.2450655, z: 0}
+    m_Center: {x: 0.0032606125, y: -0.0014731884, z: 0}
+    m_Extent: {x: 1.2729714, y: 1.2564733, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2753135946671360089
@@ -1833,7 +1971,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 18
   m_Sprite: {fileID: 6824843144774781117, guid: 4879812ec5b67004095a959b5b4c70a3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1865,7 +2003,7 @@ MonoBehaviour:
   - {fileID: 427642830323638535}
   - {fileID: 2434141857537445817}
   m_Bounds:
-    m_Center: {x: 0.0023446083, y: -0.004245162, z: 0}
+    m_Center: {x: 0.0023445487, y: -0.004244685, z: 0}
     m_Extent: {x: 0.50265497, y: 0.94075495, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1941,6 +2079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1887663096208063251}
   - component: {fileID: 5857354572292607761}
+  - component: {fileID: 1988566442}
   m_Layer: 9
   m_Name: bone_8
   m_TagString: Dentes
@@ -1956,7 +2095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3601276199911117934}
   m_LocalRotation: {x: 0, y: 0, z: -0.10722063, w: 0.9942352}
-  m_LocalPosition: {x: 0.95593697, y: 0.00000029051338, z: 0}
+  m_LocalPosition: {x: 0.96782684, y: 0.0004920952, z: 0}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
   m_Children: []
   m_Father: {fileID: 6536399430851858077}
@@ -1972,7 +2111,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1992,6 +2131,20 @@ PolygonCollider2D:
       - {x: -0.04069245, y: -0.13913286}
       - {x: 0.64590424, y: -0.09574813}
       - {x: 1.0779388, y: 0.011594564}
+--- !u!114 &1988566442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601276199911117934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: -200, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &3619351148228373043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,8 +2281,8 @@ MonoBehaviour:
   - {fileID: 7164699680506615579}
   - {fileID: 5406579208096914799}
   m_Bounds:
-    m_Center: {x: 0.00075018406, y: 0.0010149479, z: 0}
-    m_Extent: {x: 1.5766697, y: 1.3550851, z: 0}
+    m_Center: {x: 0.004850149, y: 0.000031471252, z: 0}
+    m_Extent: {x: 1.5725698, y: 1.3560688, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3938144094125495269
@@ -2266,6 +2419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6270364421452149151}
   - component: {fileID: 5296832820424415065}
+  - component: {fileID: 2145704561}
   m_Layer: 9
   m_Name: bone_43
   m_TagString: Dentes
@@ -2280,13 +2434,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4626934056405558883}
-  m_LocalRotation: {x: 0, y: 0, z: 0.07664043, w: 0.9970588}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08124221, w: 0.9966944}
   m_LocalPosition: {x: 0.8205153, y: -0.00000004927402, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 8575695865333062026}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.320001}
 --- !u!60 &5296832820424415065
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2297,7 +2451,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2317,6 +2471,20 @@ PolygonCollider2D:
       - {x: -0.067792356, y: -0.091852486}
       - {x: 0.40184957, y: -0.067867935}
       - {x: 0.9271801, y: 0.006290287}
+--- !u!114 &2145704561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4626934056405558883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 200, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &4752428681152005266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,8 +2653,8 @@ MonoBehaviour:
   - {fileID: 4319284261363762007}
   - {fileID: 5406579208096914799}
   m_Bounds:
-    m_Center: {x: -0.0006901622, y: 0.00000071525574, z: 0}
-    m_Extent: {x: 0.97431, y: 2.3750002, z: 0}
+    m_Center: {x: -0.0006901026, y: -0.005948782, z: 0}
+    m_Extent: {x: 0.97431004, y: 2.38095, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5164738222386665219
@@ -2621,7 +2789,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 18
   m_Sprite: {fileID: -4809323214588523351, guid: 4879812ec5b67004095a959b5b4c70a3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2653,8 +2821,8 @@ MonoBehaviour:
   - {fileID: 7768396020112603266}
   - {fileID: 7891970515518548649}
   m_Bounds:
-    m_Center: {x: -0.0031398833, y: 0.004240036, z: 0}
-    m_Extent: {x: 0.48686025, y: 0.95238996, z: 0}
+    m_Center: {x: -0.0031398833, y: 0.004240155, z: 0}
+    m_Extent: {x: 0.4868602, y: 0.9523903, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5293973547590199721
@@ -2667,6 +2835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8796506127405034753}
   - component: {fileID: 8820318701844217242}
+  - component: {fileID: 432099687}
   m_Layer: 9
   m_Name: bone_66
   m_TagString: Dentes
@@ -2698,7 +2867,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2718,6 +2887,20 @@ PolygonCollider2D:
       - {x: -0.08395702, y: -0.12545574}
       - {x: 1.1159179, y: -0.075600624}
       - {x: 2.0185924, y: 0.0009240508}
+--- !u!114 &432099687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5293973547590199721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 2, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &5525892192536310273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,7 +3019,7 @@ Transform:
   m_GameObject: {fileID: 5930517858896840785}
   m_LocalRotation: {x: 0, y: 0, z: 0.2602254, w: 0.9655479}
   m_LocalPosition: {x: 0.69383377, y: 0.0000000017171624, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7891970515518548649}
   m_Father: {fileID: 2395167899882365644}
@@ -3313,7 +3496,7 @@ MonoBehaviour:
   - {fileID: 5406579208096914799}
   - {fileID: 4319284261363762007}
   m_Bounds:
-    m_Center: {x: -0.0009845197, y: 0.000010073185, z: 0}
+    m_Center: {x: -0.0009844899, y: 0.000010073185, z: 0}
     m_Extent: {x: 0.2896648, y: 0.104960024, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -3327,6 +3510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5506025494667051884}
   - component: {fileID: 2481016053269757935}
+  - component: {fileID: 419906812}
   m_Layer: 9
   m_Name: bone_20
   m_TagString: Dentes
@@ -3341,13 +3525,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8028728196255284121}
-  m_LocalRotation: {x: 0, y: 0, z: -0.1960809, w: 0.9805877}
-  m_LocalPosition: {x: 0.6548007, y: -0.00000034416942, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.1729333, w: 0.9849336}
+  m_LocalPosition: {x: 0.6592245, y: -0.072011605, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 835692417427546029}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.917002}
 --- !u!60 &2481016053269757935
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3358,7 +3542,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3379,6 +3563,20 @@ PolygonCollider2D:
       - {x: -0.13270488, y: -0.10570866}
       - {x: 0.2684002, y: -0.05358243}
       - {x: 0.5274176, y: 0.024383754}
+--- !u!114 &419906812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028728196255284121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: -200, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &8117415955354285871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,7 +3680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7891970515518548649}
   - component: {fileID: 5066312614322100639}
-  - component: {fileID: 5823890967460378762}
+  - component: {fileID: 1021540438364717419}
   m_Layer: 9
   m_Name: bone_70
   m_TagString: Dentes
@@ -3514,7 +3712,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3534,27 +3732,19 @@ PolygonCollider2D:
       - {x: -0.08052099, y: -0.056071937}
       - {x: 0.348123, y: -0.07290679}
       - {x: 0.55826384, y: -0.0013783574}
---- !u!50 &5823890967460378762
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1021540438364717419
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8407919620272910813}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d36f71df9829e4991b29a1ccbd4e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1870652885}
 --- !u!1 &8701968911301677433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,6 +3910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8219944490455312866}
   - component: {fileID: 42411285249485163}
+  - component: {fileID: 938697141}
   m_Layer: 9
   m_Name: bone_28
   m_TagString: Dentes
@@ -3751,7 +3942,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3771,6 +3962,20 @@ PolygonCollider2D:
       - {x: -0.0856787, y: -0.12592733}
       - {x: 0.32302338, y: -0.07321954}
       - {x: 0.7297156, y: 0.022988081}
+--- !u!114 &938697141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877947456912347333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79046402ee1c047aaf994c99c832d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: -200, y: 2}
+  boss: {fileID: 1870652885}
 --- !u!1 &9024639972803301918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,7 +4046,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 18
   m_Sprite: {fileID: 5169995260146691853, guid: 4879812ec5b67004095a959b5b4c70a3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3876,8 +4081,8 @@ MonoBehaviour:
   - {fileID: 4433535727897837833}
   - {fileID: 8893787959780128147}
   m_Bounds:
-    m_Center: {x: -0.0026049614, y: 0.0009331703, z: 0}
-    m_Extent: {x: 0.8744551, y: 0.6915458, z: 0}
+    m_Center: {x: -0.0026049018, y: 0.0009331107, z: 0}
+    m_Extent: {x: 0.87445503, y: 0.69154596, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &9097458205031709658
@@ -4048,7 +4253,7 @@ MonoBehaviour:
   - {fileID: 3339485190007138537}
   - {fileID: 5406579208096914799}
   m_Bounds:
-    m_Center: {x: 0.0024455786, y: 0.00000023841858, z: 0}
-    m_Extent: {x: 1.7475545, y: 2.135, z: 0}
+    m_Center: {x: 0.002436161, y: 0.001199007, z: 0}
+    m_Extent: {x: 1.7475642, y: 2.1338015, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

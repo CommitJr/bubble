@@ -22,6 +22,7 @@ public class dragonFire : MonoBehaviour
         
         if (Vector2.Distance(centro.position, player.position) < 3)
         {
+            Debug.Log("aaa");
             part.Play();
         }
         else

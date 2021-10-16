@@ -11,57 +11,97 @@ public class animatorControll : MonoBehaviour
     [SerializeField] private Transform centro;
     [SerializeField] private float velocity;
 
+    private Contador counter;
+    private bool enableWave = true;
+    [SerializeField] private float maxCounter;
+    [SerializeField] private float distance;
+    [SerializeField] private float attackRange;
+    [SerializeField] private float sideAttackRange;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        counter = new Contador(maxCounter);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // falta encontrar valores melhores para a area de ataque( direita, esquerda e centro )
+        
+        ContWaveTime();
+      //  MoveAnimation();
+        Attack();
+    }
 
-
-        direction = (player.position - centro.position);
-
-        // ataque esquerdo
-        if (Vector2.Distance(centro.position, player.position) < 3)
+    private void Attack()
+    {
+        if (Mathf.Abs(Vector2.Distance(player.position, transform.position)) > attackRange)
         {
-            animator.SetBool("ataque_e", true);
-
-            direction = direction.normalized;
-            direction *= velocity;
-            rg2D.velocity = direction;
+            if (transform.position.x - player.position.x > sideAttackRange)
+            {
+                // direita da bolha, garra esquerda
+                animator.SetBool("ataque_d", true);
+                animator.SetBool("ataque_e", false);
+                animator.SetBool("abraco", false);
+            }
+            if (transform.position.x - player.position.x < sideAttackRange)
+            {
+                // esquerda da bolha, garra direita
+                animator.SetBool("ataque_d", false);
+                animator.SetBool("ataque_e", true);
+                animator.SetBool("abraco", false);
+            }
+            else
+            {
+                animator.SetBool("ataque_d", false);
+                animator.SetBool("ataque_e", false);
+                animator.SetBool("abraco", true);
+            }
         }
-
-        // ataque direito
-        if (Vector2.Distance(centro.position, player.position) < 3)
+    }
+    
+    private void MoveAnimation()
+    {
+        if(Mathf.Abs(player.position.x - transform.position.x) > distance)
         {
-            animator.SetBool("ataque_d", true);
-
-            direction = direction.normalized;
-            direction *= velocity;
-            rg2D.velocity = direction;
+            if( transform.position.x - player.position.x < 0)
+            {
+                // frente da aranha, vai pra direita
+                rg2D.velocity = Vector2.right * velocity;
+            }
+            else
+            {
+                rg2D.velocity = Vector2.left * velocity;
+            }
         }
-
-        // ataque central
-        if (Vector2.Distance(centro.position, player.position) < 3)
-        {
-            animator.SetBool("abraco", true);
-
-            direction = direction.normalized;
-            direction *= velocity;
-            rg2D.velocity = direction;
-        }
-
         else
         {
             rg2D.velocity = Vector2.zero;
-            animator.SetBool("ataque_e", false);
-            animator.SetBool("abraco", false);
-            animator.SetBool("ataque_d", false);
         }
+    }
+
+    private void ContWaveTime()
+    {
+        if (!enableWave)
+        {
+           if(counter.RepeatCountTime())
+            {
+                enableWave = true;
+            }
+        }
+    }
+
+    public void SetEnableWave(bool enable)
+    {
+        enableWave = enable;
+    }
+
+    public bool GetEnableWave()
+    {
+        return enableWave;
     }
 }
