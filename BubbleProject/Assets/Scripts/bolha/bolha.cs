@@ -129,6 +129,7 @@ public class bolha : MonoBehaviour
                 Instantiate(death, transform.position, transform.rotation);
                 gameObject.SetActive(false);
                 Invoke("defeatTime", 0.99f);
+                GameObject.FindWithTag("Ambient Sound").SetActive(false);
                 break;
         }
     }
@@ -194,7 +195,7 @@ public class bolha : MonoBehaviour
     private void prepararParaOFim(){
 
         wave.SetActive(false);
-        
+        GameObject.FindWithTag("Ambient Sound").SetActive(false);
         cineMachine.SetActive(false);
         Invoke("move2End", 0.99f);
     }
