@@ -129,6 +129,7 @@ public class bolha : MonoBehaviour
                 Instantiate(death, transform.position, transform.rotation);
                 gameObject.SetActive(false);
                 Invoke("defeatTime", 0.99f);
+               
                 GameObject.FindWithTag("Ambient Sound").SetActive(false);
                 break;
         }
@@ -139,6 +140,7 @@ public class bolha : MonoBehaviour
     void defeatTime()
     {
         DefeatUI.SetActive(true);
+        Debug.Log("estourou");
         Destroy(GameObject.FindWithTag("death"));
     }
 
@@ -219,8 +221,7 @@ public class bolha : MonoBehaviour
     {
         #region colisao fatal
         if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras" 
-            || collision.gameObject.tag == "Helice" || collision.gameObject.tag == "oleo"
-            || collision.gameObject.tag == "fogo")
+            || collision.gameObject.tag == "Helice" || collision.gameObject.tag == "oleo")
         {
             health = 0;
         }

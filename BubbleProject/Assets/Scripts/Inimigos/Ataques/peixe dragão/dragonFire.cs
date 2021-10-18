@@ -7,7 +7,7 @@ public class dragonFire : MonoBehaviour
     private ParticleSystem part;
     private Transform player;
     [SerializeField] private Transform centro;
-
+    [SerializeField] private bolha bolha;
 
     void Start()
     {
@@ -22,12 +22,20 @@ public class dragonFire : MonoBehaviour
         
         if (Vector2.Distance(centro.position, player.position) < 3)
         {
-            Debug.Log("aaa");
             part.Play();
         }
         else
         {
             part.Stop();
+        }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+        if (other.tag == "Player")
+        {
+            bolha.health = 0;
         }
     }
 }
