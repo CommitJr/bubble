@@ -224,6 +224,7 @@ public class bolha : MonoBehaviour
             || collision.gameObject.tag == "Helice" || collision.gameObject.tag == "oleo")
         {
             health = 0;
+            Debug.Log(collision.gameObject.tag);
         }
         #endregion
 
@@ -238,7 +239,7 @@ public class bolha : MonoBehaviour
         else if (collision.gameObject.tag == "Corpo")
         {
             health--;
-            Debug.Log("bateu no corpo");
+            Debug.Log(collision.gameObject.tag);
         }
         #endregion
 
