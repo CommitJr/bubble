@@ -17,7 +17,8 @@ public class Garra : MonoBehaviour
         {
             Debug.Log(collision.tag);
             onda.enabled = false;
-            collision.gameObject.GetComponent<bolhaController>().enabled = false;
+            collision.transform.parent.GetComponent<bolhaController>().enabled = false;
+            collision.transform.parent.GetComponent<Rigidbody2D>().simulated = false;
             collision.transform.parent.SetParent(transform.GetChild(0));
             collision.transform.localPosition = Vector2.zero;
             boss.GetComponent<Animator>().SetBool("End", true);

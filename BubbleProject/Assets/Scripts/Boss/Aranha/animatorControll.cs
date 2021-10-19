@@ -39,16 +39,17 @@ public class animatorControll : MonoBehaviour
 
     private void Attack()
     {
-        if (Mathf.Abs(Vector2.Distance(player.position, transform.position)) > attackRange)
+        Debug.Log(Mathf.Abs(Vector2.Distance(player.position, centro.position)));
+        if (Mathf.Abs(Vector2.Distance(player.position, centro.position)) < attackRange)
         {
-            if (transform.position.x - player.position.x < -sideAttackRange)
+            if (centro.position.x - player.position.x < -sideAttackRange)
             {
                 // direita da bolha, garra esquerda
                 animator.SetBool("ataque_d", true);
                 animator.SetBool("ataque_e", false);
                 animator.SetBool("abraco", false);
             }
-            else if (transform.position.x - player.position.x > sideAttackRange)
+            else if (centro.position.x - player.position.x > sideAttackRange)
             {
                 // esquerda da bolha, garra direita
                 animator.SetBool("ataque_d", false);
