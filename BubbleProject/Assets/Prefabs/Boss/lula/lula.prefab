@@ -45,7 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oleo: {fileID: 3550634372450415810, guid: 328404cfd966af040ba2cd681cb9642e, type: 3}
   speed: 300
-  rate: 3
+  player: {fileID: 0}
+  rate: 10
+  triggerPosition: {fileID: 0}
+  destination: {fileID: 0}
+  bossPosition: {fileID: 8807443184389190482}
+  time: 0
+  move: {fileID: 173495596}
 --- !u!1 &41702799994762977
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +555,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1778244521207683707}
   m_Bounds:
-    m_Center: {x: -0.0027697384, y: -0.0016438961, z: 0}
+    m_Center: {x: -0.0027697384, y: -0.0016429424, z: 0}
     m_Extent: {x: 0.48772, y: 0.53356516, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1193,8 +1199,8 @@ MonoBehaviour:
   - {fileID: 2505882301563333770}
   - {fileID: 7329063363159680460}
   m_Bounds:
-    m_Center: {x: 0.00013041496, y: -0.0061244965, z: 0}
-    m_Extent: {x: 1.6759293, y: 4.6010847, z: 0}
+    m_Center: {x: 0.00013041496, y: -0.024952888, z: 0}
+    m_Extent: {x: 1.6759293, y: 4.619913, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2812598661804513750
@@ -1283,7 +1289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3096467122822096650}
   m_LocalRotation: {x: 0, y: 0, z: -0.03751911, w: 0.99929595}
-  m_LocalPosition: {x: 0.89422655, y: -0.000000062603085, z: 0}
+  m_LocalPosition: {x: 0.93075794, y: 0.00913264, z: 0}
   m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 1}
   m_Children:
   - {fileID: 2977114737839147430}
@@ -2008,7 +2014,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3955010591195129476}
   m_Bounds:
-    m_Center: {x: -0.00053066015, y: -0.0018347502, z: 0}
+    m_Center: {x: -0.00053071976, y: -0.0018328428, z: 0}
     m_Extent: {x: 0.48088998, y: 0.5341748, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2660,7 +2666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8807443184389190482}
   - component: {fileID: 3327675965037227464}
-  - component: {fileID: 7924952140019640436}
+  - component: {fileID: 173495596}
   m_Layer: 9
   m_Name: lula
   m_TagString: Untagged
@@ -2718,27 +2724,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &7924952140019640436
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &173495596
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6624732004585921633}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 4.03
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7901d6e737c1846429be157eb2cc07dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  amplitude: 3
+  velocity: 1
 --- !u!1 &6811893356740911655
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,8 +3210,8 @@ MonoBehaviour:
   - {fileID: 6235177535448868360}
   - {fileID: 8665875435913379626}
   m_Bounds:
-    m_Center: {x: -0.000034093857, y: 0.015935898, z: 0}
-    m_Extent: {x: 3.8400345, y: 4.8740654, z: 0}
+    m_Center: {x: -0.000034093857, y: 0.015935421, z: 0}
+    m_Extent: {x: 3.8400345, y: 4.874065, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &8459302126263069774

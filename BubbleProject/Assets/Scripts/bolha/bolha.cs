@@ -199,7 +199,7 @@ public class bolha : MonoBehaviour
         wave.SetActive(false);
         GameObject.FindWithTag("Ambient Sound").SetActive(false);
         cineMachine.SetActive(false);
-        Invoke("move2End", 0.99f);
+        Invoke("move2End", 0.01f);
     }
 
     void move2End()
@@ -209,9 +209,7 @@ public class bolha : MonoBehaviour
         direction = direction.normalized;
         direction *= 1;
         rg2D.velocity = direction;
-        
-        Debug.Log(target.position);
-        Debug.Log(transform.position);
+       
     }
 
     #endregion
@@ -219,27 +217,27 @@ public class bolha : MonoBehaviour
     #region colisoes  
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.collider.gameObject.tag);
         #region colisao fatal
-        if (collision.gameObject.tag == "Dentes" || collision.gameObject.tag == "Pedras" 
-            || collision.gameObject.tag == "Helice" || collision.gameObject.tag == "oleo")
+        if (collision.collider.gameObject.tag == "Dentes" || collision.collider.gameObject.tag == "Pedras" 
+            || collision.collider.gameObject.tag == "Helice" || collision.collider.gameObject.tag == "oleo")
         {
             health = 0;
-            Debug.Log(collision.gameObject.tag);
+            
         }
         #endregion
 
         #region colisão torpedo
-        if (collision.gameObject.tag == "Torpedo")
+        if (collision.collider.gameObject.tag == "Torpedo")
         {
             health = 0;
         }
         #endregion
 
         #region colisao normal
-        else if (collision.gameObject.tag == "Corpo")
+        else if (collision.collider.gameObject.tag == "Corpo")
         {
             health--;
-            Debug.Log(collision.gameObject.tag);
         }
         #endregion
 

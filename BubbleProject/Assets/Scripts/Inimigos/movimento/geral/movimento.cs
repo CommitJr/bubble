@@ -10,6 +10,7 @@ public class movimento : MonoBehaviour
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
 
+    
     private void FixedUpdate()
     {
         Move();
@@ -18,9 +19,9 @@ public class movimento : MonoBehaviour
     {
         inimigoRb.velocity = new Vector2(velocidade * direcao, inimigoRb.velocity.y);
     }
-    void OnCollisionEnter2D(Collision2D parede)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (parede.transform.tag == "parede" || parede.transform.tag == "Pedras")
+        if (collision.collider.gameObject.tag == "parede" || collision.collider.gameObject.tag == "Pedras")
         {
             direcao *= -1;
             transform.eulerAngles = new Vector2(0f, 180);
