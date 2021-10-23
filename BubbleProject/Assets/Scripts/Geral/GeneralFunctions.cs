@@ -95,7 +95,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         Debug.Log("Indo Para a Seleção de Camadas..");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadScene("LevelSeletion");
     }
 
     public void GoToExit()

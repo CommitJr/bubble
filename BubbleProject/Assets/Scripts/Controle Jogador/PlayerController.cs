@@ -79,7 +79,14 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            GetComponent<GeneralFunctions>().GoToMenu();
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                GetComponent<GeneralFunctions>().GoToMenu();
+            }
+            else
+            {
+                GetComponent<GeneralFunctions>().GoToSelection();
+            }
         }
     }
 
