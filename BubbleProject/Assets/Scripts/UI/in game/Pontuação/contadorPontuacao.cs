@@ -5,18 +5,20 @@ using TMPro;
 
 public class contadorPontuacao : MonoBehaviour
 {
+    [SerializeField] int timeAlto;
+    public int timeMedio;
+    public int timeBaixo;
+    private int timeTotal;
+
     private float miliseconds = 0;
     public int seconds = 0;
     public int minutes = 0;
 
     public int stars;
 
-    public int timeAlto;
-    public int timeMedio;
-    public int timeBaixo;
-    private int timeTotal; 
+     
 
-    bool isRunning = true;
+    bool isRunning;
 
     private TextMeshProUGUI text;
 
@@ -24,6 +26,7 @@ public class contadorPontuacao : MonoBehaviour
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
+        isRunning = true;
     }
 
     // Update is called once per frame
