@@ -114,46 +114,41 @@ public class Timer : MonoBehaviour
     }
     #endregion
 
-    #region RETURNS
+    #region GETTER
     public int GetScore()
     {
         return stars;
     }
+
+    public string GetTime()
+    {
+        return GUIFormat();
+    }
     #endregion
 
     #region GUI
-    private void OnGUI()
-    {
-        DisplayGUI();
-    }
-
-    private void DisplayGUI()
-    {
-        text.SetText(GUIFormat(), minutes, seconds);
-    }
-
     private string GUIFormat()
     {
         if (minutes <= 9)
         {
             if (seconds <= 9)
             {
-                return "0{0}:0{1}";
+                return "0"+minutes+":0"+seconds;
             }
             else
             {
-                return "0{0}:{1}";
+                return "0" + minutes + ":" + seconds;
             }
         }
         else
         {
             if (seconds <= 9)
             {
-                return "{0}:0{1}";
+                return minutes + ":0" + seconds;
             }
             else
             {
-                return "{0}:{1}";
+                return minutes + ":" + seconds;
             }
         }
     }

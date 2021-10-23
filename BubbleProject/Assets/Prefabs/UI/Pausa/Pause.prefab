@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 3799718062270068912}
   - component: {fileID: 3799718062270068879}
   - component: {fileID: 3799718062270068878}
-  - component: {fileID: 3799718062270068913}
+  - component: {fileID: 8895221321082691571}
   m_Layer: 5
   m_Name: Tempo
   m_TagString: Untagged
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &3799718062270068913
+--- !u!114 &8895221321082691571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -518,10 +518,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3799718062270068915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee633ab918c027d489f6d5b9046a66d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 65f9ea36e987af44fb2dbb16678a6978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: {fileID: 0}
 --- !u!1 &3799718063111921417
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +532,6 @@ GameObject:
   - component: {fileID: 3799718063111921414}
   - component: {fileID: 3799718063111921413}
   - component: {fileID: 3799718063111921412}
-  - component: {fileID: 6074871369746246644}
   - component: {fileID: 3799718063111921415}
   m_Layer: 5
   m_Name: Menu
@@ -598,18 +596,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6074871369746246644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3799718063111921417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589482c804920bf468df5f92e34c25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3799718063111921415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,8 +639,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6074871369746246644}
-        m_MethodName: goMenu
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -782,8 +769,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Resumo
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: PauseController
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -804,7 +792,6 @@ GameObject:
   - component: {fileID: 3799718063567654935}
   - component: {fileID: 3799718063567654930}
   - component: {fileID: 3799718063567654933}
-  - component: {fileID: 1194106350778265094}
   - component: {fileID: 3799718063567654932}
   m_Layer: 5
   m_Name: Reiniciar
@@ -869,18 +856,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1194106350778265094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3799718063567654934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589482c804920bf468df5f92e34c25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3799718063567654932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,8 +899,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1194106350778265094}
-        m_MethodName: restartLevel
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

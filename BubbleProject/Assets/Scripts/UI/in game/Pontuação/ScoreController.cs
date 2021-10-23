@@ -5,21 +5,23 @@ using UnityEngine;
 public class ScoreController : MonoBehaviour
 {
     #region SCOPE
-    private GameObject shell0;
-    private GameObject shell1;
-    private GameObject shell2;
-    private GameObject shell3;
+    [SerializeField] private GameObject shell0;
+    [SerializeField] private GameObject shell1;
+    [SerializeField] private GameObject shell2;
+    [SerializeField] private GameObject shell3;
     private GameObject timer;
     #endregion
 
     #region START
     void Start()
     {
-        shell0 = GameObject.FindWithTag("Shell 0");
-        shell1 = GameObject.FindWithTag("Shell 1");
-        shell2 = GameObject.FindWithTag("Shell 2");
-        shell3 = GameObject.FindWithTag("Shell 3");
         timer = GameObject.FindWithTag("Timer");
+        StopTimer();
+    }
+
+    private void StopTimer()
+    {
+        timer.GetComponent<Timer>().StopCounter();
     }
     #endregion
 

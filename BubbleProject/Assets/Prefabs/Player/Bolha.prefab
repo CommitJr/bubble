@@ -177,10 +177,10 @@ GameObject:
   - component: {fileID: 6848984636496978328}
   - component: {fileID: 6848984637334847695}
   - component: {fileID: 6848984637334847694}
-  - component: {fileID: 6848984637334847689}
   - component: {fileID: 6848984637334847688}
   - component: {fileID: 3834550225294885417}
   - component: {fileID: 5401670679444077684}
+  - component: {fileID: 4809433594850035773}
   m_Layer: 14
   m_Name: Bolha
   m_TagString: Player
@@ -243,22 +243,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.028754845}
   serializedVersion: 2
   m_Radius: 0.78081274
---- !u!114 &6848984637334847689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6848984637334847691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e3dd6ea768037d4ab6b279b66046f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forca: 120
-  colisorMouse: {fileID: 0}
-  velocidadeLimite: 2.5
-  animator: {fileID: 0}
 --- !u!95 &6848984637334847688
 Animator:
   serializedVersion: 3
@@ -354,9 +338,21 @@ MonoBehaviour:
   health: 3
   numFases: 0
   WinUI: {fileID: 4598945329544492809, guid: 6d3cef390461bf14d9a67c57eca0e99a, type: 3}
-  DefeatUI: {fileID: 2384046544991932492, guid: 000a0abe9671303489060526125c53d2,
+  DefeatUI: {fileID: 4592305706920668068, guid: 4e8244185cf048949b30090a5cb433a8,
     type: 3}
-  death: {fileID: 0}
+  death: {fileID: 9070781621299053506, guid: bc546678647d06c4a9a509d74db87c3e, type: 3}
+--- !u!114 &4809433594850035773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848984637334847691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1673a0cca978540ade8a52bfb5503d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7091479571426719941
 GameObject:
   m_ObjectHideFlags: 0

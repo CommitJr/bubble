@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class GeneralFunctions : MonoBehaviour
 {
     #region SCOPE
-    private GameObject pauseMenuUI;
-    private GameObject winMenuUI;
-    private GameObject defeatMenuUI;
-    private GameObject header;
-    private GameObject footer;
+    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject winMenuUI;
+    [SerializeField] private GameObject defeatMenuUI;
+    [SerializeField] private GameObject header;
+    [SerializeField] private GameObject footer;
 
-    public static bool _isPause;
-    public static bool _isRestart;
+    private  bool _isPause;
+    private  bool _isRestart;
     #endregion
 
     #region START
@@ -22,18 +22,9 @@ public class GeneralFunctions : MonoBehaviour
         DefineStart();
     }
 
-    private void DefineStart() {
-        if (SceneManager.GetActiveScene().buildIndex >= 7)
-        {
-            pauseMenuUI = GameObject.FindWithTag("PauseUI");
-            winMenuUI = GameObject.FindWithTag("WinUI");
-            defeatMenuUI = GameObject.FindWithTag("DefeatUI");
-            header = GameObject.FindWithTag("HeaderUI");
-            footer = GameObject.FindWithTag("FooterUI");
-
-            _isPause = false;
-            _isRestart = false;
-        }
+    private void DefineStart() {     
+        _isPause = false;
+        _isRestart = false;
     }
     #endregion
 

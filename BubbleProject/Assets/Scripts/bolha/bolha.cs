@@ -55,7 +55,7 @@ public class bolha : MonoBehaviour
         #region preparar para o final do nível
        
         cineMachine = GameObject.FindGameObjectWithTag("cineMachine");
-        wave = GameObject.FindGameObjectWithTag("wave");
+        wave = GameObject.FindGameObjectWithTag("PlayerController");
         target = GameObject.FindGameObjectWithTag("perda de controle").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
 
@@ -113,14 +113,14 @@ public class bolha : MonoBehaviour
                 lives[0].enabled = true;
                 break;
             case 2:
-                lives[2].enabled = true;
+                lives[2].enabled = false;
                 lives[1].enabled = true;
-                lives[0].enabled = false;
+                lives[0].enabled = true;
                 break;
             case 1:
-                lives[2].enabled = true;
+                lives[2].enabled = false;
                 lives[1].enabled = false;
-                lives[0].enabled = false;
+                lives[0].enabled = true;
                 break;
             case 0:
                 lives[2].enabled = false;

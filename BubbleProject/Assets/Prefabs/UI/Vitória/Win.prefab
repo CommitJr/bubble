@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 4598945329206454530}
   - component: {fileID: 4598945329206454543}
   - component: {fileID: 4598945329206454528}
-  - component: {fileID: 957310531613051365}
   - component: {fileID: 4598945329206454529}
   m_Layer: 5
   m_Name: Reiniciar
@@ -286,18 +285,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &957310531613051365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4598945329206454531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589482c804920bf468df5f92e34c25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4598945329206454529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,8 +328,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 957310531613051365}
-        m_MethodName: restartLevel
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -363,7 +351,7 @@ GameObject:
   - component: {fileID: 4598945329544492277}
   - component: {fileID: 4598945329544492278}
   - component: {fileID: 4598945329544492279}
-  - component: {fileID: 4598945329544492808}
+  - component: {fileID: 5438691659779942894}
   m_Layer: 5
   m_Name: Win
   m_TagString: WinUI
@@ -435,7 +423,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4598945329544492808
+--- !u!114 &5438691659779942894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -444,14 +432,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4598945329544492809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7706727d37a51345a5b59bb52ae4f6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f423783acc95534f9fec7e3ca78785e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shell0: {fileID: 4598945329959408563}
   shell1: {fileID: 4598945329883463872}
   shell2: {fileID: 4598945330363156661}
   shell3: {fileID: 4598945330495683767}
-  score: {fileID: 0}
 --- !u!1 &4598945329940560342
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +450,6 @@ GameObject:
   - component: {fileID: 4598945329940560341}
   - component: {fileID: 4598945329940560338}
   - component: {fileID: 4598945329940560339}
-  - component: {fileID: 8507747412332149613}
   - component: {fileID: 4598945329940560340}
   m_Layer: 5
   m_Name: Continue
@@ -529,18 +515,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8507747412332149613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4598945329940560342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589482c804920bf468df5f92e34c25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4598945329940560340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,8 +558,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8507747412332149613}
-        m_MethodName: nextLevel
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: Next
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -629,7 +604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.800003, y: 229.70001}
+  m_AnchoredPosition: {x: 5.799988, y: 229.70001}
   m_SizeDelta: {x: 329, y: 660}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4598945330313491951
@@ -949,6 +924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: shell2
       objectReference: {fileID: 0}
+    - target: {fileID: 3113232419419095233, guid: e7da3da25eb6208458334c98b7999ca2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3113232419419095238, guid: e7da3da25eb6208458334c98b7999ca2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1079,6 +1059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shell0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946707142103404577, guid: 677d2b12369b72a48a2f8da50b975890,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2946707142103404578, guid: 677d2b12369b72a48a2f8da50b975890,
         type: 3}
@@ -1316,17 +1301,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: shell3
       objectReference: {fileID: 0}
+    - target: {fileID: 8787074484312270911, guid: 156f18d401ffabc449375b01f9a21f9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f18d401ffabc449375b01f9a21f9f, type: 3}
---- !u!1 &4598945330495683767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8787074484312270911, guid: 156f18d401ffabc449375b01f9a21f9f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5053964404974294152}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4598945330495683764 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8787074484312270908, guid: 156f18d401ffabc449375b01f9a21f9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5053964404974294152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4598945330495683767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8787074484312270911, guid: 156f18d401ffabc449375b01f9a21f9f,
     type: 3}
   m_PrefabInstance: {fileID: 5053964404974294152}
   m_PrefabAsset: {fileID: 0}
@@ -1446,6 +1436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shell1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173953828329077546, guid: d72691d677fd2ee47ba2711ac34a9f02,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d72691d677fd2ee47ba2711ac34a9f02, type: 3}

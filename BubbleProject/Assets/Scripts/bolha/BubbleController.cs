@@ -88,6 +88,8 @@ public class BubbleController : MonoBehaviour
             {
                 AnimationYAxis();
             }
+
+            GetComponent<Rigidbody2D>().AddForce(direction * force);
         }
     }
 
@@ -103,7 +105,7 @@ public class BubbleController : MonoBehaviour
         animator.SetBool("Toque y", true);
     }
 
-    public void StopAnimation()
+    public void DisableToque()
     {
         animator.SetBool("Toque y", false);
         animator.SetBool("Toque x", false);

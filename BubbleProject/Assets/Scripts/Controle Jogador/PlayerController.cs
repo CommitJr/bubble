@@ -38,15 +38,15 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
-            ControllerTouchEscapeInGame();
+            ControllerTouchInGame();
         }
         else
         {
-            ControllerTouchEscapeInMenu();
+            ControllerTouchInMenu();
         }
     }
 
-    private void ControllerTouchEscapeInGame()
+    private void ControllerTouchInGame()
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void ControllerTouchEscapeInMenu()
+    private void ControllerTouchInMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {

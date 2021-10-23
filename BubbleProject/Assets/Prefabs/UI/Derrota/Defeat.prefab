@@ -814,7 +814,6 @@ GameObject:
   - component: {fileID: 4592305707277356996}
   - component: {fileID: 4592305707277356995}
   - component: {fileID: 4592305707277356994}
-  - component: {fileID: 4161988439227570202}
   - component: {fileID: 4592305707277356997}
   m_Layer: 5
   m_Name: Menu
@@ -880,18 +879,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4161988439227570202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592305707277356999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589482c804920bf468df5f92e34c25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4592305707277356997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,8 +922,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4161988439227570202}
-        m_MethodName: goMenu
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -957,7 +945,6 @@ GameObject:
   - component: {fileID: 4592305707889430868}
   - component: {fileID: 4592305707889430867}
   - component: {fileID: 4592305707889430866}
-  - component: {fileID: 6715245458244784107}
   - component: {fileID: 4592305707889430869}
   m_Layer: 5
   m_Name: Reiniciar
@@ -1023,18 +1010,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6715245458244784107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592305707889430871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589482c804920bf468df5f92e34c25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4592305707889430869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,8 +1053,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6715245458244784107}
-        m_MethodName: restartLevel
+      - m_Target: {fileID: 5200817972885172405, guid: 94bd39b2fd03ba04ba98d483bc9c84c4,
+          type: 3}
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
