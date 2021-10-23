@@ -115,7 +115,7 @@ public class Timer : MonoBehaviour
     #endregion
 
     #region RETURNS
-    public int ReturnScore()
+    public int GetScore()
     {
         return stars;
     }

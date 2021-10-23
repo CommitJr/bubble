@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,8 +13,16 @@ public class PlayerController : MonoBehaviour
     #region START
     void Start()
     {
-        colliderTouch = GetComponent<Collider2D>();
-        wavePropagation = GameObject.FindWithTag("WavePropagation");
+        DefineStart();
+    }
+
+    private void DefineStart()
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= 7)
+        {
+            colliderTouch = GetComponent<Collider2D>();
+            wavePropagation = GameObject.FindWithTag("WavePropagation");
+        }
     }
     #endregion
 
@@ -27,6 +36,18 @@ public class PlayerController : MonoBehaviour
     #region TOUCH CONTROLLER
     private void ControllerTouch()
     {
+        if (SceneManager.GetActiveScene().buildIndex >= 7)
+        {
+            ControllerTouchEscapeInGame();
+        }
+        else
+        {
+            ControllerTouchEscapeInMenu();
+        }
+    }
+
+    private void ControllerTouchEscapeInGame()
+    {
         if (Input.GetKey(KeyCode.Mouse0))
         {
             TouchKeyDown();
@@ -35,6 +56,36 @@ public class PlayerController : MonoBehaviour
         {
             TouchKeyUp();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TouchEscapeGame();
+        }
+    }
+
+    private void ControllerTouchEscapeInMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TouchEscapeMenu();
+        }
+    }
+
+    private void TouchEscapeMenu()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            GetComponent<GeneralFunctions>().GoToExit();
+        }
+        else
+        {
+            GetComponent<GeneralFunctions>().GoToMenu();
+        }
+    }
+
+    private void TouchEscapeGame()
+    {
+        GetComponent<GeneralFunctions>().PauseController();
     }
 
     private void TouchKeyDown()
