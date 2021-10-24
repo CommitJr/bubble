@@ -148,6 +148,8 @@ public class bolha : MonoBehaviour
     {
         WinUI.SetActive(true);
         //esttava 3, mudei pra 6
+        Debug.Log("index da cena "+SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("level atualizado " + level);
         if (SceneManager.GetActiveScene().buildIndex - 6 > level)
         {
             switch (world)
@@ -180,13 +182,15 @@ public class bolha : MonoBehaviour
                 world++;
             }
             
-            Debug.Log("atualizou o nivel");
+           // Debug.Log("atualizou o nivel");
 
         }
 
+        /*
         Debug.Log("numFases = " + numFases);
         Debug.Log("mundo = " + world);
         Debug.Log("level = " + level);
+        */
 
         saveSystem.SavePlayer(this);
 
