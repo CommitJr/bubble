@@ -195,7 +195,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6848984637334847691}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.587537, y: 1.4773741, z: 1}
   m_Children:
@@ -218,10 +218,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: -0.1
+  m_GravityScale: -0.04
   m_Material: {fileID: 6200000, guid: ebe5f91483df89e40ada95766aa2e851, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
@@ -327,7 +327,10 @@ MonoBehaviour:
   tcena: {fileID: 6848984637334847691}
   score: {fileID: 0}
   animator: {fileID: 6848984637334847688}
-  lives: []
+  lives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   level: 1
   level5: 1
   level4: 1
@@ -336,10 +339,9 @@ MonoBehaviour:
   level1: 1
   world: 1
   health: 3
-  numFases: 0
-  WinUI: {fileID: 4598945329544492809, guid: 6d3cef390461bf14d9a67c57eca0e99a, type: 3}
-  DefeatUI: {fileID: 4592305706920668068, guid: 4e8244185cf048949b30090a5cb433a8,
-    type: 3}
+  numFases: 3
+  WinUI: {fileID: 0}
+  DefeatUI: {fileID: 0}
   death: {fileID: 9070781621299053506, guid: bc546678647d06c4a9a509d74db87c3e, type: 3}
 --- !u!114 &4809433594850035773
 MonoBehaviour:
