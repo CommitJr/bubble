@@ -22,7 +22,7 @@ public class followtarget : MonoBehaviour
     {
         direction = (player.position - centro.position);
 
-        if ( Vector2.Distance(centro.position, player.position) < 10)
+        if (Vector2.Distance(centro.position, player.position) < 10)
         {
             direction = direction.normalized;
             direction *= velocity;
@@ -30,12 +30,19 @@ public class followtarget : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle);
             rg2D.velocity = direction;
         }
-        
+
         else
         {
             rg2D.velocity = Vector2.zero;
         }
+    }
 
-       
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.tag == "BolhaRastreio")
+        {
+            Debug.Log(collision.collider);
+            this.GetComponent<followtarget>().enabled = false;
+        }
     }
 }
