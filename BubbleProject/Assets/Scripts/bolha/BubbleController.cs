@@ -1,25 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BubbleController : MonoBehaviour
 {
     #region SCOPE
     private int force;
     private float speedLimit;
+    private int health;
+    private bool _hasHit;
 
+    private Transform target;
+    private Vector2 direction;
+    private Rigidbody2D rigidBody2D;
     private Collider2D touchCollider;
     private Animator animator;
+    private PlayerController playerController;
+    private GeneralFunctions generalFunctions;
+
+    [SerializeField] private GameObject death;
     #endregion
 
     #region START
     void Start()
     {
+        DefineStart();
+    }
+    private void DefineStart()
+    {
         force = 120;
         speedLimit = 2.5f;
+        _hasHit = false;
+
+        if (SceneManager.GetActiveScene().buildIndex >= 8)
+        {
+            target = GameObject.FindGameObjectWithTag("perda de controle").GetComponent<Transform>();
+        }
+        
 
         touchCollider = GameObject.FindWithTag("PlayerController").GetComponent<CircleCollider2D>();
         animator = GetComponent<Animator>();
+        rigidBody2D = GetComponent<Rigidbody2D>();
+
+        playerController = GameObject.FindWithTag("PlayerController").GetComponent<PlayerController>();
+        generalFunctions = GameObject.FindWithTag("PlayerController").GetComponent<GeneralFunctions>();
     }
     #endregion
 
@@ -27,6 +52,17 @@ public class BubbleController : MonoBehaviour
     void FixedUpdate()
     {
         SpeedController();
+        HealthCheck();
+    }
+
+    private void HealthCheck()
+    {
+        switch (playerController.GetHealth())
+        {
+            case 0:
+                DeathAnimation();
+                break;
+        }
     }
     #endregion
 
@@ -68,6 +104,54 @@ public class BubbleController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D foreignObject)
     {
         AnimationController(foreignObject);
+
+        if (foreignObject.gameObject.tag == "perda de controle")
+        {
+            Debug.Log("Preparando para o fim");
+            generalFunctions.GoToEnd();
+            Invoke("move2End", 0.01f);
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.gameObject.tag);
+
+        #region colisao fatal
+        if (collision.collider.gameObject.tag == "Dentes" || collision.collider.gameObject.tag == "Pedras"
+            || collision.collider.gameObject.tag == "Helice" || collision.collider.gameObject.tag == "oleo")
+        {
+            playerController.SetHealth(0);
+        }
+        #endregion
+
+        #region colisão torpedo
+        if (collision.collider.gameObject.tag == "Torpedo")
+        {
+            playerController.SetHealth(0);
+        }
+        #endregion
+
+        #region colisao normal
+        else if (collision.collider.gameObject.tag == "Corpo")
+        {
+            playerController.SetHealth(playerController.GetHealth() - 1);
+        }
+        #endregion
+
+        #region troca de fase
+
+        else if (collision.gameObject.tag == "End" && !_hasHit)
+        {
+            Debug.Log("UI");
+            //atualiza();
+
+            _hasHit = true;
+        }
+
+
+        #endregion
+
     }
     #endregion
 
@@ -109,6 +193,30 @@ public class BubbleController : MonoBehaviour
     {
         animator.SetBool("Toque y", false);
         animator.SetBool("Toque x", false);
+    }
+
+    private void DeathAnimation()
+    {
+        Instantiate(death, transform.position, transform.rotation);
+        gameObject.SetActive(false);
+        Invoke("defeatTime", 0.99f);
+    }
+
+    private void Move2End()
+    {
+        direction = (target.position - transform.position);
+
+        direction = direction.normalized;
+        direction *= 1;
+        rigidBody2D.velocity = direction;
+    }
+    #endregion
+
+    #region DEATH
+    private void defeatTime()
+    {
+        generalFunctions.Defeat();
+        Destroy(GameObject.FindWithTag("death"));
     }
     #endregion
 }

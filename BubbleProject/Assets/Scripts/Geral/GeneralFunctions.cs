@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GeneralFunctions : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject defeatMenuUI;
     [SerializeField] private GameObject header;
     [SerializeField] private GameObject footer;
+    [SerializeField] private Image[] lives;
+
+    private PlayerController PlayerController;
+    private BubbleController bubbleController;
+    private AudioSource audioSource;
 
     private  bool _isPause;
     private  bool _isRestart;
@@ -25,6 +31,15 @@ public class GeneralFunctions : MonoBehaviour
     private void DefineStart() {     
         _isPause = false;
         _isRestart = false;
+
+        PlayerController = GetComponent<PlayerController>();
+
+        if (SceneManager.GetActiveScene().buildIndex >= 7) 
+        {
+            bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
+        }
+
+        audioSource = GameObject.FindWithTag("Ambient Sound").GetComponent<AudioSource>();
     }
     #endregion
 
@@ -73,7 +88,7 @@ public class GeneralFunctions : MonoBehaviour
 
     public void Next()
     {
-        Debug.Log("Proxima Fase..");
+        Debug.Log("Proxima Cena..");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -116,6 +131,44 @@ public class GeneralFunctions : MonoBehaviour
     {
         Debug.Log("Perdeu!");
         defeatMenuUI.SetActive(true);
+    }
+
+    public void Health(int health)
+    {
+        switch (health)
+        {
+            case 3:
+                lives[2].enabled = true;
+                lives[1].enabled = true;
+                lives[0].enabled = true;
+                break;
+            case 2:
+                lives[2].enabled = false;
+                lives[1].enabled = true;
+                lives[0].enabled = true;
+                break;
+            case 1:
+                lives[2].enabled = false;
+                lives[1].enabled = false;
+                lives[0].enabled = true;
+                break;
+            case 0:
+                lives[2].enabled = false;
+                lives[1].enabled = false;
+                lives[0].enabled = false;
+
+                audioSource.enabled = false;
+                break;
+        }
+    }
+    #endregion
+
+    #region INGAME
+    public void GoToEnd()
+    {
+        PlayerController.SetControllerActivate(false);
+
+        audioSource.enabled = false;
     }
     #endregion
 }

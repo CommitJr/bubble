@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     #region SCOPE
+    private int health;
+    private bool _isControlled;
+
     private Collider2D colliderTouch;
     private GameObject wavePropagation;
+
+    private GeneralFunctions generalFunctions;
+    private SaveData saveData;
     #endregion
 
     #region START
@@ -22,6 +28,13 @@ public class PlayerController : MonoBehaviour
         {
             colliderTouch = GetComponent<Collider2D>();
             wavePropagation = GameObject.FindWithTag("WavePropagation");
+
+            generalFunctions = GetComponent<GeneralFunctions>();
+            saveData = new SaveData();
+            saveData = SaveDataSystem.Load();
+
+            health = saveData.GetPlayerHealth();
+            _isControlled = true;
         }
     }
     #endregion
@@ -30,6 +43,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ControllerTouch();
+        if (SceneManager.GetActiveScene().buildIndex >= 7)
+        {
+            HealthController();
+        }           
     }
     #endregion
 
@@ -38,7 +55,10 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
-            ControllerTouchInGame();
+            if (_isControlled)
+            {
+                ControllerTouchInGame();
+            }
         }
         else
         {
@@ -107,6 +127,30 @@ public class PlayerController : MonoBehaviour
     private void TouchKeyUp()
     {
         colliderTouch.enabled = false;
+    }
+    #endregion
+
+    #region GETTERS & SETTERS
+    public int GetHealth()
+    {
+        return this.health;
+    }
+
+    public void SetHealth(int health)
+    {
+        this.health = health;
+    }
+
+    public void SetControllerActivate(bool activate)
+    {
+        _isControlled = activate;
+    }
+    #endregion
+
+    #region HEALTH CONTROLLER
+    private void HealthController()
+    {
+        generalFunctions.Health(GetHealth());
     }
     #endregion
 }
