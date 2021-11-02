@@ -15,17 +15,21 @@ public static class SaveDataSystem
 
         Writer.Add(new XElement("Game", new XAttribute("Version", GameData.GetGameVersion())));
         Writer.Add(new XElement("Player", new XAttribute("Health", GameData.GetPlayerHealth())));
+        Writer.Add(new XElement("Worlds", new XAttribute("NumberWorlds", GameData.GetNumberWorlds())));
+        Writer.Element("Worlds").Add(new XAttribute("UnlockedWorlds", GameData.GetUnlockedWorlds()));
 
         int WolrdIndice = 5;
-        foreach (Wolrd WolrdData in GameData.GetWorlds())
+        foreach (World WorldData in GameData.GetWorlds())
         {
-            XElement WolrdAdd = new XElement("Wolrd" + WolrdIndice);
-            WolrdAdd.Add(new XAttribute("Id", WolrdData.GetId()));
-            WolrdAdd.Add(new XAttribute("Name", WolrdData.GetName()));
-            WolrdAdd.Add(new XAttribute("Status", WolrdData.GetStatus()));
+            XElement WorldAdd = new XElement("Wolrd" + WolrdIndice);
+            WorldAdd.Add(new XAttribute("Id", WorldData.GetId()));
+            WorldAdd.Add(new XAttribute("Name", WorldData.GetName()));
+            WorldAdd.Add(new XAttribute("Status", WorldData.GetStatus()));
+            WorldAdd.Add(new XElement("Levels", new XAttribute("NumberLevels", WorldData.GetNumberLevels())));
+            WorldAdd.Element("Levels").Add(new XAttribute("UnlockedLevels", WorldData.GetUnlockedLevels()));
 
             int LevelIndice = 0;
-            foreach (Level LevelData in WolrdData.GetLevels())
+            foreach (Level LevelData in WorldData.GetLevels())
             {
                 XElement LevelAdd = new XElement("Level"+LevelIndice);
                 LevelAdd.Add(new XAttribute("Id", LevelData.GetId()));
@@ -33,12 +37,12 @@ public static class SaveDataSystem
                 LevelAdd.Add(new XAttribute("Status", LevelData.GetStatus()));
                 LevelAdd.Add(new XAttribute("PlayerScore", LevelData.GetPlayerScore()));
 
-                WolrdAdd.Add(new XElement("Levels", LevelAdd));
+                WorldAdd.Element("Levels").Add(new XElement(LevelAdd));
 
                 LevelIndice++;
             }
 
-            Writer.Add(new XElement("Wolrds",WolrdAdd));
+            Writer.Element("Worlds").Add(new XElement(WorldAdd));
 
             WolrdIndice--;
         }
@@ -62,13 +66,15 @@ public static class SaveDataSystem
             LevelAdd.SetStatus(true);
             LevelAdd.SetPlayerScore(3);
 
-            Wolrd WolrdAdd = new Wolrd();
+            World WolrdAdd = new World();
             WolrdAdd.SetId(5);
             WolrdAdd.SetName("Camada 5");
             WolrdAdd.SetStatus(true);
+            WolrdAdd.SetNumberLevels(10);
+            WolrdAdd.SetUnlockedLevels(1);
             WolrdAdd.AddLevel(LevelAdd);
 
-            GameData.AddWolrd(WolrdAdd);
+            GameData.AddWorld(WolrdAdd);
 
             Save(GameData);
 
@@ -79,16 +85,20 @@ public static class SaveDataSystem
 
         GameData.SetGameVersion(Reader.Element("Game").Attribute("Version").Value);
         GameData.SetPlayerHealth(int.Parse(Reader.Element("Player").Attribute("Health").Value));
+        GameData.SetNumberWorlds(int.Parse(Reader.Element("Worlds").Attribute("NumberWorlds").Value));
+        GameData.SetUnlockedWorlds(int.Parse(Reader.Element("Worlds").Attribute("UnlockedWorlds").Value));
 
-        foreach (var Wolrds in Reader.Descendants("Wolrds"))
+        foreach (var Worlds in Reader.Descendants("Worlds"))
         {
-            Wolrd WolrdData = new Wolrd();
+            World WorldData = new World();
 
-            WolrdData.SetId(int.Parse(Wolrds.Attribute("Id").Value));
-            WolrdData.SetName(Wolrds.Attribute("Name").Value);
-            WolrdData.SetStatus(bool.Parse(Wolrds.Attribute("Status").Value));
+            WorldData.SetId(int.Parse(Worlds.Attribute("Id").Value));
+            WorldData.SetName(Worlds.Attribute("Name").Value);
+            WorldData.SetStatus(bool.Parse(Worlds.Attribute("Status").Value));
+            WorldData.SetNumberLevels(int.Parse(Worlds.Element("Levels").Attribute("NumberLevels").Value));
+            WorldData.SetUnlockedLevels(int.Parse(Worlds.Element("Levels").Attribute("UnlockedLevels").Value));
 
-            foreach (var Levels in Wolrds.Descendants("Levels"))
+            foreach (var Levels in Worlds.Descendants("Levels"))
             {
                 Level LevelData = new Level();
 
@@ -97,10 +107,10 @@ public static class SaveDataSystem
                 LevelData.SetStatus(bool.Parse(Levels.Attribute("Status").Value));
                 LevelData.SetPlayerScore(int.Parse(Levels.Attribute("PlayerScore").Value));
 
-                WolrdData.AddLevel(LevelData);
+                WorldData.AddLevel(LevelData);
             }
 
-            GameData.AddWolrd(WolrdData);
+            GameData.AddWorld(WorldData);
         }
 
         Debug.Log("GameData Carregado com Sucesso.");

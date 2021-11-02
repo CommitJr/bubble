@@ -7,14 +7,18 @@ public class SaveData
     #region SCOPE
     private string GameVersion;
     private int PlayerHealth;
-    private List<Wolrd> Worlds;
+    private int NumberWorlds;
+    private int UnlockedWorlds;
+    private List<World> Worlds;
     #endregion
 
     #region CONSTRUCT
-    public SaveData(string GameVersion, int PlayerHealth, List<Wolrd> Worlds)
+    public SaveData(string GameVersion, int PlayerHealth, int NumberWorlds, int UnlockedWorlds, List<World> Worlds)
     {
         this.GameVersion = GameVersion;
         this.PlayerHealth = PlayerHealth;
+        this.NumberWorlds = NumberWorlds;
+        this.UnlockedWorlds = UnlockedWorlds;
         this.Worlds = Worlds;
     }
 
@@ -22,7 +26,9 @@ public class SaveData
     {
         this.GameVersion = Application.version;
         this.PlayerHealth = 3;
-        this.Worlds = new List<Wolrd>();
+        this.NumberWorlds = 5;
+        this.UnlockedWorlds = 1;
+        this.Worlds = new List<World>();
     }
     #endregion
 
@@ -45,23 +51,41 @@ public class SaveData
         this.PlayerHealth = PlayerHealth;
     }
 
-    public List<Wolrd> GetWorlds()
+    public int GetNumberWorlds()
+    {
+        return this.NumberWorlds;
+    }
+    public void SetNumberWorlds(int NumberWorlds)
+    {
+        this.NumberWorlds = NumberWorlds;
+    }
+
+    public int GetUnlockedWorlds()
+    {
+        return this.UnlockedWorlds;
+    }
+    public void SetUnlockedWorlds(int UnlockedWorlds)
+    {
+        this.UnlockedWorlds = UnlockedWorlds;
+    }
+
+    public List<World> GetWorlds()
     {
         return this.Worlds;
     }
-    public void SetWorlds(List<Wolrd> Worlds)
+    public void SetWorlds(List<World> Worlds)
     {
         this.Worlds = Worlds;
     }
     #endregion
 
     #region ADD & REMOVE
-    public void AddWolrd(Wolrd WolrdAdd)
+    public void AddWorld(World WolrdAdd)
     {
         this.Worlds.Add(WolrdAdd);
     }
 
-    public void RemoveWolrd(Wolrd WolrdRemove)
+    public void RemoveWorld(World WolrdRemove)
     {
         this.Worlds.Remove(WolrdRemove);
     }

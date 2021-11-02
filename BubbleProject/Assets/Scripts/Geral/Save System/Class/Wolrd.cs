@@ -2,29 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wolrd
+public class World
 {
     #region SCOPE
-    public int Id;
-    public string Name;
-    public bool Status;
-    public List<Level> Levels;
+    private int Id;
+    private string Name;
+    private bool Status;
+    private int NumberLevels;
+    private int UnlockedLevels;
+    private List<Level> Levels;
     #endregion
 
     #region CONSTRUCT
-    public Wolrd(int Id, string Name, bool Status, List<Level> Levels)
+    public World(int Id, string Name, bool Status, int NumberLevels, int UnlockedLevels, List<Level> Levels)
     {
         this.Id = Id;
         this.Name = Name;
         this.Status = Status;
+        this.NumberLevels = NumberLevels;
+        this.UnlockedLevels = UnlockedLevels;
         this.Levels = Levels;
     }
 
-    public Wolrd()
+    public World()
     {
         this.Id = 0;
         this.Name = "";
         this.Status = false;
+        this.NumberLevels = 0;
+        this.UnlockedLevels = 0;
         this.Levels = new List<Level>();
     }
     #endregion
@@ -55,6 +61,24 @@ public class Wolrd
     public void SetStatus(bool Status)
     {
         this.Status = Status;
+    }
+
+    public int GetNumberLevels()
+    {
+        return this.NumberLevels;
+    }
+    public void SetNumberLevels(int NumberLevels)
+    {
+        this.NumberLevels = NumberLevels;
+    }
+
+    public int GetUnlockedLevels()
+    {
+        return this.UnlockedLevels;
+    }
+    public void SetUnlockedLevels(int UnlockedLevels)
+    {
+        this.UnlockedLevels = UnlockedLevels;
     }
 
     public List<Level> GetLevels()
