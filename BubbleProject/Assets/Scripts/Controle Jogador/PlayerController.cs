@@ -8,12 +8,16 @@ public class PlayerController : MonoBehaviour
     #region SCOPE
     private int health;
     private bool _isControlled;
+    private bool _isDead;
 
     private Collider2D colliderTouch;
     private GameObject wavePropagation;
 
     private GeneralFunctions generalFunctions;
     private SaveData saveData;
+
+    [SerializeField] private GameObject death;
+    private Transform player;
     #endregion
 
     #region START
@@ -26,6 +30,8 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
+            player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+
             colliderTouch = GetComponent<Collider2D>();
             wavePropagation = GameObject.FindWithTag("WavePropagation");
 
@@ -35,6 +41,9 @@ public class PlayerController : MonoBehaviour
 
             health = 3;//saveData.GetPlayerHealth();
             _isControlled = true;
+            _isDead = false;
+
+
         }
     }
     #endregion
@@ -50,6 +59,16 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    void FixedUpdate()
+    {
+        if (!_isDead)
+        {
+            HealthCheck();
+        }
+        
+
+    }
+    
     #region TOUCH CONTROLLER
     private void ControllerTouch()
     {
@@ -153,4 +172,33 @@ public class PlayerController : MonoBehaviour
         generalFunctions.Health(GetHealth());
     }
     #endregion
+
+    private void DeathAnimation()
+    {
+        Instantiate(death, transform.position, transform.rotation);
+        player.parent.gameObject.SetActive(false);
+        Invoke("defeatTime", 0.99f);
+    }
+
+    #region DEATH
+    private void defeatTime()
+    {
+        generalFunctions.Defeat();
+        Destroy(GameObject.FindWithTag("death"));
+    }
+    #endregion
+
+    private void HealthCheck()
+    {
+        switch (GetHealth())
+        {
+            case 0:
+                Debug.Log("chama o estouro da bolha");
+                DeathAnimation();
+                _isDead = true;
+                break;
+        }
+    }
+
+
 }

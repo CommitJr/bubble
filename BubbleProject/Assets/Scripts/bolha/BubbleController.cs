@@ -48,24 +48,13 @@ public class BubbleController : MonoBehaviour
     }
     #endregion
 
-    #region UPDATE
     void FixedUpdate()
     {
         SpeedController();
-        HealthCheck();
+        
     }
 
-    private void HealthCheck()
-    {
-        switch (playerController.GetHealth())
-        {
-            case 0:
-                DeathAnimation();
-                break;
-        }
-    }
-    #endregion
-
+    
     #region SPEED
     private void SpeedController()
     {
@@ -155,7 +144,6 @@ public class BubbleController : MonoBehaviour
     }
     #endregion
 
-    #region ANIMATION
     private void AnimationController(Collider2D foreignObject)
     {
         if (foreignObject.gameObject.CompareTag("PlayerController"))
@@ -195,12 +183,7 @@ public class BubbleController : MonoBehaviour
         animator.SetBool("Toque x", false);
     }
 
-    private void DeathAnimation()
-    {
-        Instantiate(death, transform.position, transform.rotation);
-        gameObject.SetActive(false);
-        Invoke("defeatTime", 0.99f);
-    }
+
 
     private void Move2End()
     {
@@ -210,13 +193,7 @@ public class BubbleController : MonoBehaviour
         direction *= 1;
         rigidBody2D.velocity = direction;
     }
-    #endregion
 
-    #region DEATH
-    private void defeatTime()
-    {
-        generalFunctions.Defeat();
-        Destroy(GameObject.FindWithTag("death"));
-    }
-    #endregion
+
+   
 }
