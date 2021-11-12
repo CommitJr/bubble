@@ -10,6 +10,7 @@ public class animatorControll : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Transform centro;
     [SerializeField] private float velocity;
+    private bool isAttack;
 
     private Contador counter;
     private bool enableWave = true;
@@ -25,6 +26,7 @@ public class animatorControll : MonoBehaviour
         animator = GetComponent<Animator>();
 
         counter = new Contador(maxCounter);
+        isAttack = true;
 
     }
 
@@ -39,30 +41,38 @@ public class animatorControll : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log(Mathf.Abs(Vector2.Distance(player.position, centro.position)));
-        if (Mathf.Abs(Vector2.Distance(player.position, centro.position)) < attackRange)
+        if (isAttack)
         {
-            if (centro.position.x - player.position.x < -sideAttackRange)
+            Debug.Log(Mathf.Abs(Vector2.Distance(player.position, centro.position)));
+            if (Mathf.Abs(Vector2.Distance(player.position, centro.position)) < attackRange)
             {
-                // direita da bolha, garra esquerda
-                animator.SetBool("ataque_d", true);
-                animator.SetBool("ataque_e", false);
-                animator.SetBool("abraco", false);
-            }
-            else if (centro.position.x - player.position.x > sideAttackRange)
-            {
-                // esquerda da bolha, garra direita
-                animator.SetBool("ataque_d", false);
-                animator.SetBool("ataque_e", true);
-                animator.SetBool("abraco", false);
-            }
-            else
-            {
-                animator.SetBool("ataque_d", false);
-                animator.SetBool("ataque_e", false);
-                animator.SetBool("abraco", true);
+                if (centro.position.x - player.position.x < -sideAttackRange)
+                {
+                    // direita da bolha, garra esquerda
+                    animator.SetBool("ataque_d", true);
+                    animator.SetBool("ataque_e", false);
+                    animator.SetBool("abraco", false);
+                }
+                else if (centro.position.x - player.position.x > sideAttackRange)
+                {
+                    // esquerda da bolha, garra direita
+                    animator.SetBool("ataque_d", false);
+                    animator.SetBool("ataque_e", true);
+                    animator.SetBool("abraco", false);
+                }
+                else
+                {
+                    animator.SetBool("ataque_d", false);
+                    animator.SetBool("ataque_e", false);
+                    animator.SetBool("abraco", true);
+                }
             }
         }
+    }
+
+    public void StopAttack()
+    {
+        isAttack = false;
     }
     
     private void MoveAnimation()

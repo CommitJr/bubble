@@ -5,11 +5,11 @@ using UnityEngine;
 public class Garra : MonoBehaviour
 {
     [SerializeField] private animatorControll boss;
-    private onda onda;
+    private PlayerController onda;
 
     private void Start()
     {
-        onda = GameObject.FindGameObjectWithTag("wave").GetComponent<onda>();
+        onda = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,11 +17,12 @@ public class Garra : MonoBehaviour
         {
             Debug.Log(collision.tag);
             onda.enabled = false;
-            collision.transform.parent.GetComponent<bolhaController>().enabled = false;
+            collision.transform.parent.GetComponent<BubbleController>().enabled = false;
             collision.transform.parent.GetComponent<Rigidbody2D>().simulated = false;
-            collision.transform.parent.SetParent(transform.GetChild(0));
+            collision.transform.parent.SetParent(transform);
             collision.transform.localPosition = Vector2.zero;
             boss.GetComponent<Animator>().SetBool("End", true);
+            boss.StopAttack();
         }
     }
 }

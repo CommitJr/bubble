@@ -34,10 +34,10 @@ public class GeneralFunctions : MonoBehaviour
 
         PlayerController = GetComponent<PlayerController>();
 
-        if (SceneManager.GetActiveScene().buildIndex >= 7) 
-        {
+       if (SceneManager.GetActiveScene().buildIndex >= 7) 
+       {
             bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
-        }
+       }
 
         audioSource = GameObject.FindWithTag("Ambient Sound").GetComponent<AudioSource>();
     }

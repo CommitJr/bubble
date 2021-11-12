@@ -30,10 +30,10 @@ public class PlayerController : MonoBehaviour
             wavePropagation = GameObject.FindWithTag("WavePropagation");
 
             generalFunctions = GetComponent<GeneralFunctions>();
-            saveData = new SaveData();
-            saveData = SaveDataSystem.Load();
+            //saveData = new SaveData();
+            //saveData = SaveDataSystem.Load();
 
-            health = saveData.GetPlayerHealth();
+            health = 3;//saveData.GetPlayerHealth();
             _isControlled = true;
         }
     }
