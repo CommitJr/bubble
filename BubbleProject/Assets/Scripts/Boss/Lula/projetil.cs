@@ -19,7 +19,7 @@ public class projetil : MonoBehaviour
         diretion = (player.transform.position - transform.position).normalized * speed;
         rb.velocity = new Vector2(diretion.x, diretion.y);
 
-        Debug.Log(diretion);
+
 
         Destroy(gameObject, 5f);
                 

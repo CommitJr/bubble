@@ -55,7 +55,6 @@ public class lula : MonoBehaviour
     {
         if (Time.time > next)
         {
-            Debug.Log(transform.position);
             Instantiate(oleo, transform.position, Quaternion.identity);
             next = Time.time + rate;
         }

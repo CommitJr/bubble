@@ -37,10 +37,12 @@ public class PlayerController : MonoBehaviour
         health = saveData.GetPlayerHealth();
         _isControlled = true;
         _isDead = false;
-
+        
+        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+        
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
-            player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+            
 
             colliderTouch = GetComponent<Collider2D>();
             wavePropagation = GameObject.FindWithTag("WavePropagation");
@@ -203,7 +205,11 @@ public class PlayerController : MonoBehaviour
     private void DeathAnimation()
     {
         Instantiate(death, transform.position, transform.rotation);
+
         player.parent.gameObject.SetActive(false);
+
+        Debug.Log(player);
+       
         Invoke("defeatTime", 0.99f);
     }
 
@@ -217,10 +223,11 @@ public class PlayerController : MonoBehaviour
 
     private void HealthCheck()
     {
-        if (GetHealth() <= 0)
+        if (GetHealth() <= 0 && !_isDead)
         {
-            DeathAnimation();
             _isDead = true;
+            DeathAnimation();
+            
         }
     }
 
