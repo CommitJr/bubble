@@ -60,25 +60,10 @@ public static class SaveDataSystem
         {
             Debug.LogWarning("GameData não Existe em: " + Path + " | Gerando um Novo GameData.");
 
-            Level LevelAdd = new Level();
-            LevelAdd.SetId(0);
-            LevelAdd.SetName("Tutorial");
-            LevelAdd.SetStatus(true);
-            LevelAdd.SetPlayerScore(3);
+            SaveDataFile GameDataFile = new SaveDataFile();
+            Save(GameDataFile.GetGameData());
 
-            World WolrdAdd = new World();
-            WolrdAdd.SetId(5);
-            WolrdAdd.SetName("Camada 5");
-            WolrdAdd.SetStatus(true);
-            WolrdAdd.SetNumberLevels(10);
-            WolrdAdd.SetUnlockedLevels(1);
-            WolrdAdd.AddLevel(LevelAdd);
-
-            GameData.AddWorld(WolrdAdd);
-
-            Save(GameData);
-
-            return GameData;
+            return GameDataFile.GetGameData();
         }
 
         XElement Reader = XElement.Load(Path);
@@ -88,7 +73,8 @@ public static class SaveDataSystem
         GameData.SetNumberWorlds(int.Parse(Reader.Element("Worlds").Attribute("NumberWorlds").Value));
         GameData.SetUnlockedWorlds(int.Parse(Reader.Element("Worlds").Attribute("UnlockedWorlds").Value));
 
-        foreach (var Worlds in Reader.Descendants("Worlds"))
+        XElement WorldReader = Reader.Element("Worlds");
+        foreach (var Worlds in WorldReader.Elements())
         {
             World WorldData = new World();
 
@@ -98,7 +84,8 @@ public static class SaveDataSystem
             WorldData.SetNumberLevels(int.Parse(Worlds.Element("Levels").Attribute("NumberLevels").Value));
             WorldData.SetUnlockedLevels(int.Parse(Worlds.Element("Levels").Attribute("UnlockedLevels").Value));
 
-            foreach (var Levels in Worlds.Descendants("Levels"))
+            XElement LevelReader = Worlds.Element("Levels");
+            foreach (var Levels in LevelReader.Elements())
             {
                 Level LevelData = new Level();
 
@@ -114,6 +101,7 @@ public static class SaveDataSystem
         }
 
         Debug.Log("GameData Carregado com Sucesso.");
+
         return GameData;
     }
 }

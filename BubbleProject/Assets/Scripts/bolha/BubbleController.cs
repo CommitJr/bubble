@@ -35,7 +35,7 @@ public class BubbleController : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex >= 8)
         {
-            target = GameObject.FindGameObjectWithTag("perda de controle").GetComponent<Transform>();
+            target = GameObject.FindGameObjectWithTag("LossControl").GetComponent<Transform>();
         }
         
 
@@ -94,7 +94,7 @@ public class BubbleController : MonoBehaviour
     {
         AnimationController(foreignObject);
 
-        if (foreignObject.gameObject.tag == "perda de controle")
+        if (foreignObject.gameObject.tag == "LossControl")
         {
             Debug.Log("Preparando para o fim");
             generalFunctions.GoToEnd();

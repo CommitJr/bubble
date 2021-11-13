@@ -28,22 +28,20 @@ public class PlayerController : MonoBehaviour
 
     private void DefineStart()
     {
+        generalFunctions = GetComponent<GeneralFunctions>();
+        saveData = new SaveData();
+        saveData = SaveDataSystem.Load();
+
+        health = saveData.GetPlayerHealth();
+        _isControlled = true;
+        _isDead = false;
+
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
             player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
 
             colliderTouch = GetComponent<Collider2D>();
             wavePropagation = GameObject.FindWithTag("WavePropagation");
-
-            generalFunctions = GetComponent<GeneralFunctions>();
-            //saveData = new SaveData();
-            //saveData = SaveDataSystem.Load();
-
-            health = 3;//saveData.GetPlayerHealth();
-            _isControlled = true;
-            _isDead = false;
-
-
         }
     }
     #endregion
@@ -61,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_isDead)
+        if (!_isDead && SceneManager.GetActiveScene().buildIndex >= 7)
         {
             HealthCheck();
         }
@@ -190,13 +188,10 @@ public class PlayerController : MonoBehaviour
 
     private void HealthCheck()
     {
-        switch (GetHealth())
+        if (GetHealth() <= 0)
         {
-            case 0:
-                Debug.Log("chama o estouro da bolha");
-                DeathAnimation();
-                _isDead = true;
-                break;
+            DeathAnimation();
+            _isDead = true;
         }
     }
 
