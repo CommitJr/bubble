@@ -53,7 +53,7 @@ public class GeneralFunctions : MonoBehaviour
     private void DefineStartLevels()
     {
         bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
-        audioSource = GameObject.FindWithTag("AmbientSound").GetComponent<AudioSource>();
+        audioSource = GameObject.FindWithTag("AmbientSound") ? GameObject.FindWithTag("AmbientSound").GetComponent<AudioSource>() : null;
     }
     #endregion
 

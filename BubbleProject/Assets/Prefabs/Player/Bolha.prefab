@@ -179,7 +179,6 @@ GameObject:
   - component: {fileID: 6848984637334847694}
   - component: {fileID: 6848984637334847688}
   - component: {fileID: 3834550225294885417}
-  - component: {fileID: 5401670679444077684}
   - component: {fileID: 4809433594850035773}
   m_Layer: 14
   m_Name: Bolha
@@ -312,37 +311,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5401670679444077684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6848984637334847691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e62e21e41de2a5488466bc6a30621d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tcena: {fileID: 6848984637334847691}
-  score: {fileID: 0}
-  animator: {fileID: 6848984637334847688}
-  lives:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  level: 1
-  level5: 1
-  level4: 1
-  level3: 1
-  level2: 1
-  level1: 1
-  world: 1
-  health: 3
-  numFases: 3
-  WinUI: {fileID: 0}
-  DefeatUI: {fileID: 0}
-  death: {fileID: 9070781621299053506, guid: bc546678647d06c4a9a509d74db87c3e, type: 3}
 --- !u!114 &4809433594850035773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1673a0cca978540ade8a52bfb5503d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  death: {fileID: 9070781621299053506, guid: bc546678647d06c4a9a509d74db87c3e, type: 3}
 --- !u!1 &7091479571426719941
 GameObject:
   m_ObjectHideFlags: 0

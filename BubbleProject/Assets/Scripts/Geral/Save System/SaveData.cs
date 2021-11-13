@@ -73,6 +73,34 @@ public class SaveData
     {
         return this.Worlds;
     }
+    public World GetWorlds(int ID)
+    {
+        World ReturnWorld = new World();
+
+        foreach (World SpecificWorld in this.Worlds)
+        {
+            if (SpecificWorld.GetId() == ID)
+            {
+                ReturnWorld = SpecificWorld;
+            }
+        }
+
+        return ReturnWorld;
+    }
+    public World GetWorlds(string Name)
+    {
+        World ReturnWorld = new World();
+
+        foreach (World SpecificWorld in this.Worlds)
+        {
+            if (SpecificWorld.GetName() == Name)
+            {
+                ReturnWorld = SpecificWorld;
+            }
+        }
+
+        return ReturnWorld;
+    }
     public void SetWorlds(List<World> Worlds)
     {
         this.Worlds = Worlds;

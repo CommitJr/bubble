@@ -85,6 +85,34 @@ public class World
     {
         return this.Levels;
     }
+    public Level GetLevels(int ID)
+    {
+        Level ReturnLevel = new Level();
+
+        foreach (Level SpecificLevel in this.Levels)
+        {
+            if (SpecificLevel.GetId() == ID)
+            {
+                ReturnLevel = SpecificLevel;
+            }
+        }
+
+        return ReturnLevel;
+    }
+    public Level GetLevels(string Name)
+    {
+        Level ReturnLevel = new Level();
+
+        foreach (Level SpecificLevel in this.Levels)
+        {
+            if (SpecificLevel.GetName() == Name)
+            {
+                ReturnLevel = SpecificLevel;
+            }
+        }
+
+        return ReturnLevel;
+    }
     public void SetLevels(List<Level> Levels)
     {
         this.Levels = Levels;

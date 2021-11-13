@@ -4,31 +4,34 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class levelManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     [SerializeField] public Button[] levelButtons;
     [SerializeField] public GameObject[] levelLockers;
-    public int level;
 
-    void Start()
-    {       
-        playerData data = saveSystem.LoadPlayer();
-        if (data == null)
+    public void UnlockedLevels(SaveData GameData)
+    {
+        World WorldFather = new World();
+        switch (SceneManager.GetActiveScene().name)
         {
-            level = 1;  
-        }
-        else
-        {
-            level = data.level1;          
-        }
-        
-        for (int i = 0; i < levelButtons.Length; i++)
-        {
-            levelButtons[i].interactable = false;
-             levelLockers[i].SetActive(true);
+            case "Camada5":
+                WorldFather = GameData.GetWorlds(5);
+                break;
+            case "Camada4":
+                WorldFather = GameData.GetWorlds(4);
+                break;
+            case "Camada3":
+                WorldFather = GameData.GetWorlds(3);
+                break;
+            case "Camada2":
+                WorldFather = GameData.GetWorlds(2);
+                break;
+            case "Camada1":
+                WorldFather = GameData.GetWorlds(1);
+                break;
         }
 
-        for (int i = 0; i < level; i++)
+        for (int i = 0; i < WorldFather.GetUnlockedLevels(); i++)
         {
             levelButtons[i].interactable = true;
             levelLockers[i].SetActive(false);

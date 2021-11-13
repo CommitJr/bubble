@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private GeneralFunctions generalFunctions;
     private SaveData saveData;
+    private WorldManager worldManager;
+    private LevelManager levelManager;
 
     [SerializeField] private GameObject death;
     private Transform player;
@@ -43,6 +45,33 @@ public class PlayerController : MonoBehaviour
             colliderTouch = GetComponent<Collider2D>();
             wavePropagation = GameObject.FindWithTag("WavePropagation");
         }
+
+        DefineStartMenus();
+    }
+
+    private void DefineStartMenus()
+    {
+        if (SceneManager.GetActiveScene().name == "LevelSeletion")
+        {
+            DefineStartMenuWorlds();
+        }
+        if (SceneManager.GetActiveScene().buildIndex >= 2 && SceneManager.GetActiveScene().buildIndex <= 6)
+        {
+            DefineStartMenuLevels();
+        }
+        
+    }
+
+    private void DefineStartMenuWorlds()
+    {
+        worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
+        worldManager.UnlockedWorlds(saveData);
+    }
+
+    private void DefineStartMenuLevels()
+    {
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        levelManager.UnlockedLevels(saveData);
     }
     #endregion
 

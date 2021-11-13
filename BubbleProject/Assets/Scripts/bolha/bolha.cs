@@ -56,7 +56,7 @@ public class bolha : MonoBehaviour
        
         cineMachine = GameObject.FindGameObjectWithTag("cineMachine");
         wave = GameObject.FindGameObjectWithTag("PlayerController");
-        target = GameObject.FindGameObjectWithTag("perda de controle").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("LossControll").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
 
         #endregion

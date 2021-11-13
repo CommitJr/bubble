@@ -4,34 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class worldManager : MonoBehaviour
+public class WorldManager : MonoBehaviour
 {
     [SerializeField] public Button[] worldButtons;
-    [SerializeField] public GameObject[] levelLockers;
-    int world;
+    [SerializeField] public GameObject[] worldLockers;
 
-    void Start()
+    public void UnlockedWorlds(SaveData GameData)
     {
-        playerData data = saveSystem.LoadPlayer();
-        if (data == null)
-        {
-            world = 1;
-        }
-        else
-        {
-            world = data.world;
-        }
-
-        for (int i = 0; i < worldButtons.Length; i++)
-        {
-            worldButtons[i].interactable = false;
-            levelLockers[i].SetActive(true);
-        }
-
-        for (int i = 0; i < world; i++)
+        for (int i = 0; i < GameData.GetUnlockedWorlds(); i++)
         {
             worldButtons[i].interactable = true;
-            levelLockers[i].SetActive(false);
+            worldLockers[i].SetActive(false);
         }
     }
 }
