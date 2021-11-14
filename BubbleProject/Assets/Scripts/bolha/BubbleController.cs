@@ -10,7 +10,7 @@ public class BubbleController : MonoBehaviour
     private float speedLimit;
     private int health;
     private bool _hasHit;
-
+    private bool _isDead;
     private Transform target;
     private Vector2 direction;
     private Rigidbody2D rigidBody2D;
@@ -32,7 +32,7 @@ public class BubbleController : MonoBehaviour
         force = 120;
         speedLimit = 2.5f;
         _hasHit = false;
-
+        _isDead = false;
         if (SceneManager.GetActiveScene().buildIndex >= 8)
         {
             target = GameObject.FindGameObjectWithTag("LossControl").GetComponent<Transform>();
@@ -51,10 +51,17 @@ public class BubbleController : MonoBehaviour
     void FixedUpdate()
     {
         SpeedController();
-        
-    }
 
-    
+
+        Debug.Log(playerController.GetHealth());
+        if (!_isDead && SceneManager.GetActiveScene().buildIndex >= 7)
+        {
+            HealthCheck();
+        }
+
+    }
+  
+
     #region SPEED
     private void SpeedController()
     {
@@ -194,6 +201,34 @@ public class BubbleController : MonoBehaviour
         rigidBody2D.velocity = direction;
     }
 
+    private void DeathAnimation()
+    {
+        Instantiate(death, transform.position, transform.rotation);
 
-   
+        gameObject.SetActive(false);
+
+        Debug.Log(_isDead);
+
+        Invoke("defeatTime", 0.99f);
+    }
+
+    #region DEATH
+    private void defeatTime()
+    {
+        generalFunctions.Defeat();
+        Destroy(GameObject.FindWithTag("death"));
+    }
+    #endregion
+
+    private void HealthCheck()
+    {
+        if (playerController.GetHealth() <= 0 && !_isDead)
+        {
+            _isDead = true;
+            DeathAnimation();
+
+        }
+    }
+
+
 }

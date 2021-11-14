@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     #region SCOPE
     private int health;
     private bool _isControlled;
-    private bool _isDead;
+
 
     private Collider2D colliderTouch;
     private GameObject wavePropagation;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
         health = saveData.GetPlayerHealth();
         _isControlled = true;
-        _isDead = false;
+        
         
         player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         
@@ -88,15 +88,7 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
-    void FixedUpdate()
-    {
-        if (!_isDead && SceneManager.GetActiveScene().buildIndex >= 7)
-        {
-            HealthCheck();
-        }
-        
 
-    }
     
     #region TOUCH CONTROLLER
     private void ControllerTouch()
@@ -202,34 +194,6 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
-    private void DeathAnimation()
-    {
-        Instantiate(death, transform.position, transform.rotation);
-
-        player.parent.gameObject.SetActive(false);
-
-        Debug.Log(player);
-       
-        Invoke("defeatTime", 0.99f);
-    }
-
-    #region DEATH
-    private void defeatTime()
-    {
-        generalFunctions.Defeat();
-        Destroy(GameObject.FindWithTag("death"));
-    }
-    #endregion
-
-    private void HealthCheck()
-    {
-        if (GetHealth() <= 0 && !_isDead)
-        {
-            _isDead = true;
-            DeathAnimation();
-            
-        }
-    }
-
+    
 
 }
