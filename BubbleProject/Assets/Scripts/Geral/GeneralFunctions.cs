@@ -13,10 +13,12 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject header;
     [SerializeField] private GameObject footer;
     [SerializeField] private Image[] lives;
+    private GameObject timer;
 
-    private PlayerController PlayerController;
+    private PlayerController playerController;
     private BubbleController bubbleController;
     private AudioSource audioSource;
+    private SaveData saveData;
 
     private  bool _isPause;
     private  bool _isRestart;
@@ -32,7 +34,7 @@ public class GeneralFunctions : MonoBehaviour
         _isPause = false;
         _isRestart = false;
 
-        PlayerController = GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerController>();
 
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
@@ -54,6 +56,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
         audioSource = GameObject.FindWithTag("AmbientSound") ? GameObject.FindWithTag("AmbientSound").GetComponent<AudioSource>() : null;
+        timer = GameObject.FindWithTag("Timer");
     }
     #endregion
 
@@ -180,9 +183,80 @@ public class GeneralFunctions : MonoBehaviour
     #region INGAME
     public void GoToEnd()
     {
-        PlayerController.SetControllerActivate(false);
-
+        playerController.SetControllerActivate(false);
         audioSource.enabled = false;
+        Debug.Log("Salvando Progresso..");
+        SaveDataCheck();
+    }
+
+    public void SaveDataCheck()
+    {
+        saveData = playerController.GetSaveData();
+        int world = 0;
+        if (SceneManager.GetActiveScene().name.Contains("5_"))
+        {
+            world = 5;
+        }
+
+        if (SceneManager.GetActiveScene().name.Contains("4_"))
+        {
+            world = 4;
+        }
+
+        if (SceneManager.GetActiveScene().name.Contains("3_"))
+        {
+            world = 3;
+        }
+
+        if (SceneManager.GetActiveScene().name.Contains("2_"))
+        {
+            world = 2;
+        }
+
+        if (SceneManager.GetActiveScene().name.Contains("1_"))
+        {
+            world = 1;
+        }
+
+        for (int i = 0; i < saveData.GetWorlds().Count; i++)
+        {
+            if (saveData.GetWorlds()[i].GetId() == world)
+            {
+                for (int j = 0; j < saveData.GetWorlds()[i].GetLevels().Count; j++)
+                {
+                    if (saveData.GetWorlds()[i].GetLevels()[j].GetName() == SceneManager.GetActiveScene().name)
+                    {
+                        if (saveData.GetWorlds()[i].GetLevels()[j].GetPlayerScore() < timer.GetComponent<Timer>().GetScore())
+                        {
+                            saveData.GetWorlds()[i].GetLevels()[j].SetPlayerScore(timer.GetComponent<Timer>().GetScore());
+                        }              
+
+                        if(saveData.GetWorlds()[i].GetUnlockedLevels() < saveData.GetWorlds()[i].GetNumberLevels())
+                        {
+                            if (!saveData.GetWorlds()[i].GetLevels()[j + 1].GetStatus())
+                            {
+                                saveData.GetWorlds()[i].SetUnlockedLevels(saveData.GetWorlds()[i].GetUnlockedLevels() + 1);
+                                saveData.GetWorlds()[i].GetLevels()[j + 1].SetStatus(true);
+                            }
+                        }
+                        else
+                        {
+                            if (saveData.GetUnlockedWorlds() < saveData.GetNumberWorlds())
+                            {
+                                saveData.SetUnlockedWorlds(saveData.GetUnlockedWorlds() + 1);
+                                saveData.GetWorlds()[i + 1].SetStatus(true);
+                                saveData.GetWorlds()[i].GetLevels()[0].SetStatus(true);
+                            }   
+                        }
+                        
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        SaveDataSystem.Save(saveData);
     }
     #endregion
 }

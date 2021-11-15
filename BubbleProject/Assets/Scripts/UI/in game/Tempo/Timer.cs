@@ -49,10 +49,8 @@ public class Timer : MonoBehaviour
         {
             Counter();
         }
-        else
-        {
-            CounterStars();
-        }
+
+        CounterStars();
     }
 
     public void StopCounter()

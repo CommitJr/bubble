@@ -52,13 +52,10 @@ public class BubbleController : MonoBehaviour
     {
         SpeedController();
 
-
-        Debug.Log(playerController.GetHealth());
         if (!_isDead && SceneManager.GetActiveScene().buildIndex >= 7)
         {
             HealthCheck();
         }
-
     }
   
 
@@ -140,7 +137,7 @@ public class BubbleController : MonoBehaviour
         else if (collision.gameObject.tag == "End" && !_hasHit)
         {
             Debug.Log("UI");
-            //atualiza();
+            generalFunctions.Win();
 
             _hasHit = true;
         }

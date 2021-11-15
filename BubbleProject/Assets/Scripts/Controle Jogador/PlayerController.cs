@@ -37,18 +37,22 @@ public class PlayerController : MonoBehaviour
         health = saveData.GetPlayerHealth();
         _isControlled = true;
         
-        
-        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
-        
         if (SceneManager.GetActiveScene().buildIndex >= 7)
         {
-            
-
-            colliderTouch = GetComponent<Collider2D>();
-            wavePropagation = GameObject.FindWithTag("WavePropagation");
+            DefineStartLevels();
         }
+        else
+        {
+            DefineStartMenus();
+        } 
+    }
 
-        DefineStartMenus();
+    private void DefineStartLevels()
+    {
+        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+
+        colliderTouch = GetComponent<Collider2D>();
+        wavePropagation = GameObject.FindWithTag("WavePropagation");
     }
 
     private void DefineStartMenus()
@@ -87,7 +91,6 @@ public class PlayerController : MonoBehaviour
         }           
     }
     #endregion
-
 
     
     #region TOUCH CONTROLLER
@@ -179,6 +182,11 @@ public class PlayerController : MonoBehaviour
     public void SetHealth(int health)
     {
         this.health = health;
+    }
+
+    public SaveData GetSaveData()
+    {
+        return this.saveData;
     }
 
     public void SetControllerActivate(bool activate)
