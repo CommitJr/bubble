@@ -92,7 +92,6 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
-    
     #region TOUCH CONTROLLER
     private void ControllerTouch()
     {
@@ -201,7 +200,4 @@ public class PlayerController : MonoBehaviour
         generalFunctions.Health(GetHealth());
     }
     #endregion
-
-    
-
 }

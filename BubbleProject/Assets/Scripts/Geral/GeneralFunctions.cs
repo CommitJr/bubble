@@ -193,7 +193,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         saveData = playerController.GetSaveData();
         int world = 0;
-        if (SceneManager.GetActiveScene().name.Contains("5_"))
+        if (SceneManager.GetActiveScene().name.Contains("5_") || SceneManager.GetActiveScene().name.Contains("Tutorial"))
         {
             world = 5;
         }
