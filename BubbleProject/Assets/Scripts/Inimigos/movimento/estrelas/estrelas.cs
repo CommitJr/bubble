@@ -15,7 +15,7 @@ public class estrelas : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
         rg2D.gravityScale = 0f;
-        rate = 5f;
+        rate = 3f;
         contador = new Contador(rate);
         Debug.Log(transform.parent.transform.position);
     }
@@ -26,14 +26,14 @@ public class estrelas : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) < 50)
         {
             rg2D.gravityScale = 1f;
-           
+             Multiplicar();
          //   Destroy(gameObject, 7f);
         }
         else
         {
             rg2D.gravityScale = 0f;
         } 
-        Multiplicar();
+      
     }
 
     void Multiplicar()
