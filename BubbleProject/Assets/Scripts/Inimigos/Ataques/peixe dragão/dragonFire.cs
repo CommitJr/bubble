@@ -20,7 +20,7 @@ public class dragonFire : MonoBehaviour
     void Update()
     {
         
-        if (Vector2.Distance(centro.position, player.position) < 5)
+        if (Vector2.Distance(centro.position, player.position) < 3)
         {
             part.Play();
         }
