@@ -25,6 +25,7 @@ public class Grito : MonoBehaviour
     }
     private void CriaOnda(){
         Instantiate(ondaPrefab, spawnPosition.position, Quaternion.identity);
+        Destroy(ondaPrefab, 4f);
     }
 
 }
