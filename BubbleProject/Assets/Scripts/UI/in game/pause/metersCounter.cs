@@ -32,4 +32,9 @@ public class metersCounter : MonoBehaviour
             text.SetText("0{0} metros restantes", metros);
         }   
     }
+
+    public int GetMeters()
+    {
+        return metros;
+    }
 }
