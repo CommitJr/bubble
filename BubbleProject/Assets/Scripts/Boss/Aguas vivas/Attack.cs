@@ -10,12 +10,14 @@ public class Attack : MonoBehaviour
     [SerializeField] private GameObject[] boss;
     [SerializeField] private ParticleSystem[] attacks;
     [SerializeField] private metersCounter metersCounter;
+    [SerializeField] private GeneralFunctions generalFunctions;
     [SerializeField] private int attacksChange;
     private System.Random random;
     private int[] option;
     private int counter;
     private int attacksCount;
     private bool _isWithdrawal;
+    private int meters;
     #endregion
 
     #region START
@@ -26,13 +28,30 @@ public class Attack : MonoBehaviour
         attacksCount = 0;
         option = new int[2];
         _isWithdrawal = true;
+        meters = 50;
     }
     #endregion
 
     #region UPDATE
     void Update()
     {
-        if (metersCounter.GetMeters() >= 45)
+        if (!generalFunctions.GetPauseStatus())
+        {
+            Attacking();
+        }
+
+        if (!generalFunctions.GetGameStatus())
+        {
+            gameObject.SetActive(false);
+        }
+        
+    }
+    #endregion
+
+    #region ATTACK
+    private void Attacking()
+    {
+        if (meters >= 45)
         {
             NextAttack();
         }
@@ -40,11 +59,12 @@ public class Attack : MonoBehaviour
         {
             TechnicalWithdrawal();
         }
-        
-    }
-    #endregion
 
-    #region ATTACK
+        if (metersCounter.GetMeters() != 0)
+        {
+            meters = metersCounter.GetMeters();
+        }
+    }
     private void NextAttack()
     {
         if (counter == 0)
