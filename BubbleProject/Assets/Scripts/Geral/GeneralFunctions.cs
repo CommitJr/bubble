@@ -21,7 +21,7 @@ public class GeneralFunctions : MonoBehaviour
     private SaveData saveData;
 
     private  bool _isPause;
-    private  bool _isRestart;
+    private  bool _isRunning;
     #endregion
 
     #region START
@@ -32,7 +32,7 @@ public class GeneralFunctions : MonoBehaviour
 
     private void DefineStart() {     
         _isPause = false;
-        _isRestart = false;
+        _isRunning = true;
 
         playerController = GetComponent<PlayerController>();
 
@@ -65,10 +65,12 @@ public class GeneralFunctions : MonoBehaviour
     {
         if (!_isPause)
         {
+            _isPause = true;
             Pause();
         }
         else
         {
+            _isPause = false;
             Resume();
         }
     }
@@ -80,7 +82,7 @@ public class GeneralFunctions : MonoBehaviour
         header.SetActive(true);
         footer.SetActive(true);
         Time.timeScale = 1f;
-        _isPause = false;
+        
     }
 
     private void Pause()
@@ -90,7 +92,12 @@ public class GeneralFunctions : MonoBehaviour
         header.SetActive(false);
         footer.SetActive(false);
         Time.timeScale = 0f;
-        _isPause = true;
+        
+    }
+
+    public bool GetPauseStatus()
+    {
+        return _isPause;
     }
     #endregion
 
@@ -99,7 +106,6 @@ public class GeneralFunctions : MonoBehaviour
     {
         Debug.Log("Reiniciando..");
         Time.timeScale = 1f;
-        _isRestart = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -142,12 +148,14 @@ public class GeneralFunctions : MonoBehaviour
     {
         Debug.Log("Ganhou!");
         winMenuUI.SetActive(true);
+        _isRunning = false;
     }
 
     public void Defeat()
     {
         Debug.Log("Perdeu!");
         defeatMenuUI.SetActive(true);
+        _isRunning = false;
     }
 
     public void Health(int health)
@@ -257,6 +265,11 @@ public class GeneralFunctions : MonoBehaviour
         }
 
         SaveDataSystem.Save(saveData);
+    }
+
+    public bool GetGameStatus()
+    {
+        return _isRunning;
     }
     #endregion
 }
