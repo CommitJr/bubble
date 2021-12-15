@@ -46,18 +46,17 @@ public class Vampiro : MonoBehaviour
 
         if(distance < maxDistance)
         {
-             hit = Physics2D.Raycast(center.position, direction, distance, mask);
+             hit = Physics2D.Raycast(lingua.position, direction, distance, mask);
 
 
-         /*    if (hit)
+             if (hit)
              {
                     if(hit.collider.gameObject.tag == "BolhaRastreio")
                     {
-
                         playerController.GetComponent<PlayerController>().SetHealth(0);
                     }
              }
-         */
+         
              if (canAttack)
              {
                 Vector3 desiredPosition = direction * 10;
