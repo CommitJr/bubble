@@ -38,13 +38,7 @@ public class Attack : MonoBehaviour
         if (!generalFunctions.GetPauseStatus())
         {
             Attacking();
-        }
-
-        if (!generalFunctions.GetGameStatus())
-        {
-            gameObject.SetActive(false);
-        }
-        
+        }        
     }
     #endregion
 

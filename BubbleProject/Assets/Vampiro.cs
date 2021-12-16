@@ -15,9 +15,13 @@ public class Vampiro : MonoBehaviour
     private PlayerController playerController;
     private Vector2 direction;
     [SerializeField] private Transform center;
+    [SerializeField] private Transform lingua;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+     //   lingua = GameObject.FindGameObjectWithTag("Lingua").transform;
+
         time = Time.deltaTime;
         pointPosition = center.position;
         canAttack = false;
@@ -42,18 +46,17 @@ public class Vampiro : MonoBehaviour
 
         if(distance < maxDistance)
         {
-             hit = Physics2D.Raycast(center.position, direction, distance, mask);
+             hit = Physics2D.Raycast(lingua.position, direction, distance, mask);
 
 
              if (hit)
              {
                     if(hit.collider.gameObject.tag == "BolhaRastreio")
                     {
-
                         playerController.GetComponent<PlayerController>().SetHealth(0);
                     }
              }
-
+         
              if (canAttack)
              {
                 Vector3 desiredPosition = direction * 10;
@@ -83,7 +86,7 @@ public class Vampiro : MonoBehaviour
                     canAttack = true;
                 }
             }
-            //   lingua.position = pointPosition;
+            lingua.position = pointPosition;
         }
 
     }

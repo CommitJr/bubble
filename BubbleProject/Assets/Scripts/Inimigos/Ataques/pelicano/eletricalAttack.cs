@@ -6,7 +6,7 @@ public class eletricalAttack : MonoBehaviour
 {
    
     private ParticleSystem part;
-    [SerializeField] private GameObject wave;
+    private PlayerController wave;
     private List<ParticleCollisionEvent> collisionEvents;
 
     // Start is called before the first frame update
@@ -14,6 +14,7 @@ public class eletricalAttack : MonoBehaviour
     {
         ParticleSystem part = GetComponent<ParticleSystem>();
         collisionEvents = new List<ParticleCollisionEvent>();
+        wave = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
     }
 
     private void OnParticleCollision(GameObject other)
@@ -21,9 +22,10 @@ public class eletricalAttack : MonoBehaviour
         //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
         if (other.tag == "Player")
         {
-            Debug.Log("bateu");
+           
             //other
-            wave.SetActive(false); 
+            wave.enabled = false;
+            Debug.Log(wave.enabled);
             Invoke("choque", 3f);
         }
     }
@@ -31,6 +33,6 @@ public class eletricalAttack : MonoBehaviour
     
     void choque()
     {
-        wave.SetActive(true);
+        wave.enabled = true;
     }
 }

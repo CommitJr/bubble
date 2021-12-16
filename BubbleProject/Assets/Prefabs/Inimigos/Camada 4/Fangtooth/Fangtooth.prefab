@@ -92,10 +92,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4921582897067932235}
   - component: {fileID: 6528743300129147341}
-  - component: {fileID: 7081818679242442106}
   - component: {fileID: 4761282037772001620}
   - component: {fileID: 1397093273884734997}
   - component: {fileID: 8986967986897630853}
+  - component: {fileID: 5345345562317382341}
   m_Layer: 9
   m_Name: Fangtooth
   m_TagString: Corpo
@@ -144,22 +144,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &7081818679242442106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953021214246110207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d1887414abc0044ba665bba642c3701, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ondaPrefab: {fileID: 6872205143676128787, guid: 5062b6124f8c472418900befb6c48d41,
-    type: 3}
-  spawnPosition: {fileID: 5027731220084206060}
-  temporizador: 2
 --- !u!95 &4761282037772001620
 Animator:
   serializedVersion: 3
@@ -210,6 +194,21 @@ MonoBehaviour:
   speed: 3
   amplitude: 2
   inimigoRb: {fileID: 6528743300129147341}
+--- !u!114 &5345345562317382341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953021214246110207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf65964617102c4c8540417587ea289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ondaPrefab: {fileID: 1107669373872434901, guid: 748ce75282b7a8b4ebb7e1353a4d785a,
+    type: 3}
+  spawnPosition: {fileID: 5027731220084206060}
 --- !u!1 &2219537268231150899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,7 +1220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9075929216366827282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.46, y: -0.99, z: 0}
+  m_LocalPosition: {x: -6.43, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4921582897067932235}
