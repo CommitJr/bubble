@@ -14,6 +14,7 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject footer;
     [SerializeField] private Image[] lives;
     private GameObject timer;
+    private GameObject canvasTutorial;
 
     private PlayerController playerController;
     private BubbleController bubbleController;
@@ -57,6 +58,11 @@ public class GeneralFunctions : MonoBehaviour
         bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
         audioSource = GameObject.FindWithTag("AmbientSound") ? GameObject.FindWithTag("AmbientSound").GetComponent<AudioSource>() : null;
         timer = GameObject.FindWithTag("Timer");
+
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            canvasTutorial = GameObject.FindWithTag("CanvasTutorial");
+        }
     }
     #endregion
 
@@ -81,8 +87,13 @@ public class GeneralFunctions : MonoBehaviour
         pauseMenuUI.SetActive(false);
         header.SetActive(true);
         footer.SetActive(true);
+
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            canvasTutorial.SetActive(true);
+        }
+
         Time.timeScale = 1f;
-        
     }
 
     private void Pause()
@@ -91,8 +102,13 @@ public class GeneralFunctions : MonoBehaviour
         pauseMenuUI.SetActive(true);
         header.SetActive(false);
         footer.SetActive(false);
-        Time.timeScale = 0f;
         
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            canvasTutorial.SetActive(false);
+        }
+
+        Time.timeScale = 0f;
     }
 
     public bool GetPauseStatus()
