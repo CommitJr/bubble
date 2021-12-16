@@ -18,7 +18,6 @@ public class ZigZag : MonoBehaviour
     {
         Move();
         Wayback();
-        Debug.Log(canGoBack);
     }
     private void Move()
     {
