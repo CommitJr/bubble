@@ -7,8 +7,8 @@ public class ZigZag : MonoBehaviour
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float moveSpeed = 2f;
 
-    private int waypointIndex = 0;
-    private bool canGoBack = false;
+    public int waypointIndex = 0;
+    bool canGoBack = false;
     private void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;
@@ -34,6 +34,7 @@ public class ZigZag : MonoBehaviour
                 canGoBack = true;
             }
         }
+        
     }
 
     private void Wayback()
@@ -48,9 +49,9 @@ public class ZigZag : MonoBehaviour
                    waypointIndex -= 1;
                }
 
-               if (waypointIndex < waypoints.Length - 2 )
+               if (waypointIndex == 0)
                {
-                   canGoBack = false;
+                    canGoBack = false;
                }
 
             }
