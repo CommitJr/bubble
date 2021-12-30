@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class AnimatorController : MonoBehaviour
 {
-    /*
-     ARRAIAF NADA ATÉ UM PONTO
-    ARRAIAF C2HEGA AO PONTO 1
-    ARRAIAF SOME
-    ARRAIAL APARECE
-    SPAWNA INIMIGOS
-    ARRAIAL CHEGA AO PONTO 2
-    ARRAIAL SOME
-    ARRAIAC APARACE
-    */
+    
     [SerializeField] private ZigZag zigzag;
-    [SerializeField] private GameObject[] arraia;       // são duas arraias, 0 - L, 1 - F
-    [SerializeField] private GameObject[] enymies;      // são três peixes
+    [SerializeField] private GameObject[] arraia;       
+    [SerializeField] private GameObject[] enemies;   
     private Contador cont;
     [SerializeField] private float timerForSpawn;
+    private bool _canChange = true;
+    private GameObject enemy;
     void Start()
     {
         cont = new Contador(timerForSpawn);
@@ -31,31 +24,37 @@ public class AnimatorController : MonoBehaviour
 
     private void ChangeFish()
     {
-        if(zigzag.waypointIndex %2 == 0)
+       
+        if(zigzag.waypointIndex %2 == 0 && zigzag.waypointIndex > 0 && _canChange)
          {
-             // arraiaL
-             arraia[1].SetActive(true);
-             arraia[0].SetActive(false);
-         }
+            _canChange = false;
 
-         else
+            arraia[0].SetActive(false);
+            arraia[1].SetActive(true);
+
+        }
+
+         else if( zigzag.waypointIndex == 3 || zigzag.waypointIndex == 4 && !_canChange)
          {
-             // arraiaF
-             SpawnEnimy();
+            _canChange = true;
 
+            arraia[0].SetActive(true);
+            arraia[1].SetActive(false);
+
+            arraia[1].transform.rotation = Quaternion.Euler(180, 0, 0);
+            SpawnEnemy();
          }
+       
+        
 
     }
 
-    private void SpawnEnimy()
+    private void SpawnEnemy()
     {
         if (cont.RepeatCountTime())
         {
-            // inimigo randomico
-            // soltagem: da posição da arraia transform.position
-            // ele caí, alguns quadradinhos gravity
-            // depois o proprio prefab assume
-                // ativa tudooo
+            //   Instantiate(enemies[Random.Range(0, 2)], transform.position, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, 2)], transform.position, Quaternion.Euler(new Vector3(Random.Range(0, 180), 0, 0)));
         }
     }
 }

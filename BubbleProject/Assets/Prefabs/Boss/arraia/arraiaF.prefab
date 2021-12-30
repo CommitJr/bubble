@@ -206,13 +206,14 @@ GameObject:
   - component: {fileID: 7651390079668943339}
   - component: {fileID: 2683059085735335922}
   - component: {fileID: 2003373476957437255}
+  - component: {fileID: 1808136755099646632}
   m_Layer: 0
   m_Name: arraiaF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7651390079668943339
 Transform:
   m_ObjectHideFlags: 0
@@ -281,6 +282,27 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &1808136755099646632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4626640883501538468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d83c3eaf92b070489a67c10b05f15fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zigzag: {fileID: 0}
+  arraia:
+  - {fileID: 4626640883501538468}
+  - {fileID: 2767170513690035780, guid: 9f11d00a69a41e54ba9dc89a12213a7c, type: 3}
+  enemies:
+  - {fileID: 1196477382418929614, guid: 703058c7eb76b644f9e4a60e295d92b6, type: 3}
+  - {fileID: 2765140296266676375, guid: 45be991894f65fc4e8ea24b592952c96, type: 3}
+  - {fileID: 1953021214246110207, guid: afdfc23baa3a03547af5d4f30553acc1, type: 3}
+  timerForSpawn: 3
 --- !u!1 &5071671635450125179
 GameObject:
   m_ObjectHideFlags: 0
