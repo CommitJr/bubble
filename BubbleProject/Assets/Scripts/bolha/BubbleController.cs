@@ -112,7 +112,8 @@ public class BubbleController : MonoBehaviour
 
         #region colisao fatal
         if (collision.collider.gameObject.tag == "Dentes" || collision.collider.gameObject.tag == "Pedras"
-            || collision.collider.gameObject.tag == "Helice" || collision.collider.gameObject.tag == "oleo")
+            || collision.collider.gameObject.tag == "Helice" || collision.collider.gameObject.tag == "oleo"
+            || collision.collider.gameObject.tag == "Arpao")
         {
             playerController.SetHealth(0);
         }
