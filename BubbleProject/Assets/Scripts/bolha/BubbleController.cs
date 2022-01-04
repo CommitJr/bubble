@@ -205,7 +205,7 @@ public class BubbleController : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        Debug.Log(_isDead);
+        
 
         Invoke("defeatTime", 0.99f);
     }
@@ -214,6 +214,7 @@ public class BubbleController : MonoBehaviour
     private void defeatTime()
     {
         generalFunctions.Defeat();
+        Debug.Log("MORTOOOOOOO " + _isDead);
         Destroy(GameObject.FindWithTag("death"));
     }
     #endregion

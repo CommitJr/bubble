@@ -8,7 +8,7 @@ public class ZigZag : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
 
     public int waypointIndex = 0;
-    bool canGoBack = false;
+    public bool canGoBack = false;
     private void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;

@@ -6,15 +6,10 @@ public class AnimatorController : MonoBehaviour
 {
     
     [SerializeField] private ZigZag zigzag;
-    [SerializeField] private GameObject[] arraia;       
-    [SerializeField] private GameObject[] enemies;   
-    private Contador cont;
-    [SerializeField] private float timerForSpawn;
+    [SerializeField] private GameObject[] arraia;     
     private bool _canChange;
-    private GameObject enemy;
     void Start()
     {
-        cont = new Contador(timerForSpawn);
         _canChange = true;
     }
 
@@ -25,31 +20,53 @@ public class AnimatorController : MonoBehaviour
 
     private void ChangeFish()
     {
-        SpawnEnemy();
-        if ( zigzag.waypointIndex %3 == 0 && !_canChange) // descendo
+        if (!zigzag.canGoBack)
         {
-            arraia[0].SetActive(true);
-            arraia[1].SetActive(false);
-                        
-            _canChange = true;
-            Debug.Log("descendo");
+            if (zigzag.waypointIndex % 2 != 0 && !_canChange) // descendo
+            {
+                if(zigzag.waypointIndex == 5 || zigzag.waypointIndex == 1)
+                {
+                    arraia[0].SetActive(true);
+                    arraia[1].SetActive(false);
+                }
+                else
+                {
+                    arraia[0].SetActive(false);
+                    arraia[1].SetActive(true);
+                }
+                _canChange = true;
+            }
+            else if (zigzag.waypointIndex % 2 == 0 && _canChange) // subindo
+            {
+                arraia[0].SetActive(true);
+                arraia[1].SetActive(false);
+               
+                _canChange = false;
+            }
         }
-        else if(zigzag.waypointIndex %2 ==0 && _canChange) // subindo
+        else
         {
-            arraia[0].SetActive(false);
-            arraia[1].SetActive(true);
+            if (zigzag.waypointIndex % 2 == 0 && !_canChange) // descendo
+            {  
+                arraia[0].SetActive(true);
+                arraia[1].SetActive(false);
 
-            Debug.Log("subindo");
-            _canChange = false;
+                _canChange = true;
+            }
+            else if (zigzag.waypointIndex % 2 != 0 && _canChange) // subindo
+            {
+                if (zigzag.waypointIndex == 3)
+                {
+                    arraia[0].SetActive(true);
+                    arraia[1].SetActive(false);
+                }
+                else
+                {
+                    arraia[0].SetActive(false);
+                    arraia[1].SetActive(true);
+                }
+                _canChange = false;
+            }
         }
-    }
-
-    private void SpawnEnemy()
-    {
-        if (cont.RepeatCountTime())
-        {
-            Instantiate(enemies[Random.Range(0, 2)], transform.position, Quaternion.identity);
-            //Instantiate(enemies[Random.Range(0, 2)], transform.position, Quaternion.Euler(new Vector3(0, 0, Random.Range(0, 180))));
-        }
-    }
+    }   
 }
