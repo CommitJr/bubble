@@ -94,7 +94,7 @@ public class BubbleController : MonoBehaviour
     #endregion
 
     #region COLLISION
-    void OnTriggerEnter2D(Collider2D foreignObject)
+    public void OnTriggerEnter2D(Collider2D foreignObject)
     {
         AnimationController(foreignObject);
 

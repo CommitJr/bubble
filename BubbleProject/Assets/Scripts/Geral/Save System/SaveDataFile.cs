@@ -38,9 +38,18 @@ public class SaveDataFile
                 }
                 else
                 {
-                    LevelAdds.SetName("Fase " + i + "_" + (j + 1));
-                    LevelAdds.SetStatus(false);
-                    LevelAdds.SetPlayerScore(0);
+                    if (i == 5)
+                    {
+                        LevelAdds.SetName("Fase " + i + "_" + (j));
+                        LevelAdds.SetStatus(false);
+                        LevelAdds.SetPlayerScore(0);
+                    }
+                    else {
+                        LevelAdds.SetName("Fase " + i + "_" + (j + 1));
+                        LevelAdds.SetStatus(false);
+                        LevelAdds.SetPlayerScore(0);
+                    }
+                    
                 }
 
                 WolrdAdds.AddLevel(LevelAdds);
