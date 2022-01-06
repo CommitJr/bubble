@@ -28,6 +28,7 @@ public class movimento : MonoBehaviour
             if(direcao == -1)
             {
                 transform.eulerAngles = new Vector2(0f, 0);
+                gameObject.transform.position = new Vector2(gameObject.transform.position.x - 1, gameObject.transform.position.y);
             }
         }
     }

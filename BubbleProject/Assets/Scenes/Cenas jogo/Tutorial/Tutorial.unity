@@ -13015,6 +13015,7 @@ RectTransform:
   - {fileID: 1991569066}
   - {fileID: 1860693781}
   - {fileID: 52100139}
+  - {fileID: 1667802157}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14454,6 +14455,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1667802156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667802157}
+  - component: {fileID: 1667802158}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: End
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1667802157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667802156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -53, y: 1399, z: -4117.324}
+  m_LocalScale: {x: 30.602642, y: 30.602642, z: 30.602642}
+  m_Children: []
+  m_Father: {fileID: 1532807054}
+  m_RootOrder: 95
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1667802158
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667802156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.4990034, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 23.06521, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &1678008315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3238612427837727285, guid: ba1e353289aebf44e82d424facb87d1d,
@@ -18436,10 +18494,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3328023654387194937, guid: 626c63aa1f746414fa6994040768aadc,
+        type: 3}
+      propertyPath: m_TagString
+      value: LossControl
+      objectReference: {fileID: 0}
     - target: {fileID: 3328023654387194942, guid: 626c63aa1f746414fa6994040768aadc,
         type: 3}
       propertyPath: tutorial
       value: 
       objectReference: {fileID: 1246454801}
+    - target: {fileID: 3328023654387194943, guid: 626c63aa1f746414fa6994040768aadc,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 626c63aa1f746414fa6994040768aadc, type: 3}

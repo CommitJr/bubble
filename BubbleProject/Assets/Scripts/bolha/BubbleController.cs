@@ -94,7 +94,7 @@ public class BubbleController : MonoBehaviour
     #endregion
 
     #region COLLISION
-    void OnTriggerEnter2D(Collider2D foreignObject)
+    public void OnTriggerEnter2D(Collider2D foreignObject)
     {
         AnimationController(foreignObject);
 
@@ -112,7 +112,8 @@ public class BubbleController : MonoBehaviour
 
         #region colisao fatal
         if (collision.collider.gameObject.tag == "Dentes" || collision.collider.gameObject.tag == "Pedras"
-            || collision.collider.gameObject.tag == "Helice" || collision.collider.gameObject.tag == "oleo")
+            || collision.collider.gameObject.tag == "Helice" || collision.collider.gameObject.tag == "oleo"
+            || collision.collider.gameObject.tag == "Arpao")
         {
             playerController.SetHealth(0);
         }
@@ -204,7 +205,7 @@ public class BubbleController : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        Debug.Log(_isDead);
+        
 
         Invoke("defeatTime", 0.99f);
     }
@@ -213,6 +214,7 @@ public class BubbleController : MonoBehaviour
     private void defeatTime()
     {
         generalFunctions.Defeat();
+        Debug.Log("MORTOOOOOOO " + _isDead);
         Destroy(GameObject.FindWithTag("death"));
     }
     #endregion
