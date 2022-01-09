@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4762,8 +4762,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593182836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 112.19, y: -49.186, z: -2232.8193}
-  m_LocalScale: {x: 84.98771, y: 2.5890188, z: 28.25}
+  m_LocalPosition: {x: 123.5, y: -46.18, z: -2232.8193}
+  m_LocalScale: {x: 84.98771, y: 3.7611973, z: 28.25}
   m_Children: []
   m_Father: {fileID: 175025940}
   m_RootOrder: 1
@@ -6195,8 +6195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716916237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 259.3, y: 47.29, z: -2190.4443}
-  m_LocalScale: {x: 11.877297, y: 1.6324769, z: 28.25}
+  m_LocalPosition: {x: 262.96, y: 47.29, z: -2190.4443}
+  m_LocalScale: {x: 13.586167, y: 1.6324769, z: 28.25}
   m_Children: []
   m_Father: {fileID: 500574126}
   m_RootOrder: 1
@@ -6371,8 +6371,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726734583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -113.32, y: 47.023, z: -2176.3193}
-  m_LocalScale: {x: 72.95945, y: 1.8810079, z: 28.25}
+  m_LocalPosition: {x: -90.38, y: 47.023, z: -2176.3193}
+  m_LocalScale: {x: 83.678665, y: 1.8810079, z: 28.25}
   m_Children: []
   m_Father: {fileID: 89046798}
   m_RootOrder: 1
@@ -10734,6 +10734,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6732119382640535648, guid: 9ef9c1b4095e8bd4189f6b8e0b1439ac,
+        type: 3}
+      propertyPath: lowTime
+      value: 999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732119382640535648, guid: 9ef9c1b4095e8bd4189f6b8e0b1439ac,
+        type: 3}
+      propertyPath: highTime
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732119382640535648, guid: 9ef9c1b4095e8bd4189f6b8e0b1439ac,
+        type: 3}
+      propertyPath: middleTime
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 6732119384464414464, guid: 9ef9c1b4095e8bd4189f6b8e0b1439ac,
         type: 3}
       propertyPath: m_Name
