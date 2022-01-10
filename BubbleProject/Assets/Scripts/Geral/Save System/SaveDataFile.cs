@@ -21,39 +21,138 @@ public class SaveDataFile
             else
             {
                 WolrdAdds.SetStatus(false);
-            }          
-            WolrdAdds.SetNumberLevels(10);
+            }
+            switch (i)
+            {
+                case 1:
+                    WolrdAdds.SetNumberLevels(1);
+
+                    for (int j = 0; j < 1; j++)
+                    {
+                        Level LevelAdds = new Level();
+
+                        LevelAdds.SetId(j);
+
+                        LevelAdds.SetName("Fase " + i + "_" + (j + 1));
+
+                        if (j == 0)
+                        {
+                            LevelAdds.SetStatus(true);
+                        }
+                        else
+                        {
+                            LevelAdds.SetStatus(false);
+                        }
+                        
+                        LevelAdds.SetPlayerScore(0);
+
+                        WolrdAdds.AddLevel(LevelAdds);
+                    }
+                    break;
+                case 2:
+                    WolrdAdds.SetNumberLevels(4);
+
+                    for (int j = 0; j < 4; j++)
+                    {
+                        Level LevelAdds = new Level();
+
+                        LevelAdds.SetId(j);
+
+                        LevelAdds.SetName("Fase " + i + "_" + (j + 1));
+
+                        if (j == 0)
+                        {
+                            LevelAdds.SetStatus(true);
+                        }
+                        else
+                        {
+                            LevelAdds.SetStatus(false);
+                        }
+
+                        LevelAdds.SetPlayerScore(0);
+
+                        WolrdAdds.AddLevel(LevelAdds);
+                    }
+                    break;
+                case 3:
+                    WolrdAdds.SetNumberLevels(4);
+
+                    for (int j = 0; j < 4; j++)
+                    {
+                        Level LevelAdds = new Level();
+
+                        LevelAdds.SetId(j);
+
+                        LevelAdds.SetName("Fase " + i + "_" + (j + 1));
+
+                        if (j == 0)
+                        {
+                            LevelAdds.SetStatus(true);
+                        }
+                        else
+                        {
+                            LevelAdds.SetStatus(false);
+                        }
+
+                        LevelAdds.SetPlayerScore(0);
+
+                        WolrdAdds.AddLevel(LevelAdds);
+                    }
+                    break;
+                case 4:
+                    WolrdAdds.SetNumberLevels(4);
+
+                    for (int j = 0; j < 4; j++)
+                    {
+                        Level LevelAdds = new Level();
+
+                        LevelAdds.SetId(j);
+
+                        LevelAdds.SetName("Fase " + i + "_" + (j + 1));
+
+                        if (j == 0)
+                        {
+                            LevelAdds.SetStatus(true);
+                        }
+                        else
+                        {
+                            LevelAdds.SetStatus(false);
+                        }
+
+                        LevelAdds.SetPlayerScore(0);
+
+                        WolrdAdds.AddLevel(LevelAdds);
+                    }
+                    break;
+                case 5:
+                    WolrdAdds.SetNumberLevels(5);
+
+                    for (int j = 0; j < 5; j++)
+                    {
+                        Level LevelAdds = new Level();
+
+                        LevelAdds.SetId(j);
+                        if (j == 0)
+                        {
+                            LevelAdds.SetName("Tutorial");
+                            LevelAdds.SetStatus(true);
+                            LevelAdds.SetPlayerScore(3);
+                        }
+                        else
+                        {
+                            LevelAdds.SetName("Fase " + i + "_" + (j));
+                            LevelAdds.SetStatus(false);
+                            LevelAdds.SetPlayerScore(0);
+                        }
+
+                        WolrdAdds.AddLevel(LevelAdds);
+                    }
+                    break;
+            }
+            
             WolrdAdds.SetUnlockedLevels(1);
 
-            for (int j = 0; j < 10; j++)
-            {
-                Level LevelAdds = new Level();
-                               
-                LevelAdds.SetId(j);
-                if (i == 5 && j == 0)
-                {
-                    LevelAdds.SetName("Tutorial");
-                    LevelAdds.SetStatus(true);
-                    LevelAdds.SetPlayerScore(3);
-                }
-                else
-                {
-                    if (i == 5)
-                    {
-                        LevelAdds.SetName("Fase " + i + "_" + (j));
-                        LevelAdds.SetStatus(false);
-                        LevelAdds.SetPlayerScore(0);
-                    }
-                    else {
-                        LevelAdds.SetName("Fase " + i + "_" + (j + 1));
-                        LevelAdds.SetStatus(false);
-                        LevelAdds.SetPlayerScore(0);
-                    }
-                    
-                }
-
-                WolrdAdds.AddLevel(LevelAdds);
-            }
+            
 
             GameData.AddWorld(WolrdAdds);
         }
