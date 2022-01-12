@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -696,6 +696,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tubarao
       objectReference: {fileID: 0}
+    - target: {fileID: 7604032069778693414, guid: 10bc809e31b502540b749a6b4428c8e1,
+        type: 3}
+      propertyPath: velocidade
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8934822310250644298, guid: 10bc809e31b502540b749a6b4428c8e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -1123,7 +1128,7 @@ GameObject:
   - component: {fileID: 1671424374}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

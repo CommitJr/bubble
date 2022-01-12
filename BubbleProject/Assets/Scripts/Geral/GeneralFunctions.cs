@@ -222,6 +222,11 @@ public class GeneralFunctions : MonoBehaviour
 
     public void SaveDataCheck()
     {
+        if (GameObject.FindGameObjectWithTag("Inimigos") != null)
+        {
+            GameObject.FindGameObjectWithTag("Inimigos").SetActive(false);
+        }
+        
         saveData = playerController.GetSaveData();
         int world = 0;
         if (SceneManager.GetActiveScene().name.Contains("5_") || SceneManager.GetActiveScene().name.Contains("Tutorial"))
@@ -249,17 +254,20 @@ public class GeneralFunctions : MonoBehaviour
             world = 1;
         }
 
-        for (int i = 0; i < saveData.GetWorlds().Count; i++)
+        for (int i = 0; i < saveData.GetNumberWorlds(); i++)
         {
             if (saveData.GetWorlds()[i].GetId() == world)
             {
-                for (int j = 0; j < saveData.GetWorlds()[i].GetLevels().Count; j++)
+                for (int j = 0; j < saveData.GetWorlds()[i].GetNumberLevels(); j++)
                 {
                     if (saveData.GetWorlds()[i].GetLevels()[j].GetName() == SceneManager.GetActiveScene().name)
                     {
-                        if (saveData.GetWorlds()[i].GetLevels()[j].GetPlayerScore() < timer.GetComponent<Timer>().GetScore())
+                        if(SceneManager.GetActiveScene().name != "Tutorial")
                         {
-                            saveData.GetWorlds()[i].GetLevels()[j].SetPlayerScore(timer.GetComponent<Timer>().GetScore());
+                            if (saveData.GetWorlds()[i].GetLevels()[j].GetPlayerScore() < timer.GetComponent<Timer>().GetScore())
+                            {
+                                saveData.GetWorlds()[i].GetLevels()[j].SetPlayerScore(timer.GetComponent<Timer>().GetScore());
+                            }
                         }              
 
                         if(saveData.GetWorlds()[i].GetUnlockedLevels() < saveData.GetWorlds()[i].GetNumberLevels())
