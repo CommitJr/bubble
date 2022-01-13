@@ -10,7 +10,12 @@ public class Initial : MonoBehaviour
     {
         if(collision.collider.gameObject.tag== "End")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            LoadNextScene();
         }
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
