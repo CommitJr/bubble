@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         health = saveData.GetPlayerHealth();
         _isControlled = true;
         
-        if (SceneManager.GetActiveScene().buildIndex >= 7)
+        if (SceneManager.GetActiveScene().buildIndex >= 8)
         {
             DefineStartLevels();
         }
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         {
             DefineStartMenuWorlds();
         }
-        if (SceneManager.GetActiveScene().buildIndex >= 2 && SceneManager.GetActiveScene().buildIndex <= 6)
+        if (SceneManager.GetActiveScene().buildIndex >= 3 && SceneManager.GetActiveScene().buildIndex <= 7)
         {
             DefineStartMenuLevels();
         }
