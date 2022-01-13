@@ -33,7 +33,7 @@ public class BubbleController : MonoBehaviour
         speedLimit = 2.5f;
         _hasHit = false;
         _isDead = false;
-        if (SceneManager.GetActiveScene().buildIndex >= 8)
+        if (SceneManager.GetActiveScene().buildIndex >= 9)
         {
             target = GameObject.FindGameObjectWithTag("LossControl").GetComponent<Transform>();
         }
@@ -52,7 +52,7 @@ public class BubbleController : MonoBehaviour
     {
         SpeedController();
 
-        if (!_isDead && SceneManager.GetActiveScene().buildIndex >= 7)
+        if (!_isDead && SceneManager.GetActiveScene().buildIndex >= 9)
         {
             HealthCheck();
         }
