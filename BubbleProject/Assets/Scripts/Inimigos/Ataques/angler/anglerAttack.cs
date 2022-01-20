@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
 
 public class anglerAttack : MonoBehaviour
 {
-    public UnityEngine.Experimental.Rendering.Universal.Light2D intensity;
+    public UnityEngine.Rendering.Universal.Light2D intensity;
     private Vector2 direction;
     private GameObject player;
     private Contador contador;
@@ -13,7 +12,7 @@ public class anglerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        intensity = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        intensity = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         player = GameObject.FindWithTag("Player");
         contador = new Contador(.25f);
     }

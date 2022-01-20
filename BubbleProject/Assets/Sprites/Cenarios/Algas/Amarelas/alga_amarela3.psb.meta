@@ -24,6 +24,8 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -42,6 +44,9 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -75,7 +80,6 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -99,43 +103,70 @@ ScriptedImporter:
       width: 260
       height: 862
     spriteID: e13db0708c692b74b9e89d950f603d14
-    internalID: 0
     spriteBone:
     - name: bone_1
+      guid: 
       position: {x: 91.48468, y: -3.1735535, z: 0}
       rotation: {x: 0, y: 0, z: 0.8335586, w: 0.55243105}
       length: 98.84868
       parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_2
+      guid: 
       position: {x: 98.84865, y: -0.0000031404288, z: 0}
       rotation: {x: 0, y: 0, z: -0.3805337, w: 0.92476714}
       length: 169.70058
       parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_3
+      guid: 
       position: {x: 169.70058, y: 0.00009775665, z: 0}
       rotation: {x: 0, y: 0, z: -0.012193608, w: 0.99992573}
       length: 106.66346
       parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_4
+      guid: 
       position: {x: 106.66342, y: 0.00004870024, z: 0}
       rotation: {x: 0, y: 0, z: 0.08304717, w: 0.9965457}
       length: 133.32938
       parentId: 2
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_5
+      guid: 
       position: {x: 133.32939, y: 0.000010926794, z: 0}
       rotation: {x: 0, y: 0, z: 0.11902083, w: 0.9928917}
       length: 80.53222
       parentId: 3
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_6
+      guid: 
       position: {x: 80.532234, y: 0.0000027893777, z: 0}
       rotation: {x: 0, y: 0, z: 0.07259131, w: 0.9973618}
       length: 145.08644
       parentId: 4
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_7
+      guid: 
       position: {x: 145.08643, y: 0.00007483865, z: 0}
       rotation: {x: 0, y: 0, z: 0.14514396, w: 0.9894106}
       length: 57.958458
       parentId: 5
+      color:
+        serializedVersion: 2
+        rgba: 0
     spriteOutline: []
     vertices:
     - position: {x: 92, y: 2}
@@ -3097,69 +3128,71 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -826, y: -315}
-  platformSettings: []
-  mosaicLayers: 1
-  documentPivot: {x: 0, y: 0}
-  documentAlignment: 7
-  importHiddenLayers: 0
-  importedTextureWidth: 512
-  importedTextureHeight: 1024
-  documentSize: {x: 1920, y: 1500}
-  paperDollMode: 0
-  keepDupilcateSpriteName: 0
-  spriteCategoryList:
-    categories: []
-  textureActualWidth: 512
-  textureActualHeight: 1024
-  spritePackingTag: 
-  resliceFromLayer: 0
-  characterMode: 1
-  mosaicPSDLayers: []
-  rigPSDLayers:
-  - name: Vector 138.png
-    spriteName: Vector 138.png
-    isGroup: 0
-    parentIndex: -1
-    spriteID: e13db0708c692b74b9e89d950f603d14
-    layerID: 0
-    mosaicPosition: {x: 4, y: 4}
   characterData:
     bones:
     - name: bone_1
+      guid: 
       position: {x: 921.4847, y: 315.82645, z: 0}
       rotation: {x: 0, y: 0, z: 0.8335586, w: 0.55243105}
       length: 98.84868
       parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_2
+      guid: 
       position: {x: 98.84865, y: -0.00003023048, z: 0}
       rotation: {x: 0, y: 0, z: -0.38053367, w: 0.9247671}
       length: 169.70058
       parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_3
+      guid: 
       position: {x: 169.70059, y: 0.000055554305, z: 0}
       rotation: {x: 0, y: 0, z: -0.012193598, w: 0.9999257}
       length: 106.66346
       parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_4
+      guid: 
       position: {x: 106.66347, y: 0.0000138343385, z: 0}
       rotation: {x: 0, y: 0, z: 0.08304712, w: 0.9965456}
       length: 133.32938
       parentId: 2
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_5
+      guid: 
       position: {x: 133.32936, y: -0.000027355298, z: 0}
       rotation: {x: 0, y: 0, z: 0.11902089, w: 0.9928918}
       length: 80.53222
       parentId: 3
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_6
+      guid: 
       position: {x: 80.532234, y: 0.000018321429, z: 0}
       rotation: {x: 0, y: 0, z: 0.07259131, w: 0.9973618}
       length: 145.08646
       parentId: 4
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_7
+      guid: 
       position: {x: 145.08646, y: 0.000047343692, z: 0}
       rotation: {x: 0, y: 0, z: 0.14514394, w: 0.98941064}
       length: 57.958458
       parentId: 5
+      color:
+        serializedVersion: 2
+        rgba: 0
     parts:
     - spritePosition:
         x: 830
@@ -3172,8 +3205,46 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Vector 138.png
+    spriteName: Vector 138.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e13db0708c692b74b9e89d950f603d14
+    layerID: 0
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   generateGOHierarchy: 0
   textureAssetName: alga_amarela3 Texture
   prefabAssetName: alga_amarela3 Prefab
   spriteLibAssetName: alga_amarela3 Sprite Lib
+  skeletonAssetName: 
   secondarySpriteTextures: []

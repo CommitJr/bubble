@@ -24,6 +24,8 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -42,6 +44,9 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -75,7 +80,6 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -99,7 +103,6 @@ ScriptedImporter:
       width: 29
       height: 31
     spriteID: 63bdc29712c01f1429a315ed6468f146
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices:
@@ -373,7 +376,6 @@ ScriptedImporter:
       width: 953
       height: 437
     spriteID: b00c0c29533c29a428b7c4c78c357ce3
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices:
@@ -1727,7 +1729,6 @@ ScriptedImporter:
       width: 950
       height: 436
     spriteID: 84f3d7c6822b25643bf89f469ea6ac58
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices:
@@ -3562,7 +3563,6 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: a08dc3cef5148a34f90b77fbfdb144d1
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3572,53 +3572,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -958, y: -592}
-  platformSettings: []
-  mosaicLayers: 1
-  documentPivot: {x: 0, y: 0}
-  documentAlignment: 7
-  importHiddenLayers: 0
-  importedTextureWidth: 1024
-  importedTextureHeight: 1024
-  documentSize: {x: 1920, y: 1080}
-  paperDollMode: 0
-  keepDupilcateSpriteName: 0
-  spriteCategoryList:
-    categories: []
-  textureActualWidth: 1024
-  textureActualHeight: 1024
-  spritePackingTag: 
-  resliceFromLayer: 0
-  characterMode: 1
-  mosaicPSDLayers: []
-  rigPSDLayers:
-  - name: Olhos.png
-    spriteName: Olhos.png
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 63bdc29712c01f1429a315ed6468f146
-    layerID: 0
-    mosaicPosition: {x: 962, y: 449}
-  - name: layer1.png
-    spriteName: layer1.png
-    isGroup: 0
-    parentIndex: -1
-    spriteID: b00c0c29533c29a428b7c4c78c357ce3
-    layerID: -1692494715
-    mosaicPosition: {x: 4, y: 4}
-  - name: Mask Group.png
-    spriteName: Mask Group.png
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 84f3d7c6822b25643bf89f469ea6ac58
-    layerID: 1977702268
-    mosaicPosition: {x: 4, y: 449}
-  - name: Fundo
-    spriteName: Fundo
-    isGroup: 0
-    parentIndex: -1
-    spriteID: a08dc3cef5148a34f90b77fbfdb144d1
-    layerID: -2007530074
-    mosaicPosition: {x: 962, y: 488}
   characterData:
     bones: []
     parts:
@@ -3660,8 +3613,76 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Olhos.png
+    spriteName: Olhos.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63bdc29712c01f1429a315ed6468f146
+    layerID: 0
+    mosaicPosition: {x: 962, y: 449}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: layer1.png
+    spriteName: layer1.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b00c0c29533c29a428b7c4c78c357ce3
+    layerID: -1692494715
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Mask Group.png
+    spriteName: Mask Group.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 84f3d7c6822b25643bf89f469ea6ac58
+    layerID: 1977702268
+    mosaicPosition: {x: 4, y: 449}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fundo
+    spriteName: Fundo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a08dc3cef5148a34f90b77fbfdb144d1
+    layerID: -2007530074
+    mosaicPosition: {x: 962, y: 488}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   generateGOHierarchy: 0
   textureAssetName: vibora Texture
   prefabAssetName: vibora Prefab
   spriteLibAssetName: vibora Sprite Lib
+  skeletonAssetName: 
   secondarySpriteTextures: []
