@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         health = saveData.GetPlayerHealth();
         _isControlled = true;
         
-        if (SceneManager.GetActiveScene().buildIndex >= 8)
+        if ((SceneManager.GetActiveScene().name.Contains("Fase")) || (SceneManager.GetActiveScene().name == "Tutorial"))
         {
             DefineStartLevels();
         }
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         {
             DefineStartMenuWorlds();
         }
-        if (SceneManager.GetActiveScene().buildIndex >= 3 && SceneManager.GetActiveScene().buildIndex <= 7)
+        if (SceneManager.GetActiveScene().name.Contains("Camada"))
         {
             DefineStartMenuLevels();
         }
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
     #region TOUCH CONTROLLER
     private void ControllerTouch()
     {
-        if (SceneManager.GetActiveScene().buildIndex >= 7)
+        if ((SceneManager.GetActiveScene().name.Contains("Fase")) || (SceneManager.GetActiveScene().name == "Tutorial"))
         {
             if (_isControlled)
             {
@@ -135,13 +135,13 @@ public class PlayerController : MonoBehaviour
 
     private void TouchEscapeMenu()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().name == "Menu")
         {
             GetComponent<GeneralFunctions>().GoToExit();
         }
         else
         {
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (SceneManager.GetActiveScene().name == "LevelSeletion")
             {
                 GetComponent<GeneralFunctions>().GoToMenu();
             }
