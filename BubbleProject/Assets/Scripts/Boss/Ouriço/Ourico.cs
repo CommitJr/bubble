@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ourico : MonoBehaviour
 {
+    #region SCOPE
     [Header("Find closest Thorn")]
     GameObject[] allThorns;
     private Transform playerPosition;
@@ -11,7 +12,6 @@ public class Ourico : MonoBehaviour
 
     [Header("Thorn Settings")]
     SpriteRenderer color;
-    int thorn, contador;
     Vector2 oldPosition;
 
     [Header("Thorn Moviment Atributtes")]
@@ -19,9 +19,13 @@ public class Ourico : MonoBehaviour
     [SerializeField] private float timerForSpawn;
     private Contador respaw;
     [SerializeField] private float timerForReSpawn;
-    double alphaAtributte = 1;
+    [SerializeField] private float fadeSpeed;
     [SerializeField] private float force;
     [SerializeField] private Transform centro;
+    [SerializeField] private float distanceOurico;
+    [SerializeField] private float distanceThorn;
+
+    #endregion
     void Start()
     {
         spaw = new Contador(timerForSpawn);
@@ -29,18 +33,21 @@ public class Ourico : MonoBehaviour
 
         playerPosition = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
 
-        allThorns = GameObject.FindGameObjectsWithTag("Espinhos"); // gamesObjects com a tag espinhos
+        allThorns = GameObject.FindGameObjectsWithTag("Espinhos");
     }
 
     void Update()
     {
-        if (Vector2.Distance(centro.position, playerPosition.position) < 16)
+        if (Vector2.Distance(centro.position, playerPosition.position) < distanceOurico)
         {
             FindClosestThorn();
             Call();
         }
     }
 
+    #region FUNCTIONS
+
+    #region Main Function
     private void Call()
     {
         if (spaw.RepeatCountTime())
@@ -48,48 +55,40 @@ public class Ourico : MonoBehaviour
             SendThorn();
         }
 
-        if (respaw.RepeatCountTime())
-        {
-            SendThornBack();
-        }
     }
+    #endregion
 
-    // faz os espinhos se soltarem e irem atrás do player
+    #region Moviment
     private void SendThorn()
     {
-        closestThorn.GetComponent<Rigidbody2D>().AddForce(closestThorn.transform.right*force, ForceMode2D.Impulse);
+        closestThorn.GetComponent<Rigidbody2D>().AddForce(closestThorn.transform.right * force, ForceMode2D.Impulse);
 
-        if (Vector2.Distance(centro.position, closestThorn.transform.position) > 15)
+        if (Vector2.Distance(centro.position, closestThorn.transform.position) > distanceThorn)
         {
-            if (alphaAtributte != 0)
-            {
-                alphaAtributte = alphaAtributte - 0.5f;
-            }
-
-            color.color = new Color(1, 1, 1, (float)alphaAtributte);
+            StartCoroutine(FadeOut());
             closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled = false;
+
+            Invoke("SendThornBack", 7f);
         }
     }
 
-    // faz os espinhos lançados nascerem de novo
+
     private void SendThornBack()
     {
-        closestThorn.transform.position = oldPosition;
-
-        if (alphaAtributte != 1)
+        if (closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled)
         {
-            alphaAtributte = alphaAtributte + 0.5f;
+            closestThorn.transform.position = oldPosition;
+            closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled = true;
         }
-
-        color.color = new Color(1, 1, 1, (float)alphaAtributte);
-        closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled = true;
-
+        StartCoroutine(FadeIn());
     }
+    #endregion
 
+    #region Find nearby
     void FindClosestThorn()
     {
         float distanceToClosestThorn = Mathf.Infinity;
-        
+
         foreach (GameObject currentThorn in allThorns)
         {
             float distanceToPlayer = (playerPosition.transform.position - currentThorn.transform.position).sqrMagnitude;
@@ -98,17 +97,41 @@ public class Ourico : MonoBehaviour
                 distanceToClosestThorn = distanceToPlayer;
                 closestThorn = currentThorn;
 
-                oldPosition = currentThorn.transform.position;
-                color = currentThorn.GetComponentInChildren<SpriteRenderer>();
+                oldPosition = closestThorn.transform.position;
             }
         }
     }
+    #endregion
 
-    void OnCollisionEnter2D(Collision2D collision)
+    #region Change alpha
+    private IEnumerator FadeOut()
     {
-        if(collision.collider.gameObject.tag == "Player")
+        while (closestThorn.GetComponentInChildren<SpriteRenderer>().material.color.a > 0)
         {
-            closestThorn.SetActive(false);
+            Color objectColor = closestThorn.GetComponentInChildren<SpriteRenderer>().material.color;
+            float fadeAmount = objectColor.a -(fadeSpeed * Time.deltaTime);
+            
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            closestThorn.GetComponentInChildren<SpriteRenderer>().material.color = objectColor;
+            
+            yield return null;
         }
     }
+
+    private IEnumerator FadeIn()
+    {
+        while (closestThorn.GetComponentInChildren<SpriteRenderer>().material.color.a < 1)
+        {
+            Color objectColor = closestThorn.GetComponentInChildren<SpriteRenderer>().material.color;
+            float fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            closestThorn.GetComponentInChildren<SpriteRenderer>().material.color = objectColor;
+
+            yield return null;
+        }
+    }
+    #endregion
+    #endregion
+
 }
