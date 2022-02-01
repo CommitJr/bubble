@@ -7,6 +7,10 @@ public class Contador{
     private float currentTime;
     private float maxTime;
 
+    public void SetCurrentTime(float time)
+    {
+        currentTime = time;
+    }
     public Contador(float maxTime){
         this.maxTime = maxTime;
         currentTime = 0;
@@ -23,4 +27,6 @@ public class Contador{
         
         return false;
     }
+
+    
 }

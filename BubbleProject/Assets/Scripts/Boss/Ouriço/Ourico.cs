@@ -8,17 +8,15 @@ public class Ourico : MonoBehaviour
     [Header("Find closest Thorn")]
     GameObject[] allThorns;
     private Transform playerPosition;
-    GameObject closestThorn;
+    GameObject closestThorn = null;
 
     [Header("Thorn Settings")]
-    SpriteRenderer color;
-    Vector2 oldPosition;
+    private Transform[] oldPosition;
+    private int index;
 
     [Header("Thorn Moviment Atributtes")]
     private Contador spaw;
     [SerializeField] private float timerForSpawn;
-    private Contador respaw;
-    [SerializeField] private float timerForReSpawn;
     [SerializeField] private float fadeSpeed;
     [SerializeField] private float force;
     [SerializeField] private Transform centro;
@@ -29,11 +27,17 @@ public class Ourico : MonoBehaviour
     void Start()
     {
         spaw = new Contador(timerForSpawn);
-        respaw = new Contador(timerForReSpawn);
+        spaw.SetCurrentTime(timerForSpawn);
 
         playerPosition = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
 
         allThorns = GameObject.FindGameObjectsWithTag("Espinhos");
+        oldPosition = new Transform[15];
+
+        for(int i = 0; i < allThorns.Length; i++)
+        {
+            oldPosition[i] = allThorns[i].GetComponent<Transform>();
+        }
     }
 
     void Update()
@@ -67,27 +71,19 @@ public class Ourico : MonoBehaviour
         {
             StartCoroutine(FadeOut());
             closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled = false;
-
-            Invoke("SendThornBack", 7f);
         }
     }
 
 
-    private void SendThornBack()
-    {
-        if (closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled)
-        {
-            closestThorn.transform.position = oldPosition;
-            closestThorn.GetComponentInChildren<PolygonCollider2D>().enabled = true;
-        }
-        StartCoroutine(FadeIn());
-    }
+
     #endregion
 
     #region Find nearby
     void FindClosestThorn()
     {
         float distanceToClosestThorn = Mathf.Infinity;
+
+        int indice = 0;
 
         foreach (GameObject currentThorn in allThorns)
         {
@@ -97,8 +93,9 @@ public class Ourico : MonoBehaviour
                 distanceToClosestThorn = distanceToPlayer;
                 closestThorn = currentThorn;
 
-                oldPosition = closestThorn.transform.position;
+                index = indice;
             }
+            indice++;
         }
     }
     #endregion
@@ -106,31 +103,20 @@ public class Ourico : MonoBehaviour
     #region Change alpha
     private IEnumerator FadeOut()
     {
-        while (closestThorn.GetComponentInChildren<SpriteRenderer>().material.color.a > 0)
+        while (closestThorn.GetComponentInChildren<SpriteRenderer>().color.a > 0)
         {
-            Color objectColor = closestThorn.GetComponentInChildren<SpriteRenderer>().material.color;
-            float fadeAmount = objectColor.a -(fadeSpeed * Time.deltaTime);
-            
+            Color objectColor = closestThorn.GetComponentInChildren<SpriteRenderer>().color;
+            float fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+
             objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-            closestThorn.GetComponentInChildren<SpriteRenderer>().material.color = objectColor;
-            
+            closestThorn.GetComponentInChildren<SpriteRenderer>().color = objectColor;
+
+
             yield return null;
         }
     }
 
-    private IEnumerator FadeIn()
-    {
-        while (closestThorn.GetComponentInChildren<SpriteRenderer>().material.color.a < 1)
-        {
-            Color objectColor = closestThorn.GetComponentInChildren<SpriteRenderer>().material.color;
-            float fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
 
-            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-            closestThorn.GetComponentInChildren<SpriteRenderer>().material.color = objectColor;
-
-            yield return null;
-        }
-    }
     #endregion
     #endregion
 
