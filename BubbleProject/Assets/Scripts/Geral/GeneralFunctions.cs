@@ -38,7 +38,7 @@ public class GeneralFunctions : MonoBehaviour
 
         playerController = GetComponent<PlayerController>();
 
-        if (SceneManager.GetActiveScene().buildIndex >= 7)
+        if (SceneManager.GetActiveScene().name.Contains("Fase") || SceneManager.GetActiveScene().name == "Tutorial")
         {
             DefineStartLevels();
         }
