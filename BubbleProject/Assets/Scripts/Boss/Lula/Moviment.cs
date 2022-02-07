@@ -10,8 +10,6 @@ public class Moviment : MonoBehaviour
     float startingVal;
 
     [SerializeField] private float velocity;
-
-    bool canGo = true;
     void Start()
     {
        

@@ -9,11 +9,20 @@ public class BaiacuAttack : MonoBehaviour
     private int direcao = -1;
     public float velocidadeNormal;
     public float velocidadeInchado;
- 
-    // Update is called once per frame
+    private PlayerController playerController;
+    private AudioSource baiacuSound;
+
+    void Start()
+    {
+        baiacuSound = GetComponent<AudioSource>();
+        baiacuSound.Stop();
+        playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
+
+    }
     void Update()
     {
         Move();
+        Infla();
     }
 
     void Move()
@@ -28,11 +37,26 @@ public class BaiacuAttack : MonoBehaviour
         } 
     }
 
+    private void Infla()
+    {
+        if (playerController.FindPlayer(this.transform, 5))
+        {
+            baiacuSound.Play();
+            inchado.SetActive(true);
+            normal.SetActive(false);
+            GetComponent<PolygonCollider2D>().enabled = false;
+        }
+        else
+        {
+            Attack();
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D objeto)
     {
         if (objeto.transform.tag == "Player" && transform.tag == "Baiacu")
         {
-            StartCoroutine(Attack());
+            playerController.KillPlayer();
         }
 
         if (objeto.transform.tag == "parede" || objeto.transform.tag == "Pedras")
@@ -47,14 +71,8 @@ public class BaiacuAttack : MonoBehaviour
         }
     }
 
-    IEnumerator Attack()
+    void Attack()
     {
-        inchado.SetActive(true);
-        normal.SetActive(false);
-        GetComponent<PolygonCollider2D>().enabled = false;
-
-        yield return new WaitForSeconds(5f);
-
         inchado.SetActive(false);
         normal.SetActive(true);
         GetComponent<PolygonCollider2D>().enabled = true;

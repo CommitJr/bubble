@@ -8,12 +8,15 @@ public class dragonFire : MonoBehaviour
     private Transform player;
     [SerializeField] private Transform centro;
     private PlayerController playerController;
+    private AudioSource dragonSound;
 
     void Start()
     {
         part = GetComponent<ParticleSystem>();
-        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
+
+        dragonSound = GetComponent<AudioSource>();
+        dragonSound.Stop();
 
         part.Stop();
 
@@ -22,14 +25,12 @@ public class dragonFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log(Vector2.Distance(centro.position, player.position));
-        if (Vector2.Distance(centro.position, player.position) < 5)
+        // Debug.Log(Vector2.Distance(centro.position, player.position));
+        if (playerController.FindPlayer(centro, 5))
         {
-       
             part.Play();
-        //    Debug.Log("FOGO");
+            dragonSound.Play();
 
-            
         }
         else
         {
@@ -43,19 +44,9 @@ public class dragonFire : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log(other.tag);
-        //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
         if (other.tag == "Player")
-        {    
-           
-            KillPlayer();
+        {
+            playerController.KillPlayer();
         }
     }
-
-    public void KillPlayer()
-    {
-
-        playerController.GetComponent<PlayerController>().SetHealth(0);
-    }
-
 }

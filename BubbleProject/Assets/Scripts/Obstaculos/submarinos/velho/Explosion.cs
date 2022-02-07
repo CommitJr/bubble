@@ -6,13 +6,14 @@ public class Explosion : MonoBehaviour
 {
     public float delay = 1f;
     public GameObject exp;
-    float countdown;
-    bool hasExploded = false;
     public float radius = 1f;
-    // Start is called before the first frame update
+    private AudioSource explosionSound;
+
+
     void Start()
     {
-        countdown = delay;
+        explosionSound = GetComponent<AudioSource>();
+        explosionSound.Stop();
     }
 
     void Explode()
@@ -26,7 +27,7 @@ public class Explosion : MonoBehaviour
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.AddExplosionForce(700f, transform.position, radius);
+                rb.AddExplosionForce(700f, transform.position, radius); 
             }
         }
         Destroy(gameObject);
@@ -34,7 +35,8 @@ public class Explosion : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Explode();      
+        Explode();
+        explosionSound.Play();
     }
 }
 

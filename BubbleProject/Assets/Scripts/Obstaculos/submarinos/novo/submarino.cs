@@ -5,20 +5,28 @@ using UnityEngine;
 public class submarino : MonoBehaviour
 {
     public GameObject torpedo;
-    [SerializeField] private float speed = 300;
     private Transform player;
-    private float dirX, dirY;
+    private PlayerController playerController;
 
+    private sinusoidalMoviment sinu;
     [SerializeField] private float rate;
     private float next;
 
     void Start()
     {
+        playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
+
         next = Time.time;
+        sinu = GetComponent<sinusoidalMoviment>();
+        sinu.enabled = false;
     }
     void Update()
     {
-        Fogo();
+        if (playerController.FindPlayer(this.transform, 10))
+        {
+            sinu.enabled = true;
+            Fogo();
+        }
     }
 
     void Fogo()

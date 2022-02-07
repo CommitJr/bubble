@@ -9,12 +9,15 @@ public class AtirarArpao : MonoBehaviour
     [SerializeField] private Transform spawnZone;
     [SerializeField] private int time;
     private Contador contador;
+    private AudioSource arpaoSound;
     #endregion
 
     #region START
     void Start()
     {
         contador = new Contador(time);
+        arpaoSound = GetComponent<AudioSource>();
+        arpaoSound.Stop();
     }
     #endregion
 
@@ -39,7 +42,7 @@ public class AtirarArpao : MonoBehaviour
         if (GameObject.FindWithTag("Player") != null && Vector3.Distance(GameObject.FindWithTag("Player").transform.position, gameObject.transform.position) <= 35)
         {
             gameObject.GetComponent<Animator>().SetTrigger("_isAttacking");
-
+            arpaoSound.Play();
             Instantiate(arpao, spawnZone.position, gameObject.transform.rotation);
             GameObject.FindWithTag("Arpao").GetComponent<NomeAtirador>().SetShooterName(gameObject.name);
         }

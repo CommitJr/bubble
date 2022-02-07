@@ -24,6 +24,8 @@ public class GeneralFunctions : MonoBehaviour
 
     private  bool _isPause;
     private  bool _isRunning;
+
+    private Transform player;
     #endregion
 
     #region START
@@ -46,7 +48,8 @@ public class GeneralFunctions : MonoBehaviour
         {
             DefineStartMenus();
         }
-    
+
+        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
     }
 
     private void DefineStartMenus()
@@ -118,6 +121,18 @@ public class GeneralFunctions : MonoBehaviour
         return _isPause;
     }
     #endregion
+
+    #region FIND PLAYER
+    public bool FindPlayer(Transform center, int distance)
+    {
+        if (Vector2.Distance(center.position, player.position) < distance)
+            return true;
+      
+        else
+            return false;
+    }
+    #endregion
+
 
     #region SCENES
     public void Restart()

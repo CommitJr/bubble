@@ -194,10 +194,27 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    #region FIND PLAYER
+    public bool FindPlayer(Transform center, int distance)
+    {
+        if (Vector2.Distance(center.position, player.position) < distance)
+            return true;
+
+        else
+            return false;
+    }
+    #endregion
+
     #region HEALTH CONTROLLER
     private void HealthController()
     {
         generalFunctions.Health(GetHealth());
     }
+
+    public void KillPlayer()
+    {
+        SetHealth(0);
+    }
+
     #endregion
 }

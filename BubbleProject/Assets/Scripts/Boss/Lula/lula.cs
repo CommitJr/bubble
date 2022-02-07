@@ -5,7 +5,6 @@ using UnityEngine;
 public class lula : MonoBehaviour
 {
     public GameObject oleo;
-    [SerializeField] private float speed = 300;
     [SerializeField] private Transform player;
     private float dirX, dirY;
 
