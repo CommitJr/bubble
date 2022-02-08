@@ -43,13 +43,14 @@ public class GeneralFunctions : MonoBehaviour
         if (SceneManager.GetActiveScene().name.Contains("Fase") || SceneManager.GetActiveScene().name == "Tutorial")
         {
             DefineStartLevels();
+            player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         }
         else
         {
             DefineStartMenus();
         }
 
-        player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+ 
     }
 
     private void DefineStartMenus()
