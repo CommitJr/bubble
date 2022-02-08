@@ -11,7 +11,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource endSound;
     [SerializeField] private AudioSource hardGameSound;
     [SerializeField] private AudioSource deepSeaSound;
-    private bool var = true;
 
     void Start()
     {

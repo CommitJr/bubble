@@ -18,8 +18,6 @@ public class GeneralFunctions : MonoBehaviour
 
     private PlayerController playerController;
     private BubbleController bubbleController;
-    private AudioSource audioSource;
-    private bool _hasAudio;
     private SaveData saveData;
 
     private  bool _isPause;
@@ -61,13 +59,10 @@ public class GeneralFunctions : MonoBehaviour
     private void DefineStartLevels()
     {
         bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
-        audioSource = GameObject.FindWithTag("AmbientSound") ? GameObject.FindWithTag("AmbientSound").GetComponent<AudioSource>() : null;
         timer = GameObject.FindWithTag("Timer");
-        _hasAudio = true;
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             canvasTutorial = GameObject.FindWithTag("CanvasTutorial");
-            _hasAudio = false;
         }
     }
     #endregion
@@ -215,8 +210,6 @@ public class GeneralFunctions : MonoBehaviour
                 lives[2].enabled = false;
                 lives[1].enabled = false;
                 lives[0].enabled = false;
-
-                audioSource.enabled = false;
                 break;
         }
     }
@@ -226,11 +219,6 @@ public class GeneralFunctions : MonoBehaviour
     public void GoToEnd()
     {
         playerController.SetControllerActivate(false);
-
-        if (_hasAudio)
-        {
-            audioSource.enabled = false;
-        }
 
         Debug.Log("Salvando Progresso..");
         SaveDataCheck();
