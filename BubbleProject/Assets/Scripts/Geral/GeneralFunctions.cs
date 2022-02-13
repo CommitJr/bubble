@@ -24,6 +24,9 @@ public class GeneralFunctions : MonoBehaviour
     private  bool _isRunning;
 
     private Transform player;
+
+    private AudioSource buttonSound;
+    private bool _isPlaying;
     #endregion
 
     #region START
@@ -37,6 +40,7 @@ public class GeneralFunctions : MonoBehaviour
         _isRunning = true;
 
         playerController = GetComponent<PlayerController>();
+        buttonSound = GetComponent<AudioSource>();
 
         if (SceneManager.GetActiveScene().name.Contains("Fase") || SceneManager.GetActiveScene().name == "Tutorial")
         {
@@ -66,6 +70,11 @@ public class GeneralFunctions : MonoBehaviour
         }
     }
     #endregion
+
+    private void Update()
+    {
+        _isPlaying = buttonSound.isPlaying;
+    }
 
     #region PAUSE
     public void PauseController() 
@@ -129,46 +138,68 @@ public class GeneralFunctions : MonoBehaviour
     }
     #endregion
 
-
     #region SCENES
+    
+ 
     public void Restart()
     {
         Debug.Log("Reiniciando..");
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (!_isPlaying)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
+
 
     public void Next()
     {
-        Debug.Log("Proxima Cena..");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        if (!_isPlaying)
+        {
+            Debug.Log("Proxima Cena..");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     public void Load(string nome)
     {
-        Debug.Log("Carregando..");
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(nome);
+        if (!_isPlaying)
+        {
+            Debug.Log("Carregando..");
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(nome);
+        }
+
     }
 
     public void GoToMenu()
     {
         Debug.Log("Indo Para o Menu..");
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        if (!_isPlaying)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     public void GoToSelection()
     {
-        Debug.Log("Indo Para a Seleção de Camadas..");
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("LevelSeletion");
+        if (!_isPlaying)
+        {
+            Debug.Log("Indo Para a Seleção de Camadas..");
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("LevelSeletion");
+        }
     }
 
     public void GoToExit()
     {
-        Debug.Log("Saindo..");
-        Application.Quit();
+        if (!_isPlaying)
+        {
+            Debug.Log("Saindo..");
+            Application.Quit();
+        }
     }
     #endregion
 
