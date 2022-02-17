@@ -73,7 +73,7 @@ public class GeneralFunctions : MonoBehaviour
 
     private void Update()
     {
-        _isPlaying = buttonSound.isPlaying;
+        _isPlaying = buttonSound.isPlaying;       
     }
 
     #region PAUSE
