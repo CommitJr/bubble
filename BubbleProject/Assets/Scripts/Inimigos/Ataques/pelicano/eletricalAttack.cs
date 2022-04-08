@@ -8,13 +8,27 @@ public class eletricalAttack : MonoBehaviour
     private ParticleSystem part;
     private PlayerController wave;
     private List<ParticleCollisionEvent> collisionEvents;
+    private AudioSource eletrical;
 
     // Start is called before the first frame update
     void Start()
     {
-        ParticleSystem part = GetComponent<ParticleSystem>();
+        part = GetComponent<ParticleSystem>();
         collisionEvents = new List<ParticleCollisionEvent>();
-        wave = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
+        //wave = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
+        eletrical = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        if (part.isPlaying == true)
+        {
+            if(eletrical.isPlaying == false)
+            {
+                eletrical.Play();
+            }
+            
+        }
     }
 
     private void OnParticleCollision(GameObject other)
