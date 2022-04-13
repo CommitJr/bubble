@@ -7,6 +7,7 @@ public class circleMoviment : MonoBehaviour
     [Header("Movimento")]
     private int direcao = -1;
     public float speed;
+    public float radius = 1;
 
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
@@ -43,9 +44,9 @@ public class circleMoviment : MonoBehaviour
 
     void Circle(float Speed)
     {
-        float x = Mathf.Cos(Time.time * Speed);
+        float x = radius*Mathf.Cos(Time.time * Speed);
         float z = 0;
-        float y = Mathf.Sin(Time.time * Speed);
+        float y = radius*Mathf.Sin(Time.time * Speed);
 
         transform.position = new Vector3(startingValx + x, startingValy + y, z);
     }

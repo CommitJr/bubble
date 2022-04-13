@@ -6,7 +6,8 @@ public class movimento : MonoBehaviour
 {
     [Header("Movimento")]
     public float velocidade;
-    private int direcao = -1;
+    [SerializeField] private int direcao = -1; // -1 -> Esquerda / 1 -> Direita
+   
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
 
