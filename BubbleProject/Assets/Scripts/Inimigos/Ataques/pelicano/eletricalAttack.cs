@@ -19,18 +19,6 @@ public class eletricalAttack : MonoBehaviour
         eletrical = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-        if (part.isPlaying == true)
-        {
-            if(eletrical.isPlaying == false)
-            {
-                eletrical.Play();
-            }
-            
-        }
-    }
-
     private void OnParticleCollision(GameObject other)
     {
         //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
@@ -48,5 +36,6 @@ public class eletricalAttack : MonoBehaviour
     void choque()
     {
         wave.enabled = true;
+        eletrical.Play();
     }
 }

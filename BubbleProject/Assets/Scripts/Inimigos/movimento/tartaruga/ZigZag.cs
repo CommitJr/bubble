@@ -12,6 +12,7 @@ public class ZigZag : MonoBehaviour
     private void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;
+
     }
 
     private void Update()
