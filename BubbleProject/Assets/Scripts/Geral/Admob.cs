@@ -5,17 +5,23 @@ using GoogleMobileAds.Api;
 
 public class Admob : MonoBehaviour
 {
+    #region SCOPE
     public static Admob Instance;
     private BannerView bannerView;
     private InterstitialAd interstitial;
+    #endregion
 
+    #region START
     void Start()
     {
         MobileAds.Initialize(initStatus => { });
 
         this.RequestBanner();
+        this.RequestInterstitial();
     }
+    #endregion
 
+    #region AWAKE
     private void Awake()
     {
         if (Instance == null)
@@ -28,13 +34,15 @@ public class Admob : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
 
+    #region BANNER
     public void RequestBanner()
     {
         #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-3940256099942544/6300978111";
+            string adUnitId = adUnitIdAndroid == "" ? "ca-app-pub-3940256099942544/6300978111" : adUnitIdAndroid;
         #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+            string adUnitId = adUnitIdIphone == "" ? "ca-app-pub-3940256099942544/2934735716" : adUnitIphone;
         #else
             string adUnitId = "unexpected_platform";
         #endif
@@ -50,7 +58,9 @@ public class Admob : MonoBehaviour
     {
         this.bannerView.Destroy();
     }
+    #endregion
 
+    #region INTERSTITIAL
     private void RequestInterstitial()
     {
         #if UNITY_ANDROID
@@ -63,8 +73,24 @@ public class Admob : MonoBehaviour
 
         this.interstitial = new InterstitialAd(adUnitId);
 
+        this.interstitial.OnAdClosed += HandleOnAdClosed;
+
         AdRequest request = new AdRequest.Builder().Build();
         
         this.interstitial.LoadAd(request);
     }
+
+    public void ShowInterstitial()
+    {
+        if (this.interstitial.IsLoaded())
+        {
+            this.interstitial.Show();
+        }
+    }
+
+    void HandleOnAdClosed(object sender, System.EventArgs args)
+    {
+        this.RequestInterstitial();
+    }
+    #endregion
 }
