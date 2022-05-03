@@ -9,6 +9,9 @@ public class Admob : MonoBehaviour
     public static Admob Instance;
     private BannerView bannerView;
     private InterstitialAd interstitial;
+
+    public static int wins;
+    public static int defeats;
     #endregion
 
     #region START
@@ -40,9 +43,9 @@ public class Admob : MonoBehaviour
     public void RequestBanner()
     {
         #if UNITY_ANDROID
-            string adUnitId = adUnitIdAndroid == "" ? "ca-app-pub-3940256099942544/6300978111" : adUnitIdAndroid;
+            string adUnitId = "ca-app-pub-3940256099942544/6300978111";
         #elif UNITY_IPHONE
-            string adUnitId = adUnitIdIphone == "" ? "ca-app-pub-3940256099942544/2934735716" : adUnitIphone;
+            string adUnitId = "ca-app-pub-3940256099942544/2934735716";
         #else
             string adUnitId = "unexpected_platform";
         #endif
@@ -54,7 +57,7 @@ public class Admob : MonoBehaviour
         this.bannerView.LoadAd(request);
     }
 
-    void DestroyBanner()
+    public void DestroyBanner()
     {
         this.bannerView.Destroy();
     }

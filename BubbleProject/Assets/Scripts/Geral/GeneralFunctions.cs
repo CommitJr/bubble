@@ -46,6 +46,8 @@ public class GeneralFunctions : MonoBehaviour
         {
             DefineStartLevels();
             player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
+
+            Admob.Instance.DestroyBanner();
         }
         else
         {
@@ -57,7 +59,15 @@ public class GeneralFunctions : MonoBehaviour
 
     private void DefineStartMenus()
     {
-
+        if(SceneManager.GetActiveScene().name == "Menu")
+        {
+            Admob.Instance.DestroyBanner();
+            Admob.Instance.RequestBanner();
+        }
+        else
+        {
+            Admob.Instance.DestroyBanner();
+        }
     }
 
     private void DefineStartLevels()
@@ -104,6 +114,8 @@ public class GeneralFunctions : MonoBehaviour
         }
 
         Time.timeScale = 1f;
+
+        Admob.Instance.DestroyBanner();
     }
 
     private void Pause()
@@ -119,6 +131,8 @@ public class GeneralFunctions : MonoBehaviour
         }
 
         Time.timeScale = 0f;
+
+        Admob.Instance.RequestBanner();
     }
 
     public bool GetPauseStatus()
@@ -144,6 +158,9 @@ public class GeneralFunctions : MonoBehaviour
     public void Restart()
     {
         Debug.Log("Reiniciando..");
+
+        Admob.Instance.DestroyBanner();
+
         if (!_isPlaying)
         {
             Time.timeScale = 1f;
@@ -154,7 +171,8 @@ public class GeneralFunctions : MonoBehaviour
 
     public void Next()
     {
-        
+        Admob.Instance.DestroyBanner();
+
         if (!_isPlaying)
         {
             Debug.Log("Proxima Cena..");
@@ -164,6 +182,8 @@ public class GeneralFunctions : MonoBehaviour
 
     public void Load(string nome)
     {
+        Admob.Instance.DestroyBanner();
+
         if (!_isPlaying)
         {
             Debug.Log("Carregando..");
@@ -185,6 +205,8 @@ public class GeneralFunctions : MonoBehaviour
 
     public void GoToSelection()
     {
+        Admob.Instance.DestroyBanner();
+
         if (!_isPlaying)
         {
             Debug.Log("Indo Para a Seleção de Camadas..");
@@ -209,6 +231,16 @@ public class GeneralFunctions : MonoBehaviour
         Debug.Log("Ganhou!");
         winMenuUI.SetActive(true);
         _isRunning = false;
+
+        Admob.wins++;
+
+        if(Admob.wins >= 4)
+        {
+            Admob.wins = 0;
+            Admob.Instance.ShowInterstitial();
+        }
+
+        Admob.Instance.RequestBanner();
     }
 
     public void Defeat()
@@ -216,6 +248,16 @@ public class GeneralFunctions : MonoBehaviour
         Debug.Log("Perdeu!");
         defeatMenuUI.SetActive(true);
         _isRunning = false;
+
+        Admob.defeats++;
+        Debug.Log(Admob.defeats);
+        if (Admob.defeats >= 3)
+        {
+            Admob.defeats = 0;
+            Admob.Instance.ShowInterstitial();
+        }
+
+        Admob.Instance.RequestBanner();
     }
 
     public void Health(int health)
