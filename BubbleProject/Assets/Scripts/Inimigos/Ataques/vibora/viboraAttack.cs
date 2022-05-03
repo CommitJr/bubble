@@ -9,7 +9,12 @@ public class viboraAttack : MonoBehaviour
     private int direcao = -1;
     [Header("Componentes")]
     public Rigidbody2D inimigoRb;
+    private float initialSpeed;
 
+    private void Start()
+    {
+        initialSpeed = velocidade;
+    }
     private void FixedUpdate()
     {
         Move();
@@ -21,7 +26,7 @@ public class viboraAttack : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D parede)
     {
-        if (parede.transform.tag == "parede" || parede.transform.tag == "Pedras")
+        if (parede.transform.tag == "parede" )
         {
             direcao *= -1;
             transform.eulerAngles = new Vector2(0f, 180);
@@ -32,7 +37,7 @@ public class viboraAttack : MonoBehaviour
         }
     }
     void Attack() {
-        if (velocidade == 2)
+        if (velocidade == initialSpeed)
         {
             velocidade = velocidade * 10;
         }
