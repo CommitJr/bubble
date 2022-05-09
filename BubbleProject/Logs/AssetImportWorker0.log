@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.8f1 (d0e5f0a7b06a) revision 13690352'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit CoreSingleLanguage' Language: 'pt' Physical Memory: 8122 MB
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'pt' Physical Memory: 16294 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.2.8f1\Editor\Unity.exe
+D:\Unity\Unity Versions\2021.2.8f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Marina/Documents/Bubble/bubble/BubbleProject
+D:/GitHub/bubble/BubbleProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52012
-Successfully changed project path to: C:/Users/Marina/Documents/Bubble/bubble/BubbleProject
-C:/Users/Marina/Documents/Bubble/bubble/BubbleProject
+52998
+Successfully changed project path to: D:/GitHub/bubble/BubbleProject
+D:/GitHub/bubble/BubbleProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,58 +47,685 @@ C:/Users/Marina/Documents/Bubble/bubble/BubbleProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 1987.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 57.26 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Marina/Documents/Bubble/bubble/BubbleProject/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/Unity Versions/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GitHub/bubble/BubbleProject/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
-    Vendor:   Intel
-    VRAM:     2048 MB
-    Driver:   20.19.15.4531
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2488)
+    Vendor:   NVIDIA
+    VRAM:     8043 MB
+    Driver:   30.0.15.1259
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
+Mono path[0] = 'D:/Unity/Unity Versions/2021.2.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Unity Versions/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Unity Versions/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.063727 seconds.
+Register platform support module: D:/Unity/Unity Versions/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002690 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 163.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 57.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.147 seconds
+- Completed reload, in  0.425 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2148ms)
-		BeginReloadAssembly (877ms)
+	ReloadAssembly (425ms)
+		BeginReloadAssembly (47ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1053ms)
-			LoadAssemblies (891ms)
+		EndReloadAssembly (326ms)
+			LoadAssemblies (47ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (220ms)
+			SetupTypeCache (70ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (62ms)
-			SetupLoadedEditorAssemblies (651ms)
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (189ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (120ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (164ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (278ms)
-				ProcessInitializeOnLoadMethodAttributes (88ms)
+				RefreshPlugins (57ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (89ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.018495 seconds.
+Registered in 0.004480 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 59.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.264 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1264ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1117ms)
+			LoadAssemblies (60ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (166ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (793ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (59ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (587ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4199 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 76 unused Assets / (0.6 MB). Loaded Objects now: 4642.
+Memory consumption went from 188.4 MB to 187.7 MB.
+Total: 3.914400 ms (FindLiveObjects: 0.288500 ms CreateObjectMapping: 0.209400 ms MarkObjects: 3.161800 ms  DeleteObjects: 0.253700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 956905.728920 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity
+  artifactKey: Guid(8e8ad454e803e0b4d8bd206ce1b74d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity using Guid(8e8ad454e803e0b4d8bd206ce1b74d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd54d61af340d7540226af7653de9b550') in 0.016895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.760446 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_5.unity
+  artifactKey: Guid(8e8ad454e803e0b4d8bd206ce1b74d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_5.unity using Guid(8e8ad454e803e0b4d8bd206ce1b74d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2072b79ab0c42a8ceeaa32b90cc8746') in 0.004620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.636119 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4.unity
+  artifactKey: Guid(156588d74da5d3a4fb269b7a6eee751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4.unity using Guid(156588d74da5d3a4fb269b7a6eee751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5928a9ded3fe3aa4e3b7117393f1195c') in 0.004745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.436636 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_10.unity
+  artifactKey: Guid(156588d74da5d3a4fb269b7a6eee751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_10.unity using Guid(156588d74da5d3a4fb269b7a6eee751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3923f8c39f818bd370a91f55ccaf8743') in 0.004297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.463040 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3.unity
+  artifactKey: Guid(a783816ade6bbda4f825344917ca00d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3.unity using Guid(a783816ade6bbda4f825344917ca00d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17138d5749d232f80cf34b2a0f5843f5') in 0.005471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.072697 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_9.unity
+  artifactKey: Guid(a783816ade6bbda4f825344917ca00d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_9.unity using Guid(a783816ade6bbda4f825344917ca00d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19c66ce0dd97898bd3f2d01873642263') in 0.004735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 63.221493 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1.unity
+  artifactKey: Guid(e898749539a772a4693e299c4d214f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1.unity using Guid(e898749539a772a4693e299c4d214f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f2fb3c1dbbe657e7ced0b87b92d3c9a') in 0.010066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 103.376917 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1 1.unity
+  artifactKey: Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1 1.unity using Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40bd5cc739ed3592fd1599c5706e647') in 0.004193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.640131 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity
+  artifactKey: Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity using Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c8fefb16c66c36461c819aaa27642f') in 0.001603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 467.849344 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity
+  artifactKey: Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity using Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e73e6ad3828a364bc6bfc3cb96f5df') in 0.001718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.220455 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1 1.unity
+  artifactKey: Guid(36f95a66c95fa7f4fab28408d4ecd516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1 1.unity using Guid(36f95a66c95fa7f4fab28408d4ecd516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9520aa71e3dfbd2d9bb2b88a59be13d7') in 0.001599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.430144 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1.unity
+  artifactKey: Guid(e898749539a772a4693e299c4d214f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_1.unity using Guid(e898749539a772a4693e299c4d214f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9932a46be646abba6d09d759d1210475') in 0.001575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.503036 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2bc05a7ec8f890ee159f80f8c575e82') in 0.305739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 137.795532 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2 1.unity
+  artifactKey: Guid(84eb0a81adff2924b96e1be385416dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2 1.unity using Guid(84eb0a81adff2924b96e1be385416dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c7ddfe0d622d012ed6eefb7ee6a3507') in 0.004259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.400001 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3.unity
+  artifactKey: Guid(84eb0a81adff2924b96e1be385416dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3.unity using Guid(84eb0a81adff2924b96e1be385416dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f3cdeddc461de72b2eb00b57a7e56d') in 0.001533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.382676 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity
+  artifactKey: Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_2.unity using Guid(aa1117858fe8d244db11e69d627b27fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '102acd4276148f2872afac1aa7e7307a') in 0.001636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 260.779839 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3.unity
+  artifactKey: Guid(84eb0a81adff2924b96e1be385416dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3.unity using Guid(84eb0a81adff2924b96e1be385416dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '629ec8eac3900f5c710f034d8cad912e') in 0.001533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.532760 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3 1.unity
+  artifactKey: Guid(f4fbcbe359ccfcd4cb749bf4ab55abe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_3 1.unity using Guid(f4fbcbe359ccfcd4cb749bf4ab55abe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015d0b86fa22853d5b29a5b04c4ca3dc') in 0.004195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.010865 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4.unity
+  artifactKey: Guid(f4fbcbe359ccfcd4cb749bf4ab55abe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4.unity using Guid(f4fbcbe359ccfcd4cb749bf4ab55abe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dd31f09c3efb6106e387cdc1279c6f9') in 0.001516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 242.054155 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/Estrelas/amarela.prefab
+  artifactKey: Guid(40d7f8c7821e8514b9b6c0e285bb0aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/Estrelas/amarela.prefab using Guid(40d7f8c7821e8514b9b6c0e285bb0aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52ed6b6deafee03abe3c4ecdb756ed75') in 0.035344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/Estrelas/rosa.prefab
+  artifactKey: Guid(486d279a310d46c4ba4a3d5689f1215c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/Estrelas/rosa.prefab using Guid(486d279a310d46c4ba4a3d5689f1215c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a3e824f5fb27592d4e859221aa26610') in 0.040289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/Estrelas/verde.prefab
+  artifactKey: Guid(3ce231e4dd5932940a4e3d743b418d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/Estrelas/verde.prefab using Guid(3ce231e4dd5932940a4e3d743b418d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8fc2054ca3b11b3de83e6b31c9797e6') in 0.051192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 187.833738 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4.unity
+  artifactKey: Guid(f4fbcbe359ccfcd4cb749bf4ab55abe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4.unity using Guid(f4fbcbe359ccfcd4cb749bf4ab55abe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd710c06daa4fc12ab5d3ec1d385ed4f') in 0.001686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.152719 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4 1.unity
+  artifactKey: Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_4 1.unity using Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a03defe9f1d0b9594794740a0d822e46') in 0.004282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.195468 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity
+  artifactKey: Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity using Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2a8888b548ebd18c62bcd694f71f98d') in 0.004057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 115.916973 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 1
+  artifactKey: Guid(6a5188e6c3311a74e80517bd6d68abe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 1 using Guid(6a5188e6c3311a74e80517bd6d68abe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa3ab3eba1efe50928b625662538de76') in 0.003865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.577505 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2
+  artifactKey: Guid(e30add9038910304586b2de7edf99535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2 using Guid(e30add9038910304586b2de7edf99535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a951a2692abc6a02613facea114f4efb') in 0.003937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.259548 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/0-1.png
+  artifactKey: Guid(7603eae569648ed42a5e883668a89bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/0-1.png using Guid(7603eae569648ed42a5e883668a89bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666e38a5ebda6ca92b6760f8ceac1e68') in 0.092103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/4-5.png
+  artifactKey: Guid(ea311c073c206a44ebae4568697f1b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/4-5.png using Guid(ea311c073c206a44ebae4568697f1b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8208c5df6c2b641bb4257d0f729b3c7a') in 0.024505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/2-3.png
+  artifactKey: Guid(461345b2df5b4454cb1541e4c39a635f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/2-3.png using Guid(461345b2df5b4454cb1541e4c39a635f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7870336e945510d8ef762581588683c') in 0.020970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/Mesopelagia.png
+  artifactKey: Guid(6c5e5c7f228dd984f81e4b42de96cf00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/Mesopelagia.png using Guid(6c5e5c7f228dd984f81e4b42de96cf00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460efb5e5eba3c3cda8ab098e81a2b76') in 0.108901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.005369 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/2-5.png
+  artifactKey: Guid(461345b2df5b4454cb1541e4c39a635f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/2-5.png using Guid(461345b2df5b4454cb1541e4c39a635f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84779c66375d2a1ee8f2c243003b665f') in 0.020953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.816895 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 3
+  artifactKey: Guid(a2180573ce3487345b9a89472f1b1fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 3 using Guid(a2180573ce3487345b9a89472f1b1fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd47913fdde055f2adcf1abafb30f2692') in 0.004065 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.045817 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 3/Batial.png
+  artifactKey: Guid(0f355424330fcbe4b9f86c033a4ac96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 3/Batial.png using Guid(0f355424330fcbe4b9f86c033a4ac96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f050ffdd7196f9e390ea2d7773c24aac') in 0.031224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.466870 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 1/Epilagia.png
+  artifactKey: Guid(bf9788655e6ea954ab6462cd07dca574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 1/Epilagia.png using Guid(bf9788655e6ea954ab6462cd07dca574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1dbbf2fa23df1641f430121510b7ac') in 0.213521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 1/fundo 3 1.png
+  artifactKey: Guid(8ce585fc53a7a6b438212cb9de02876e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 1/fundo 3 1.png using Guid(8ce585fc53a7a6b438212cb9de02876e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6cfa8590e3521eb90b94d2a92d66407') in 0.037983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 1/fundo 1.png
+  artifactKey: Guid(8e887e4d449e71c42b8df8dd08164aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 1/fundo 1.png using Guid(8e887e4d449e71c42b8df8dd08164aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92899ee32aa7feba33864d1e65fdaf91') in 0.054320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 1/fundo 2 1.png
+  artifactKey: Guid(062d86406eed9404b8a40ca520ae511b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 1/fundo 2 1.png using Guid(062d86406eed9404b8a40ca520ae511b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cba2615b4b85fde4d7c0cf7254646aee') in 0.042604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.548389 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 4
+  artifactKey: Guid(695eac9eae2fe2949a579e28db84df2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 4 using Guid(695eac9eae2fe2949a579e28db84df2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068e97067e767f450602e5d24dc57211') in 0.014547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006142 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 4/Abyssal.png
+  artifactKey: Guid(087ea3c168c720542b56151542bd44e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 4/Abyssal.png using Guid(087ea3c168c720542b56151542bd44e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf29948c157490fe914f7f067e3da5be') in 0.055387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.269913 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 5
+  artifactKey: Guid(d37c38392f34b4b499273c6ad6b366ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 5 using Guid(d37c38392f34b4b499273c6ad6b366ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0fa1ad0a427ab6772ca1a6814c1ea82') in 0.004099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.030475 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 5/Hadal 1.png
+  artifactKey: Guid(7822aa5cf52df5e45b48b3935f9e3ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 5/Hadal 1.png using Guid(7822aa5cf52df5e45b48b3935f9e3ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b914e59369b9cce07b2cabdc93289161') in 0.085319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 5/Hadal.png
+  artifactKey: Guid(43d59accaefd0284abf0a89f80af7f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 5/Hadal.png using Guid(43d59accaefd0284abf0a89f80af7f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f5efb41ddfb7d87d8b6ca72e093d455') in 0.206441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 5/Hadal 2.png
+  artifactKey: Guid(39b8a3a8afaa0c0468802c850a1cb701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 5/Hadal 2.png using Guid(39b8a3a8afaa0c0468802c850a1cb701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f407b6a1d319d8c235fe8d352cea19a') in 0.083525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 5/hadal.mat
+  artifactKey: Guid(17919578d5c511949bb45055e5cd6084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 5/hadal.mat using Guid(17919578d5c511949bb45055e5cd6084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a04910b53957909cd2362ccdd8db790') in 0.113135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.919372 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Tutorial
+  artifactKey: Guid(237d49d199c568f4380da2123c9c0b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Tutorial using Guid(237d49d199c568f4380da2123c9c0b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23341de4584f1e68ab5949e9123924ef') in 0.003952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.186564 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/9-10.png
+  artifactKey: Guid(ea311c073c206a44ebae4568697f1b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/9-10.png using Guid(ea311c073c206a44ebae4568697f1b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12c4d94517d8b88b603401e86294bd53') in 0.017497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.144838 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/6.png
+  artifactKey: Guid(85b0f0705068dfb4186cb535d625b35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/6.png using Guid(85b0f0705068dfb4186cb535d625b35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c81f02cadbfa37ba2731b7f00b50046') in 0.039912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/7.png
+  artifactKey: Guid(ba12e1e82da95394d8df94dc9afcbb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/7.png using Guid(ba12e1e82da95394d8df94dc9afcbb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b5c21df084d27964dc7d8972a02331a') in 0.048443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/8.png
+  artifactKey: Guid(e1dc0bf634287ec4ba191c0cdf41940c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/8.png using Guid(e1dc0bf634287ec4ba191c0cdf41940c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '533f18d4258aa51399b7bec64365a1ff') in 0.048602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 76.426629 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/6.png
+  artifactKey: Guid(85b0f0705068dfb4186cb535d625b35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/6.png using Guid(85b0f0705068dfb4186cb535d625b35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e0726338ef3ba3ac7fc89df8a1c43b8') in 0.103605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.222920 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/7.png
+  artifactKey: Guid(ba12e1e82da95394d8df94dc9afcbb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/7.png using Guid(ba12e1e82da95394d8df94dc9afcbb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac98d091c2b34e128b101bfc47095e29') in 0.044432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.385208 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/8.png
+  artifactKey: Guid(e1dc0bf634287ec4ba191c0cdf41940c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/8.png using Guid(e1dc0bf634287ec4ba191c0cdf41940c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9953c799fb4cec68a1f47b9642a271c') in 0.019651 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 7.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 50 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 53 unused Assets / (0.6 MB). Loaded Objects now: 4804.
+Memory consumption went from 105.2 MB to 104.6 MB.
+Total: 4.561600 ms (FindLiveObjects: 0.349100 ms CreateObjectMapping: 0.223200 ms MarkObjects: 3.719800 ms  DeleteObjects: 0.268900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004113 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.875 seconds
+Domain Reload Profiling:
+	ReloadAssembly (876ms)
+		BeginReloadAssembly (101ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (717ms)
+			LoadAssemblies (54ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (148ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (386ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (48ms)
+				ProcessInitializeOnLoadAttributes (269ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4057 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (251.4 KB). Loaded Objects now: 5099.
+Memory consumption went from 224.5 MB to 224.2 MB.
+Total: 3.694500 ms (FindLiveObjects: 0.308500 ms CreateObjectMapping: 0.165600 ms MarkObjects: 3.143800 ms  DeleteObjects: 0.075700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (241.4 KB). Loaded Objects now: 5099.
+Memory consumption went from 142.2 MB to 142.0 MB.
+Total: 3.752500 ms (FindLiveObjects: 0.341700 ms CreateObjectMapping: 0.214500 ms MarkObjects: 3.139100 ms  DeleteObjects: 0.056600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003980 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.832 seconds
+Domain Reload Profiling:
+	ReloadAssembly (832ms)
+		BeginReloadAssembly (101ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (673ms)
+			LoadAssemblies (54ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (150ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (379ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (55ms)
+				ProcessInitializeOnLoadAttributes (258ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4029 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (244.3 KB). Loaded Objects now: 5114.
+Memory consumption went from 222.7 MB to 222.5 MB.
+Total: 3.653200 ms (FindLiveObjects: 0.316100 ms CreateObjectMapping: 0.179200 ms MarkObjects: 3.085300 ms  DeleteObjects: 0.072000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 88.185369 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/9-10.png
+  artifactKey: Guid(ea311c073c206a44ebae4568697f1b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/9-10.png using Guid(ea311c073c206a44ebae4568697f1b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1437efb52f328140b65443ec4888445') in 0.057925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Cenarios/Fundos/Camada 2/2-5.png
+  artifactKey: Guid(461345b2df5b4454cb1541e4c39a635f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cenarios/Fundos/Camada 2/2-5.png using Guid(461345b2df5b4454cb1541e4c39a635f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '258e105451b1200c05b136c7119c56af') in 0.014203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1050.523538 seconds.
+  path: Assets/Prefabs/Inimigos/AguaViva/AguaViva.prefab
+  artifactKey: Guid(f58e455d36ccc1647b388d443448be2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/AguaViva/AguaViva.prefab using Guid(f58e455d36ccc1647b388d443448be2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4074487b93d576ae0418f4f1ab9b87c9') in 0.413697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefabs/Inimigos/AguaViva/Small_Lightning.prefab
+  artifactKey: Guid(6d9777b3afa164c4385972a60d1de6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/AguaViva/Small_Lightning.prefab using Guid(6d9777b3afa164c4385972a60d1de6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd2a920372a0cc43eecf25bbbc36151') in 0.025911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 470.993041 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity
+  artifactKey: Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity using Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1972aa0508e0452a1892dbaa1aa5711b') in 0.004643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.272957 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6 1.unity
+  artifactKey: Guid(73d731fffd9fbf940a0de04787c5cdb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6 1.unity using Guid(73d731fffd9fbf940a0de04787c5cdb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6247d20bad9f0ff96196edeb7cede3ca') in 0.004924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.405077 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_7.unity
+  artifactKey: Guid(73d731fffd9fbf940a0de04787c5cdb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_7.unity using Guid(73d731fffd9fbf940a0de04787c5cdb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c601847ebd690e1e1091924fa42f407') in 0.004104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 187.281680 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 2/Baiacu/Baiacu.prefab
+  artifactKey: Guid(703058c7eb76b644f9e4a60e295d92b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 2/Baiacu/Baiacu.prefab using Guid(703058c7eb76b644f9e4a60e295d92b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cf8ec1e673527ba9801675cec357132') in 0.115570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.235187 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 2/Nautilus/nautilus.prefab
+  artifactKey: Guid(3e31be71c3659d1439503f40daca2096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 2/Nautilus/nautilus.prefab using Guid(3e31be71c3659d1439503f40daca2096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a34d26eb6344403f50f761ced2a49000') in 0.062917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.786168 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 2/Tartaruga/tartaruga.prefab
+  artifactKey: Guid(3c1af78a6689f9e43b1c345d119566a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 2/Tartaruga/tartaruga.prefab using Guid(3c1af78a6689f9e43b1c345d119566a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd98dd53b4304bad1978878a57694f79a') in 0.051243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 72.610403 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6 1.unity
+  artifactKey: Guid(d07134c2c945c214f8945eff920188ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6 1.unity using Guid(d07134c2c945c214f8945eff920188ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7ccef93def1172085f188db0a132477') in 0.001664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.768204 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_8.unity
+  artifactKey: Guid(d07134c2c945c214f8945eff920188ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_8.unity using Guid(d07134c2c945c214f8945eff920188ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7a018027968600a156e16fc231879a2') in 0.004378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 371.152470 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity
+  artifactKey: Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity using Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d7d26481f5be6d9be05215670b32a2') in 0.002079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.641091 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_9.unity
+  artifactKey: Guid(a783816ade6bbda4f825344917ca00d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_9.unity using Guid(a783816ade6bbda4f825344917ca00d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0351a3df0494eb00bf9c72c2eed57c') in 0.004348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.214875 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_62.unity
+  artifactKey: Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_62.unity using Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc54c18be2d814226e479fb1770317e1') in 0.004276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.336696 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity
+  artifactKey: Guid(d07134c2c945c214f8945eff920188ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_6.unity using Guid(d07134c2c945c214f8945eff920188ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92b00b376478575fa640ce91c510cd72') in 0.001734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.607495 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_8.unity
+  artifactKey: Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_8.unity using Guid(619bedbcb268f344198d567e6b3ba12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e16fea32d7df34bd3ad6c740126af60') in 0.001617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.306489 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_7.unity
+  artifactKey: Guid(73d731fffd9fbf940a0de04787c5cdb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 2/Fase 2_7.unity using Guid(73d731fffd9fbf940a0de04787c5cdb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '671b146d95b6768e675e49b6d5a796eb') in 0.001767 seconds 
