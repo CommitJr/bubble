@@ -20,7 +20,7 @@ public class WaitForPlayer : MonoBehaviour
     {
         if (playerController.FindPlayer(centro, ray))
         {
-            Debug.Log(Vector2.Distance(centro.position, GameObject.FindGameObjectWithTag("Player").transform.position));
+            //Debug.Log(Vector2.Distance(centro.position, GameObject.FindGameObjectWithTag("Player").transform.position));
             if (peixe.GetComponent<viboraAttack>() == true)
             {
                 peixe.GetComponent<viboraAttack>().enabled = true;

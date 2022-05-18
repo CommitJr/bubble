@@ -46,7 +46,7 @@ public class aguaViva : MonoBehaviour
         if (hitCD <= auxHitCD) {
             canMove = true;
             if (hitPlayer) {
-                Debug.Log("HIT");
+                //Debug.Log("HIT");
                 rb.velocity = new Vector2(0f,0f);                
                 startingVal = transform.position.y;
                 hitPlayer = false;
@@ -106,7 +106,7 @@ public class aguaViva : MonoBehaviour
     #region COLLISION
     void OnTriggerEnter2D (Collider2D collider) {
         if (collider.transform.parent != null && collider.transform.parent.tag == "Player") {
-            Debug.Log("Player morre");
+            //Debug.Log("Player morre");
             lightingEfct.Play ();
             ParticleSystem.EmissionModule em = lightingEfct.emission;
             em.enabled = true;
@@ -121,16 +121,20 @@ public class aguaViva : MonoBehaviour
             var knockback = new Vector2 (0,0);         
             // Bolha na direita
             if (collision.transform.position.x >= transform.position.x) {
-                Debug.Log("Bolha direita"); knockback.x -= 1; }
+                //Debug.Log("Bolha direita"); 
+                knockback.x -= 1; }
             // Bolha na esquerda
             if (collision.transform.position.x <= transform.position.x) {
-                Debug.Log("Bolha esquerda"); knockback.x += 1; }
+                //Debug.Log("Bolha esquerda");
+                knockback.x += 1; }
             // Bolha em cima
             if (collision.transform.position.y >= transform.position.y) {
-                Debug.Log("Bolha cima"); knockback.y -= 1; }
+                //Debug.Log("Bolha cima");
+                knockback.y -= 1; }
             // Bolha em baixo
             if (collision.transform.position.y <= transform.position.y) {
-                Debug.Log("Bolha baixo"); knockback.y += 1; }
+                //Debug.Log("Bolha baixo");
+                knockback.y += 1; }
             rb.velocity = knockback;
         } 
         if (collision.transform.tag == "parede" || collision.transform.tag == "Pedras") {

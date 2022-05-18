@@ -52,7 +52,7 @@ public class animatorControll : MonoBehaviour
     {
         if (isAttack)
         {
-            Debug.Log(Mathf.Abs(Vector2.Distance(player.position, centro.position)));
+            //Debug.Log(Mathf.Abs(Vector2.Distance(player.position, centro.position)));
             if (Mathf.Abs(Vector2.Distance(player.position, centro.position)) < attackRange)
             {
                 if (centro.position.x - player.position.x < -sideAttackRange)
@@ -128,7 +128,7 @@ public class animatorControll : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("qualquer coisa");
+        //Debug.Log("qualquer coisa");
         playerController.GetComponent<PlayerController>().SetHealth(0);
     }
 

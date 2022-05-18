@@ -13,10 +13,10 @@ public class Lightning : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log(other.tag);
+        //Debug.Log(other.tag);
         if (other.tag == "Player" && !_isDamage)
         {
-            Debug.Log("Eletrocutado");
+            //Debug.Log("Eletrocutado");
 
             playerController.SetHealth(playerController.GetHealth() - 1);
             _isDamage = true;

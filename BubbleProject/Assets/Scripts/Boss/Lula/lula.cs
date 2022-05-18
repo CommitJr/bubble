@@ -18,11 +18,13 @@ public class lula : MonoBehaviour
     private bool hasMove = false;
     [SerializeField] private float time;
     [SerializeField] private Moviment move;
+    [SerializeField] private AudioSource audioSource;
 
     void Start()
     {
         next = Time.time;
         time = Time.deltaTime;
+        audioSource.Play();
     }
     void Update()
     {
@@ -33,6 +35,7 @@ public class lula : MonoBehaviour
         else if (bossPosition.position.y + 2 <= destination.position.y )
         {
             bossPosition.position = Vector2.Lerp(bossPosition.position, destination.position, time);
+            audioSource.Play();
             
         }
         else 

@@ -25,9 +25,9 @@ public class SaveDataFile
             switch (i)
             {
                 case 1:
-                    WolrdAdds.SetNumberLevels(1);
+                    WolrdAdds.SetNumberLevels(10);
 
-                    for (int j = 0; j < 1; j++)
+                    for (int j = 0; j < 10; j++)
                     {
                         Level LevelAdds = new Level();
 
@@ -50,9 +50,9 @@ public class SaveDataFile
                     }
                     break;
                 case 2:
-                    WolrdAdds.SetNumberLevels(4);
+                    WolrdAdds.SetNumberLevels(10);
 
-                    for (int j = 0; j < 4; j++)
+                    for (int j = 0; j < 10; j++)
                     {
                         Level LevelAdds = new Level();
 
@@ -75,9 +75,9 @@ public class SaveDataFile
                     }
                     break;
                 case 3:
-                    WolrdAdds.SetNumberLevels(4);
+                    WolrdAdds.SetNumberLevels(10);
 
-                    for (int j = 0; j < 4; j++)
+                    for (int j = 0; j < 10; j++)
                     {
                         Level LevelAdds = new Level();
 
@@ -100,9 +100,9 @@ public class SaveDataFile
                     }
                     break;
                 case 4:
-                    WolrdAdds.SetNumberLevels(4);
+                    WolrdAdds.SetNumberLevels(10);
 
-                    for (int j = 0; j < 4; j++)
+                    for (int j = 0; j < 10; j++)
                     {
                         Level LevelAdds = new Level();
 
@@ -125,9 +125,9 @@ public class SaveDataFile
                     }
                     break;
                 case 5:
-                    WolrdAdds.SetNumberLevels(5);
+                    WolrdAdds.SetNumberLevels(11);
 
-                    for (int j = 0; j < 5; j++)
+                    for (int j = 0; j < 11; j++)
                     {
                         Level LevelAdds = new Level();
 

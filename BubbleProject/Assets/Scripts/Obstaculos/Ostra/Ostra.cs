@@ -30,7 +30,7 @@ public class Ostra : MonoBehaviour
     {
         if (collision.tag == "BolhaRastreio")
         {
-            Debug.Log(collision.tag);
+            //Debug.Log(collision.tag);
             //    collision.transform.parent.GetComponent<BubbleController>().enabled = false;
             collision.transform.parent.GetComponent<Rigidbody2D>().simulated = false;
             collision.transform.parent.SetParent(transform);

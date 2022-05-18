@@ -53,7 +53,7 @@ public class SoundManager : MonoBehaviour
                     hardGameSound.Play();
                     endSound.Stop();
 
-                    Debug.Log("a");
+                    //Debug.Log("a");
                 }
 
                 break;

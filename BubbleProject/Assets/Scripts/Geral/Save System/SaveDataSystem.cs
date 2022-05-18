@@ -61,7 +61,7 @@ public static class SaveDataSystem
 
             if (!File.Exists(Path))
             {
-                Debug.LogWarning("GameData não Existe em: " + Path + " | Gerando um Novo GameData.");
+                //Debug.LogWarning("GameData não Existe em: " + Path + " | Gerando um Novo GameData.");
 
                 SaveDataFile GameDataFile = new SaveDataFile();
                 Save(GameDataFile.GetGameData());
@@ -103,7 +103,7 @@ public static class SaveDataSystem
                 GameData.AddWorld(WorldData);
             }
 
-            Debug.Log("GameData Carregado com Sucesso.");
+            //Debug.Log("GameData Carregado com Sucesso.");
 
             return GameData;
         }

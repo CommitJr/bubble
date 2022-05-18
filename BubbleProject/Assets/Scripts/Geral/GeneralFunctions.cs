@@ -103,7 +103,7 @@ public class GeneralFunctions : MonoBehaviour
 
     private void Resume()
     {
-        Debug.Log("Retomando..");
+        //Debug.Log("Retomando..");
         pauseMenuUI.SetActive(false);
         header.SetActive(true);
         footer.SetActive(true);
@@ -120,7 +120,7 @@ public class GeneralFunctions : MonoBehaviour
 
     private void Pause()
     {
-        Debug.Log("Pausando..");
+        //Debug.Log("Pausando..");
         pauseMenuUI.SetActive(true);
         header.SetActive(false);
         footer.SetActive(false);
@@ -157,7 +157,7 @@ public class GeneralFunctions : MonoBehaviour
  
     public void Restart()
     {
-        Debug.Log("Reiniciando..");
+        //Debug.Log("Reiniciando..");
 
         Admob.Instance.DestroyBanner();
 
@@ -175,7 +175,7 @@ public class GeneralFunctions : MonoBehaviour
 
         if (!_isPlaying)
         {
-            Debug.Log("Proxima Cena..");
+            //Debug.Log("Proxima Cena..");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
@@ -186,7 +186,7 @@ public class GeneralFunctions : MonoBehaviour
 
         if (!_isPlaying)
         {
-            Debug.Log("Carregando..");
+            //Debug.Log("Carregando..");
             Time.timeScale = 1f;
             SceneManager.LoadScene(nome);
         }
@@ -195,7 +195,7 @@ public class GeneralFunctions : MonoBehaviour
 
     public void GoToMenu()
     {
-        Debug.Log("Indo Para o Menu..");
+        //Debug.Log("Indo Para o Menu..");
         if (!_isPlaying)
         {
             Time.timeScale = 1f;
@@ -209,7 +209,7 @@ public class GeneralFunctions : MonoBehaviour
 
         if (!_isPlaying)
         {
-            Debug.Log("Indo Para a Seleção de Camadas..");
+            //Debug.Log("Indo Para a Seleção de Camadas..");
             Time.timeScale = 1f;
             SceneManager.LoadScene("LevelSeletion");
         }
@@ -219,7 +219,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         if (!_isPlaying)
         {
-            Debug.Log("Saindo..");
+            //Debug.Log("Saindo..");
             Application.Quit();
         }
     }
@@ -228,7 +228,7 @@ public class GeneralFunctions : MonoBehaviour
     #region UI
     public void Win()
     {
-        Debug.Log("Ganhou!");
+        //Debug.Log("Ganhou!");
         winMenuUI.SetActive(true);
         _isRunning = false;
 
@@ -245,12 +245,12 @@ public class GeneralFunctions : MonoBehaviour
 
     public void Defeat()
     {
-        Debug.Log("Perdeu!");
+        //Debug.Log("Perdeu!");
         defeatMenuUI.SetActive(true);
         _isRunning = false;
 
         Admob.defeats++;
-        Debug.Log(Admob.defeats);
+        //Debug.Log(Admob.defeats);
         if (Admob.defeats >= 3)
         {
             Admob.defeats = 0;
@@ -293,7 +293,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         playerController.SetControllerActivate(false);
 
-        Debug.Log("Salvando Progresso..");
+        //Debug.Log("Salvando Progresso..");
         SaveDataCheck();
     }
 

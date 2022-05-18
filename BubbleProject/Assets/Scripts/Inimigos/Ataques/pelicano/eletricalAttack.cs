@@ -27,7 +27,7 @@ public class eletricalAttack : MonoBehaviour
            
             //other
             wave.enabled = false;
-            Debug.Log(wave.enabled);
+            //Debug.Log(wave.enabled);
             Invoke("choque", 3f);
         }
     }

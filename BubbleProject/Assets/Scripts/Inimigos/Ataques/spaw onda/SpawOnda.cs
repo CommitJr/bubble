@@ -38,7 +38,7 @@ public class SpawOnda : MonoBehaviour
 
     private void CriaOnda()
     {
-        Debug.Log("pum");
+        //Debug.Log("pum");
         part.Play();
         fartSound.Play();
     }

@@ -100,7 +100,7 @@ public class BubbleController : MonoBehaviour
 
         if (foreignObject.gameObject.tag == "LossControl")
         {
-            Debug.Log("Preparando para o fim");
+            //Debug.Log("Preparando para o fim");
             generalFunctions.GoToEnd();
             Invoke("move2End", 0.01f);
         }
@@ -108,7 +108,7 @@ public class BubbleController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.collider.gameObject.tag);
+        //Debug.Log(collision.collider.gameObject.tag);
 
         #region colisao fatal
         if (collision.collider.gameObject.tag == "Dentes" || collision.collider.gameObject.tag == "Pedras"
@@ -137,7 +137,7 @@ public class BubbleController : MonoBehaviour
 
         else if (collision.gameObject.tag == "End" && !_hasHit)
         {
-            Debug.Log("UI");
+            //Debug.Log("UI");
             generalFunctions.Win();
 
             _hasHit = true;
@@ -214,7 +214,7 @@ public class BubbleController : MonoBehaviour
     private void defeatTime()
     {
         generalFunctions.Defeat();
-        Debug.Log("MORTOOOOOOO " + _isDead);
+        //Debug.Log("MORTOOOOOOO " + _isDead);
         Destroy(GameObject.FindWithTag("death"));
     }
     #endregion

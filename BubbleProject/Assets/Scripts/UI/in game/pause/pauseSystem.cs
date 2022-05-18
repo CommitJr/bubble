@@ -22,7 +22,7 @@ public class pauseSystem : MonoBehaviour
 
     public void Pause()
     {
-        Debug.Log("pausa");
+        //Debug.Log("pausa");
         pausaMenuUI.SetActive(true);
         superiorUIGame.SetActive(false);
         inferiorUIGame.SetActive(false);

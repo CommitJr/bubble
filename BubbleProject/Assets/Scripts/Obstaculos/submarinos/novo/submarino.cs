@@ -33,7 +33,7 @@ public class submarino : MonoBehaviour
     {
         if (Time.time > next)
         {
-            Debug.Log(transform.position);
+            //Debug.Log(transform.position);
             Instantiate(torpedo, transform.position, Quaternion.identity);
             next = Time.time + rate;
         }

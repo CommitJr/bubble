@@ -17,7 +17,7 @@ public class estrelas : MonoBehaviour
         rg2D.gravityScale = 0f;
         rate = 3f;
         contador = new Contador(rate);
-        Debug.Log(transform.parent.transform.position);
+        //Debug.Log(transform.parent.transform.position);
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class estrelas : MonoBehaviour
     {
         if (contador.RepeatCountTime())
         {
-            Debug.Log(transform.parent.transform.position);
+            //Debug.Log(transform.parent.transform.position);
             GameObject star = Instantiate(estrelaPrefab, transform.parent);
             star.transform.position = transform.parent.position;
         }

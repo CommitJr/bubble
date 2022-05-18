@@ -43,7 +43,7 @@ public class AnimatorControl : MonoBehaviour
     public void StopAttack()
     {
         _canAttack = false;
-        Debug.Log(_canAttack);
+        //Debug.Log(_canAttack);
         animatorControl.SetBool("_toAttack", false);
         animatorControl.SetBool("_canAttack", false);
         playerController.KillPlayer();

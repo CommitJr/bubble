@@ -15,7 +15,7 @@ public class Garra : MonoBehaviour
     {
         if (collision.tag == "BolhaRastreio")
         {
-            Debug.Log(collision.tag);
+            //Debug.Log(collision.tag);
             onda.SetControllerActivate(false);
         //    collision.transform.parent.GetComponent<BubbleController>().enabled = false;
             collision.transform.parent.GetComponent<Rigidbody2D>().simulated = false;

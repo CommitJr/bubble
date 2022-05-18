@@ -14,7 +14,7 @@ public class wave : MonoBehaviour
         {
             collision.transform.parent.gameObject.GetComponent<Rigidbody2D>().AddForce( direction );
             boss.SetEnableWave(false);
-            Debug.Log("bateu");
+            //Debug.Log("bateu");
         }
     }
 }
