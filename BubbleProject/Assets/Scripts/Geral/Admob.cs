@@ -12,11 +12,6 @@ public class Admob : MonoBehaviour
 
     public static int wins;
     public static int defeats;
-
-    [SerializeField] private string androidKeyBanner;
-    [SerializeField] private string androidKeyIntersticial;
-    [SerializeField] private string iosKeyBanner;
-    [SerializeField] private string iosKeyIntersticial;
     #endregion
 
     #region START
@@ -48,9 +43,9 @@ public class Admob : MonoBehaviour
     public void RequestBanner()
     {
         #if UNITY_ANDROID
-            string adUnitId = string.IsNullOrEmpty(androidKeyBanner) ? androidKeyBanner : "ca-app-pub-3940256099942544/6300978111";
+            string adUnitId = "ca-app-pub-5411945946344476/4011471975";
         #elif UNITY_IPHONE
-            string adUnitId = string.IsNullOrEmpty(iosKeyBanner) ? iosKeyBanner : "ca-app-pub-3940256099942544/2934735716";
+            string adUnitId = "ca-app-pub-3940256099942544/2934735716";
         #else
             string adUnitId = "unexpected_platform";
         #endif
@@ -72,9 +67,9 @@ public class Admob : MonoBehaviour
     private void RequestInterstitial()
     {
         #if UNITY_ANDROID
-            string adUnitId = string.IsNullOrEmpty(androidKeyIntersticial) ? androidKeyIntersticial : "ca-app-pub-3940256099942544/1033173712";
+            string adUnitId = "ca-app-pub-5411945946344476/4732692559";
         #elif UNITY_IPHONE
-            string adUnitId = string.IsNullOrEmpty(iosKeyIntersticial) ? iosKeyIntersticial : "ca-app-pub-3940256099942544/4411468910";
+            string adUnitId = "ca-app-pub-3940256099942544/4411468910";
         #else
             string adUnitId = "unexpected_platform";
         #endif
