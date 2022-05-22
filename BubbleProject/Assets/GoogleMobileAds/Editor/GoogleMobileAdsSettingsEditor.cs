@@ -1,3 +1,5 @@
+using System.IO;
+
 using UnityEditor;
 using UnityEngine;
 
@@ -16,47 +18,61 @@ namespace GoogleMobileAds.Editor
 
         public override void OnInspectorGUI()
         {
-            EditorGUILayout.LabelField("Google Mobile Ads App ID", EditorStyles.boldLabel);
-            EditorGUI.indentLevel++;
+            EditorGUILayout.LabelField("Google Ad Manager", EditorStyles.boldLabel);
+            GoogleMobileAdsSettings.Instance.IsAdManagerEnabled =
+                    EditorGUILayout.Toggle(new GUIContent("Enabled"),
+                            GoogleMobileAdsSettings.Instance.IsAdManagerEnabled);
 
-            GoogleMobileAdsSettings.Instance.GoogleMobileAdsAndroidAppId =
-                    EditorGUILayout.TextField("Android",
-                            GoogleMobileAdsSettings.Instance.GoogleMobileAdsAndroidAppId);
-
-            GoogleMobileAdsSettings.Instance.GoogleMobileAdsIOSAppId =
-                    EditorGUILayout.TextField("iOS",
-                            GoogleMobileAdsSettings.Instance.GoogleMobileAdsIOSAppId);
-
-            EditorGUILayout.HelpBox(
-                    "Google Mobile  Ads App ID will look similar to this sample ID: ca-app-pub-3940256099942544~3347511713",
-                    MessageType.Info);
-
-            EditorGUI.indentLevel--;
             EditorGUILayout.Separator();
 
-            EditorGUILayout.LabelField("AdMob-specific settings", EditorStyles.boldLabel);
-            EditorGUI.indentLevel++;
+            EditorGUILayout.LabelField("Google AdMob", EditorStyles.boldLabel);
+            GoogleMobileAdsSettings.Instance.IsAdMobEnabled =
+                    EditorGUILayout.Toggle(new GUIContent("Enabled"),
+                            GoogleMobileAdsSettings.Instance.IsAdMobEnabled);
 
-            EditorGUI.BeginChangeCheck();
+            EditorGUILayout.Separator();
+
+            EditorGUI.BeginDisabledGroup(!GoogleMobileAdsSettings.Instance.IsAdMobEnabled);
+
+            EditorGUILayout.LabelField("AdMob App ID");
+
+            GoogleMobileAdsSettings.Instance.AdMobAndroidAppId =
+                    EditorGUILayout.TextField("Android",
+                            GoogleMobileAdsSettings.Instance.AdMobAndroidAppId);
+
+            GoogleMobileAdsSettings.Instance.AdMobIOSAppId =
+                    EditorGUILayout.TextField("iOS",
+                            GoogleMobileAdsSettings.Instance.AdMobIOSAppId);
+
+            if (GoogleMobileAdsSettings.Instance.IsAdMobEnabled)
+            {
+                EditorGUILayout.HelpBox(
+                        "AdMob App ID will look similar to this sample ID: ca-app-pub-3940256099942544~3347511713",
+                        MessageType.Info);
+            }
+
+            EditorGUILayout.Separator();
 
             GoogleMobileAdsSettings.Instance.DelayAppMeasurementInit =
                     EditorGUILayout.Toggle(new GUIContent("Delay app measurement"),
                     GoogleMobileAdsSettings.Instance.DelayAppMeasurementInit);
-
             if (GoogleMobileAdsSettings.Instance.DelayAppMeasurementInit) {
-                EditorGUILayout.HelpBox(
-                        "Delays app measurement until you explicitly initialize the Mobile Ads SDK or load an ad.",
-                        MessageType.Info);
+                    EditorGUILayout.HelpBox(
+                            "Delays app measurement until you explicitly initialize the Mobile Ads SDK or load an ad.",
+                            MessageType.Info);
             }
+            EditorGUI.EndDisabledGroup();
 
-            EditorGUI.indentLevel--;
-            EditorGUILayout.Separator();
-
-            if (EditorGUI.EndChangeCheck())
+            if (GUI.changed)
             {
-                EditorUtility.SetDirty((GoogleMobileAdsSettings)target);
-                AssetDatabase.SaveAssets();
+                OnSettingsChanged();
             }
+        }
+
+        private void OnSettingsChanged()
+        {
+            EditorUtility.SetDirty((GoogleMobileAdsSettings) target);
+            GoogleMobileAdsSettings.Instance.WriteSettingsToFile();
         }
     }
 }

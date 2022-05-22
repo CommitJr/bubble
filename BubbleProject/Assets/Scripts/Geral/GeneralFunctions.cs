@@ -46,8 +46,6 @@ public class GeneralFunctions : MonoBehaviour
         {
             DefineStartLevels();
             player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
-
-            Admob.Instance.DestroyBanner();
         }
         else
         {
@@ -59,15 +57,7 @@ public class GeneralFunctions : MonoBehaviour
 
     private void DefineStartMenus()
     {
-        if(SceneManager.GetActiveScene().name == "Menu")
-        {
-            Admob.Instance.DestroyBanner();
-            Admob.Instance.RequestBanner();
-        }
-        else
-        {
-            Admob.Instance.DestroyBanner();
-        }
+        
     }
 
     private void DefineStartLevels()
@@ -114,8 +104,6 @@ public class GeneralFunctions : MonoBehaviour
         }
 
         Time.timeScale = 1f;
-
-        Admob.Instance.DestroyBanner();
     }
 
     private void Pause()
@@ -131,8 +119,6 @@ public class GeneralFunctions : MonoBehaviour
         }
 
         Time.timeScale = 0f;
-
-        Admob.Instance.RequestBanner();
     }
 
     public bool GetPauseStatus()
@@ -153,44 +139,53 @@ public class GeneralFunctions : MonoBehaviour
     #endregion
 
     #region SCENES
-    
- 
     public void Restart()
     {
         //Debug.Log("Reiniciando..");
 
-        Admob.Instance.DestroyBanner();
-
         if (!_isPlaying)
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(restart());
+           
         }
+    }
+    private IEnumerator restart()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 
     public void Next()
     {
-        Admob.Instance.DestroyBanner();
-
         if (!_isPlaying)
         {
             //Debug.Log("Proxima Cena..");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(next());
+            
         }
+    }
+    private IEnumerator next()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Load(string nome)
     {
-        Admob.Instance.DestroyBanner();
-
         if (!_isPlaying)
         {
             //Debug.Log("Carregando..");
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(nome);
+            StartCoroutine(load(nome));
         }
 
+    }
+    private IEnumerator load(string nome)
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(nome);
     }
 
     public void GoToMenu()
@@ -198,21 +193,29 @@ public class GeneralFunctions : MonoBehaviour
         //Debug.Log("Indo Para o Menu..");
         if (!_isPlaying)
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("Menu");
+            StartCoroutine(gotomenu());
         }
+    }
+    private IEnumerator gotomenu()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("Menu");
     }
 
     public void GoToSelection()
     {
-        Admob.Instance.DestroyBanner();
-
         if (!_isPlaying)
         {
             //Debug.Log("Indo Para a Seleção de Camadas..");
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("LevelSeletion");
+            StartCoroutine(gotoselection());
         }
+    }
+    private IEnumerator gotoselection()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("LevelSeletion");
     }
 
     public void GoToExit()
@@ -220,8 +223,13 @@ public class GeneralFunctions : MonoBehaviour
         if (!_isPlaying)
         {
             //Debug.Log("Saindo..");
-            Application.Quit();
+            StartCoroutine(gotoexit());
         }
+    }
+    private IEnumerator gotoexit()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Application.Quit();
     }
     #endregion
 
@@ -231,16 +239,6 @@ public class GeneralFunctions : MonoBehaviour
         //Debug.Log("Ganhou!");
         winMenuUI.SetActive(true);
         _isRunning = false;
-
-        Admob.wins++;
-
-        if(Admob.wins >= 4)
-        {
-            Admob.wins = 0;
-            Admob.Instance.ShowInterstitial();
-        }
-
-        Admob.Instance.RequestBanner();
     }
 
     public void Defeat()
@@ -248,16 +246,6 @@ public class GeneralFunctions : MonoBehaviour
         //Debug.Log("Perdeu!");
         defeatMenuUI.SetActive(true);
         _isRunning = false;
-
-        Admob.defeats++;
-        //Debug.Log(Admob.defeats);
-        if (Admob.defeats >= 3)
-        {
-            Admob.defeats = 0;
-            Admob.Instance.ShowInterstitial();
-        }
-
-        Admob.Instance.RequestBanner();
     }
 
     public void Health(int health)
@@ -287,7 +275,6 @@ public class GeneralFunctions : MonoBehaviour
         }
     }
     #endregion
-
     #region INGAME
     public void GoToEnd()
     {
