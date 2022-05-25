@@ -13,12 +13,14 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject header;
     [SerializeField] private GameObject footer;
     [SerializeField] private Image[] lives;
+ 
     private GameObject timer;
     private GameObject canvasTutorial;
 
     private PlayerController playerController;
     private BubbleController bubbleController;
     private SaveData saveData;
+    private AdsManager adsManager;
 
     private  bool _isPause;
     private  bool _isRunning;
@@ -41,6 +43,7 @@ public class GeneralFunctions : MonoBehaviour
 
         playerController = GetComponent<PlayerController>();
         buttonSound = GetComponent<AudioSource>();
+        adsManager = GameObject.FindGameObjectWithTag("Ads").GetComponent<AdsManager>();
 
         if (SceneManager.GetActiveScene().name.Contains("Fase") || SceneManager.GetActiveScene().name == "Tutorial")
         {
@@ -57,7 +60,10 @@ public class GeneralFunctions : MonoBehaviour
 
     private void DefineStartMenus()
     {
-        
+        if(SceneManager.GetActiveScene().name == "Menu")
+        {
+            adsManager.LoadAdBanner();
+        }
     }
 
     private void DefineStartLevels()
@@ -98,6 +104,8 @@ public class GeneralFunctions : MonoBehaviour
         header.SetActive(true);
         footer.SetActive(true);
 
+        adsManager.HideBannerAd();
+
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             canvasTutorial.SetActive(true);
@@ -112,7 +120,9 @@ public class GeneralFunctions : MonoBehaviour
         pauseMenuUI.SetActive(true);
         header.SetActive(false);
         footer.SetActive(false);
-        
+
+        adsManager.LoadAdBanner();
+
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             canvasTutorial.SetActive(false);
@@ -154,6 +164,8 @@ public class GeneralFunctions : MonoBehaviour
         Time.timeScale = 1f;
         yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        adsManager.HideBannerAd();
     }
 
 
@@ -170,6 +182,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        adsManager.HideBannerAd();
     }
 
     public void Load(string nome)
@@ -239,6 +252,19 @@ public class GeneralFunctions : MonoBehaviour
         //Debug.Log("Ganhou!");
         winMenuUI.SetActive(true);
         _isRunning = false;
+
+        adsManager.LoadAdBanner();
+
+        if (adsManager.GetWinCounter() < 4)
+        {
+            adsManager.CounterWins(false);
+        }
+        else
+        {
+            adsManager.CounterWins(true);
+            adsManager.LoadAdInterstitial();
+            adsManager.ShowAdInterstitial();
+        }
     }
 
     public void Defeat()
@@ -246,6 +272,19 @@ public class GeneralFunctions : MonoBehaviour
         //Debug.Log("Perdeu!");
         defeatMenuUI.SetActive(true);
         _isRunning = false;
+
+        adsManager.LoadAdBanner();
+
+        if (adsManager.GetDeathCounter() < 3)
+        {
+            adsManager.CounterDeaths(false);
+        }
+        else
+        {
+            adsManager.CounterDeaths(true);
+            adsManager.LoadAdInterstitial();
+            adsManager.ShowAdInterstitial();
+        }
     }
 
     public void Health(int health)
