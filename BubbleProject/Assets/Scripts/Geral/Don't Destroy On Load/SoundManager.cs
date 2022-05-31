@@ -45,7 +45,7 @@ public class SoundManager : MonoBehaviour
                 }
                 break;
 
-            case "Fase 5_4" or "Fase 4_4" or "Fase 3_4" or "Fase 2_4" or "Fase 1_4":
+            case "Fase 5_6" or "Fase 4_4" or "Fase 3_4" or "Fase 2_4" or "Fase 1_9":
                 if (!hardGameSound.isPlaying)
                 {
                     normalGameSound.Stop();
