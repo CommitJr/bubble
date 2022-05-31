@@ -35,7 +35,7 @@ public class lula : MonoBehaviour
         else if (bossPosition.position.y + 2 <= destination.position.y )
         {
             bossPosition.position = Vector2.Lerp(bossPosition.position, destination.position, time);
-            audioSource.Play();
+            if(!audioSource.isPlaying) audioSource.Play();
             
         }
         else 
