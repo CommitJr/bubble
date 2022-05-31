@@ -71,7 +71,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     public void LoadAdBanner()
     {
         Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
-        Advertisement.Banner.Show(_adUnitIdBanner);
+        Advertisement.Banner.Load(_adUnitIdBanner);
+        if(Advertisement.Banner.isLoaded) Advertisement.Banner.Show(_adUnitIdBanner);
     }
 
     public void HideBannerAd()
