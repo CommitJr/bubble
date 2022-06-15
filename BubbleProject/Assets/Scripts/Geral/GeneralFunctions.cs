@@ -20,6 +20,7 @@ public class GeneralFunctions : MonoBehaviour
     private PlayerController playerController;
     private BubbleController bubbleController;
     private SaveData saveData;
+    private GameControl gameControl;
     private AdsManager adsManager;
 
     private  bool _isPause;
@@ -41,6 +42,7 @@ public class GeneralFunctions : MonoBehaviour
         _isPause = false;
         _isRunning = true;
 
+        gameControl = new GameControl();
         playerController = GetComponent<PlayerController>();
         buttonSound = GetComponent<AudioSource>();
         adsManager = GameObject.FindGameObjectWithTag("Ads").GetComponent<AdsManager>();
@@ -314,6 +316,7 @@ public class GeneralFunctions : MonoBehaviour
         }
     }
     #endregion
+
     #region INGAME
     public void GoToEnd()
     {
@@ -399,6 +402,7 @@ public class GeneralFunctions : MonoBehaviour
         }
 
         SaveDataSystem.Save(saveData);
+        gameControl.Save(saveData);
     }
 
     public bool GetGameStatus()
