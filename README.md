@@ -10,6 +10,6 @@ O jogo consiste em guiar uma bolhinha de ar até chegar na superfície. Evite os
 
 <!--START_SECTION:waka-->
 ```text
-Builds   3  ███▒░░░░░░░░░░   27.50 % 
+Builds   7  █████████░░░░░   75.00 % 
 ```
 <!--END_SECTION:waka-->
