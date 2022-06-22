@@ -401,8 +401,8 @@ public class GeneralFunctions : MonoBehaviour
             }
         }
 
-        SaveDataSystem.Save(saveData);
-        gameControl.Save(saveData);
+        SaveDataSystem.SaveJson(saveData);
+        // gameControl.Save(saveData);
     }
 
     public bool GetGameStatus()

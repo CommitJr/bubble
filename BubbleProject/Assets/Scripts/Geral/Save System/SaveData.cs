@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class SaveData
 {
     #region SCOPE
-    private string GameVersion;
-    private int PlayerHealth;
-    private int NumberWorlds;
-    private int UnlockedWorlds;
-    private List<World> Worlds;
+    [SerializeField] private string GameVersion;
+    [SerializeField] private int PlayerHealth;
+    [SerializeField] private int NumberWorlds;
+    [SerializeField] private int UnlockedWorlds;
+    [SerializeField] private List<World> Worlds;
     #endregion
 
     #region CONSTRUCT

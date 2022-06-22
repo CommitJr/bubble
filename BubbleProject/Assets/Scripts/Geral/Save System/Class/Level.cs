@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Level
 {
     #region SCOPE
-    private int Id;
-    private string Name;
-    private bool Status;
-    private int PlayerScore;
+    [SerializeField] private int Id;
+    [SerializeField] private string Name;
+    [SerializeField] private bool Status;
+    [SerializeField] private int PlayerScore;
     #endregion
 
     #region CONSTRUCT

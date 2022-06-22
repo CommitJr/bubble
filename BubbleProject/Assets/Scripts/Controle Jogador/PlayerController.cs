@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         generalFunctions = GetComponent<GeneralFunctions>();
         saveData = new SaveData();
-        saveData = SaveDataSystem.Load();
+        saveData = SaveDataSystem.LoadJson();
 
         health = saveData.GetPlayerHealth();
         _isControlled = true;

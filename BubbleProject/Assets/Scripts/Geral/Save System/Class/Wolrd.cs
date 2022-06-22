@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class World
 {
     #region SCOPE
-    private int Id;
-    private string Name;
-    private bool Status;
-    private int NumberLevels;
-    private int UnlockedLevels;
-    private List<Level> Levels;
+    [SerializeField] private int Id;
+    [SerializeField] private string Name;
+    [SerializeField] private bool Status;
+    [SerializeField] private int NumberLevels;
+    [SerializeField] private int UnlockedLevels;
+    [SerializeField] private List<Level> Levels;
     #endregion
 
     #region CONSTRUCT

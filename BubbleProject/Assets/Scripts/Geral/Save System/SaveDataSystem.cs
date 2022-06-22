@@ -8,10 +8,10 @@ using System;
 
 public static class SaveDataSystem
 {
-    public static void Save(SaveData GameData)
+    private static string PathJson = Application.persistentDataPath + "/GameData.json";
+    private static string PathXml = Application.persistentDataPath + "/GameData.xml";
+    public static void SaveXml(SaveData GameData)
     {
-        string Path = Application.persistentDataPath + "/GameData.xml";
-
         XElement Writer = new XElement("DataSave");
 
         Writer.Add(new XElement("Game", new XAttribute("Version", GameData.GetGameVersion())));
@@ -48,28 +48,36 @@ public static class SaveDataSystem
             WolrdIndice--;
         }
 
-        Writer.Save(Path);
+        Writer.Save(PathXml);
     }
 
-    public static SaveData Load()
+    public static void SaveJson(SaveData saveData)
+    {
+        string json = JsonUtility.ToJson(saveData);
+
+        using (StreamWriter streamWriter = new StreamWriter(PathJson))
+        {
+            streamWriter.Write(json);
+        }
+    }
+
+    public static SaveData LoadXml()
     {
         try
         {
-            string Path = Application.persistentDataPath + "/GameData.xml";
-
             SaveData GameData = new SaveData();
 
-            if (!File.Exists(Path))
+            if (!File.Exists(PathXml))
             {
                 //Debug.LogWarning("GameData não Existe em: " + Path + " | Gerando um Novo GameData.");
 
                 SaveDataFile GameDataFile = new SaveDataFile();
-                Save(GameDataFile.GetGameData());
+                SaveXml(GameDataFile.GetGameData());
 
                 return GameDataFile.GetGameData();
             }
 
-            XElement Reader = XElement.Load(Path);
+            XElement Reader = XElement.Load(PathXml);
 
             GameData.SetGameVersion(Reader.Element("Game").Attribute("Version").Value);
             GameData.SetPlayerHealth(int.Parse(Reader.Element("Player").Attribute("Health").Value));
@@ -112,5 +120,29 @@ public static class SaveDataSystem
             Debug.Log(e);
             return null;
         }
+    }
+    public static SaveData LoadJson()
+    {
+        string json;
+        SaveData saveData;
+
+        if (!File.Exists(PathJson))
+        {
+            //Debug.LogWarning("GameData não Existe em: " + Path + " | Gerando um Novo GameData.");
+
+            SaveDataFile GameDataFile = new SaveDataFile();
+            SaveJson(GameDataFile.GetGameData());
+
+            return GameDataFile.GetGameData();
+        }
+
+        using (StreamReader streamReader = new StreamReader(Application.persistentDataPath + "/GameData.json"))
+        {
+            json = streamReader.ReadToEnd();
+        }
+        
+        saveData = JsonUtility.FromJson<SaveData>(json);
+
+        return saveData;
     }
 }
