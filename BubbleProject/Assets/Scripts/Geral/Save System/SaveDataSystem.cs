@@ -59,6 +59,9 @@ public static class SaveDataSystem
         {
             streamWriter.Write(json);
         }
+
+        if (UnitySave.Instance.isOnline)
+            UnitySave.Instance.SaveCloudData(json);
     }
 
     public static SaveData LoadXml()

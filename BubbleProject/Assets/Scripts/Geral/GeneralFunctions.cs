@@ -20,7 +20,8 @@ public class GeneralFunctions : MonoBehaviour
     private PlayerController playerController;
     private BubbleController bubbleController;
     private SaveData saveData;
-    private GameControl gameControl;
+    //    private GameControl gameControl;
+ //   private UnitySave cloudSave;
     private AdsManager adsManager;
 
     private  bool _isPause;
@@ -42,7 +43,7 @@ public class GeneralFunctions : MonoBehaviour
         _isPause = false;
         _isRunning = true;
 
-        gameControl = new GameControl();
+     //   gameControl = new GameControl();
         playerController = GetComponent<PlayerController>();
         buttonSound = GetComponent<AudioSource>();
         adsManager = GameObject.FindGameObjectWithTag("Ads").GetComponent<AdsManager>();
@@ -57,7 +58,10 @@ public class GeneralFunctions : MonoBehaviour
             DefineStartMenus();
         }
 
- 
+        // ---------------- CLOUD SAVE ------------------------
+        // Subscribe to cloud save service events
+    //    UnitySave.Instance.OnCloudDataRetrieved += UnitySave.Instance.OnCloudDataRetrievedHandler;
+             
     }
 
     private void DefineStartMenus()

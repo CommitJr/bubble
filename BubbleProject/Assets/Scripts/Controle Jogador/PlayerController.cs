@@ -34,6 +34,14 @@ public class PlayerController : MonoBehaviour
         saveData = new SaveData();
         saveData = SaveDataSystem.LoadJson();
 
+
+        // Check if service is ready
+   /*     if (UnitySave.Instance.isOnline)
+        {
+            UnitySave.Instance.GetCloudData(UnitySave.ECloudKeyData.TotalKey);
+        }
+   */
+
         health = saveData.GetPlayerHealth();
         _isControlled = true;
         
