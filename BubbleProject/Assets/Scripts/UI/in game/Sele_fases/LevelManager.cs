@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
         {
             levelButtons[i].interactable = true;
             levelLockers[i].SetActive(false);
-            levelScore[i].transform.GetChild(WorldFather.GetLevels()[i].GetPlayerScore()).gameObject.GetComponent<Image>().enabled = true;
+            levelScore[i].transform.GetChild(WorldFather.GetLevels()[i].GetPlayerScore() - 1).gameObject.GetComponent<Image>().enabled = true;
         }
     }
 }
