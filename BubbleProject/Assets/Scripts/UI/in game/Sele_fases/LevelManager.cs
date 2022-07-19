@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] public Button[] levelButtons;
     [SerializeField] public GameObject[] levelLockers;
+    [SerializeField] public GameObject[] levelScore;
 
     public void UnlockedLevels(SaveData GameData)
     {
@@ -35,6 +36,7 @@ public class LevelManager : MonoBehaviour
         {
             levelButtons[i].interactable = true;
             levelLockers[i].SetActive(false);
+            levelScore[i].transform.GetChild(WorldFather.GetLevels()[i].GetPlayerScore()).gameObject.GetComponent<Image>().enabled = true;
         }
     }
 }
