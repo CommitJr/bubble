@@ -17,6 +17,7 @@ public class GeneralFunctions : MonoBehaviour
     private GameObject timer;
     private GameObject canvasTutorial;
 
+    private GameObject time;
     private PlayerController playerController;
     private BubbleController bubbleController;
     private SaveData saveData;
@@ -43,7 +44,8 @@ public class GeneralFunctions : MonoBehaviour
         _isPause = false;
         _isRunning = true;
 
-     //   gameControl = new GameControl();
+        //   gameControl = new GameControl();
+        time = GameObject.FindWithTag("Timer");
         playerController = GetComponent<PlayerController>();
         buttonSound = GetComponent<AudioSource>();
         adsManager = GameObject.FindGameObjectWithTag("Ads").GetComponent<AdsManager>();
@@ -326,6 +328,7 @@ public class GeneralFunctions : MonoBehaviour
     {
         playerController.SetControllerActivate(false);
 
+        time.GetComponent<Timer>().StopCounter();   
         //Debug.Log("Salvando Progresso..");
         SaveDataCheck();
     }
