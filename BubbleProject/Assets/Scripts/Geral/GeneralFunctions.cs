@@ -13,7 +13,11 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject header;
     [SerializeField] private GameObject footer;
     [SerializeField] private Image[] lives;
- 
+    [SerializeField] private Animator scene_transition;
+    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private Slider slider;
+
+
     private GameObject timer;
     private GameObject canvasTutorial;
 
@@ -157,6 +161,7 @@ public class GeneralFunctions : MonoBehaviour
     #endregion
 
     #region SCENES
+    #region RESTART 
     public void Restart()
     {
         //Debug.Log("Reiniciando..");
@@ -170,13 +175,16 @@ public class GeneralFunctions : MonoBehaviour
     private IEnumerator restart()
     {
         Time.timeScale = 1f;
-        yield return new WaitForSeconds(0.2f);
+        scene_transition.SetTrigger("start");
+
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         adsManager.HideBannerAd();
     }
+    #endregion
 
-
+    #region NEXT
     public void Next()
     {
         if (!_isPlaying)
@@ -188,11 +196,15 @@ public class GeneralFunctions : MonoBehaviour
     }
     private IEnumerator next()
     {
-        yield return new WaitForSeconds(0.2f);
+        scene_transition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         adsManager.HideBannerAd();
     }
 
+    #endregion
+
+    #region LOAD
     public void Load(string nome)
     {
         if (!_isPlaying)
@@ -204,11 +216,23 @@ public class GeneralFunctions : MonoBehaviour
     }
     private IEnumerator load(string nome)
     {
-        Time.timeScale = 1f;
-        yield return new WaitForSeconds(0.2f);
-        SceneManager.LoadScene(nome);
+       
+      //  yield return new WaitForSeconds(1f);
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(nome);
+        scene_transition.SetTrigger("start");
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .1f);
+            slider.value = progress;
+            yield return null;
+        }
     }
 
+    #endregion
+
+    #region GO TO MENU
     public void GoToMenu()
     {
         //Debug.Log("Indo Para o Menu..");
@@ -220,10 +244,14 @@ public class GeneralFunctions : MonoBehaviour
     private IEnumerator gotomenu()
     {
         Time.timeScale = 1f;
-        yield return new WaitForSeconds(0.2f);
+        scene_transition.SetTrigger("start");
+
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Menu");
     }
+    #endregion
 
+    #region GO TO SELECTION
     public void GoToSelection()
     {
         if (!_isPlaying)
@@ -235,10 +263,13 @@ public class GeneralFunctions : MonoBehaviour
     private IEnumerator gotoselection()
     {
         Time.timeScale = 1f;
-        yield return new WaitForSeconds(0.2f);
+        scene_transition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("LevelSeletion");
     }
+    #endregion
 
+    #region EXIT
     public void GoToExit()
     {
         if (!_isPlaying)
@@ -249,9 +280,12 @@ public class GeneralFunctions : MonoBehaviour
     }
     private IEnumerator gotoexit()
     {
-        yield return new WaitForSeconds(0.2f);
+        scene_transition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
         Application.Quit();
     }
+    #endregion
+
     #endregion
 
     #region UI
