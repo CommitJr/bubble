@@ -26,7 +26,7 @@ public class dragonFire : MonoBehaviour
     void Update()
     {
         // Debug.Log(Vector2.Distance(centro.position, player.position));
-        if (playerController.FindPlayer(centro, 5))
+        if (playerController.FindPlayer(centro, 7))
         {
             part.Play();
             dragonSound.Play();
