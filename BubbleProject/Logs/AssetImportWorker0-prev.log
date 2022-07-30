@@ -15,7 +15,7 @@ C:/Users/Marina/Documents/GitHub/bubble/BubbleProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63577
+62252
 Successfully changed project path to: C:/Users/Marina/Documents/GitHub/bubble/BubbleProject
 C:/Users/Marina/Documents/GitHub/bubble/BubbleProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Marina/Documents/GitHub/bubble/BubbleProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 134.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 156.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,42 +63,671 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56252
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012253 seconds.
+Registered in 0.011174 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 126.11 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 228.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.923 seconds
+- Completed reload, in  1.131 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1924ms)
-		BeginReloadAssembly (543ms)
+	ReloadAssembly (1132ms)
+		BeginReloadAssembly (117ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (706ms)
-			LoadAssemblies (538ms)
+		EndReloadAssembly (895ms)
+			LoadAssemblies (112ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (157ms)
+			SetupTypeCache (190ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (410ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (549ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
+				InitializePlatformSupportModulesInManaged (42ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (126ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (177ms)
-				ProcessInitializeOnLoadMethodAttributes (82ms)
+				RefreshPlugins (228ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (206ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.019077 seconds.
+Registered in 0.019052 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 165.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.885 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3887ms)
+		BeginReloadAssembly (289ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (3373ms)
+			LoadAssemblies (380ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (518ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (128ms)
+			SetupLoadedEditorAssemblies (2224ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (166ms)
+				BeforeProcessingInitializeOnLoad (156ms)
+				ProcessInitializeOnLoadAttributes (1400ms)
+				ProcessInitializeOnLoadMethodAttributes (424ms)
+				AfterProcessingInitializeOnLoad (49ms)
+				EditorAssembliesLoaded (9ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.22 seconds
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4653 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 86 unused Assets / (0.6 MB). Loaded Objects now: 5084.
+Memory consumption went from 199.9 MB to 199.3 MB.
+Total: 16.709300 ms (FindLiveObjects: 0.825000 ms CreateObjectMapping: 0.474900 ms MarkObjects: 14.927900 ms  DeleteObjects: 0.478000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 173058.786222 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 3/Fase 3_2.unity
+  artifactKey: Guid(3dbe8012476088240ab44e095dedc683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 3/Fase 3_2.unity using Guid(3dbe8012476088240ab44e095dedc683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6cbc83f846eb0ecbeda94decdb89093') in 0.236747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.126072 seconds.
+  path: Assets/Scenes/Cenas jogo/Fases/Camada 3/Fase 3_3.unity
+  artifactKey: Guid(298192453250a5d4a85beb8eab3b0569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas jogo/Fases/Camada 3/Fase 3_3.unity using Guid(298192453250a5d4a85beb8eab3b0569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68041af24028b60757f1274d109f6c5e') in 0.014788 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 19.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (0.6 MB). Loaded Objects now: 5084.
+Memory consumption went from 98.0 MB to 97.4 MB.
+Total: 7.076400 ms (FindLiveObjects: 0.562300 ms CreateObjectMapping: 0.681600 ms MarkObjects: 5.435700 ms  DeleteObjects: 0.395600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016642 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.388 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2390ms)
+		BeginReloadAssembly (279ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (96ms)
+		EndReloadAssembly (1940ms)
+			LoadAssemblies (179ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (385ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (1113ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (154ms)
+				ProcessInitializeOnLoadAttributes (751ms)
+				ProcessInitializeOnLoadMethodAttributes (164ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4487 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (0.6 MB). Loaded Objects now: 5100.
+Memory consumption went from 187.8 MB to 187.2 MB.
+Total: 6.991300 ms (FindLiveObjects: 0.966900 ms CreateObjectMapping: 0.778500 ms MarkObjects: 4.836200 ms  DeleteObjects: 0.408300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 70.550903 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/fogo.prefab
+  artifactKey: Guid(07f24625b516f204082d2f362e4326dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/fogo.prefab using Guid(07f24625b516f204082d2f362e4326dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5cc878826f3cb6125072be52dd4828') in 0.596469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2bfe82b2d609b7b6e1c33b85fa48f5d') in 0.215609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.281639 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5664f72d73b71392dcc79b043fec8bb') in 0.095634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.745318 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1327387ae61502a5b8e54b8f03f31d57') in 0.103884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.981218 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f4fe427b27ac4afa24e46d586cab10') in 0.087258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.699658 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43d980725407ccb7fc7be4764893abfa') in 0.087616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.774834 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46dab0e95a9a6f4829595f1d1ab4775') in 0.074453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.308243 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec089d5b5482130a0ec110a13b25ed3') in 0.106807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.600551 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762d6cb0709f510e3efeda841d83a98e') in 0.074561 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 19.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 60 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 62 unused Assets / (0.6 MB). Loaded Objects now: 5172.
+Memory consumption went from 110.4 MB to 109.8 MB.
+Total: 9.520000 ms (FindLiveObjects: 0.583500 ms CreateObjectMapping: 0.623500 ms MarkObjects: 7.645700 ms  DeleteObjects: 0.665400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022620 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.690 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2692ms)
+		BeginReloadAssembly (261ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (25ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (77ms)
+		EndReloadAssembly (2225ms)
+			LoadAssemblies (181ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (552ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (1177ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (178ms)
+				ProcessInitializeOnLoadAttributes (807ms)
+				ProcessInitializeOnLoadMethodAttributes (148ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 2.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4494 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (251.2 KB). Loaded Objects now: 5177.
+Memory consumption went from 196.9 MB to 196.6 MB.
+Total: 9.505100 ms (FindLiveObjects: 0.803600 ms CreateObjectMapping: 0.363700 ms MarkObjects: 8.130100 ms  DeleteObjects: 0.205700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 50.010531 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
+  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be3d2d68639a3b2528690c277c94a6ed') in 0.365230 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.031670 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.842 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4844ms)
+		BeginReloadAssembly (316ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (99ms)
+		EndReloadAssembly (4338ms)
+			LoadAssemblies (191ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (593ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (162ms)
+			SetupLoadedEditorAssemblies (1349ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (86ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (213ms)
+				ProcessInitializeOnLoadAttributes (852ms)
+				ProcessInitializeOnLoadMethodAttributes (176ms)
+				AfterProcessingInitializeOnLoad (18ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 2.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4483 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (244.1 KB). Loaded Objects now: 5266.
+Memory consumption went from 196.1 MB to 195.9 MB.
+Total: 31.712800 ms (FindLiveObjects: 0.468600 ms CreateObjectMapping: 0.244000 ms MarkObjects: 30.796000 ms  DeleteObjects: 0.193200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022571 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.621 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3622ms)
+		BeginReloadAssembly (362ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (125ms)
+		EndReloadAssembly (3047ms)
+			LoadAssemblies (243ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (746ms)
+			ReleaseScriptCaches (8ms)
+			RebuildScriptCaches (192ms)
+			SetupLoadedEditorAssemblies (1465ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (127ms)
+				SetLoadedEditorAssemblies (6ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (212ms)
+				ProcessInitializeOnLoadAttributes (952ms)
+				ProcessInitializeOnLoadMethodAttributes (142ms)
+				AfterProcessingInitializeOnLoad (22ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 3.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4483 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (244.1 KB). Loaded Objects now: 5281.
+Memory consumption went from 196.1 MB to 195.9 MB.
+Total: 13.234100 ms (FindLiveObjects: 1.062200 ms CreateObjectMapping: 2.963700 ms MarkObjects: 8.982900 ms  DeleteObjects: 0.221800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 781.209531 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab
+  artifactKey: Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 3/PeixeDragão/peixe dragao.prefab using Guid(d6dd34abca7d3e542b24688b3bb885bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87eda0629fa7a6b32e6648f589666ae') in 0.783344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.122945 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab
+  artifactKey: Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab using Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c1af80daa43437d0f2cdc64cb00833d') in 0.706720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 419.402074 seconds.
+  path: Assets/Sprites/Inimigos/Sprites/pelicano/pelicano.png
+  artifactKey: Guid(f167538faf0af184a86d62791c2e2970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/Sprites/pelicano/pelicano.png using Guid(f167538faf0af184a86d62791c2e2970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ec0ea5bc6436eade0926521d052b33') in 1.008569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.119413 seconds.
+  path: Assets/Sprites/Inimigos/Sprites/pelicano/Mask Group.png
+  artifactKey: Guid(1035f99fd9b3ce04cbc47bb122449cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/Sprites/pelicano/Mask Group.png using Guid(1035f99fd9b3ce04cbc47bb122449cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584757f108fe3b41cc0b31821c0195da') in 0.057944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 93.885412 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/pelicano.psb
+  artifactKey: Guid(9dcf954a1d99b7847a23dedd8ce7a334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/pelicano.psb using Guid(9dcf954a1d99b7847a23dedd8ce7a334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278f9550b610958aa537e3efe00e3660') in 0.427179 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.003438 seconds.
+  path: Assets/Sprites/Boss/Camada5 - lula/lula-gigante.psb
+  artifactKey: Guid(2dc0ab89fff1218409b3a4078404a0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Boss/Camada5 - lula/lula-gigante.psb using Guid(2dc0ab89fff1218409b3a4078404a0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8481c6584eccfce71955e91c8101169') in 1.039924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Sprites/Boss/Camada2 - arraia/lado/arraia.psb
+  artifactKey: Guid(4b84ffe0b9f03164ba8d320565ad9269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Boss/Camada2 - arraia/lado/arraia.psb using Guid(4b84ffe0b9f03164ba8d320565ad9269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48ac6b3b7b91633a62fdbaab2eee49ef') in 0.248741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Sprites/Boss/Camada5 - lula/lula.psb
+  artifactKey: Guid(b4d7af660c83fc747a2b0f026be12d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Boss/Camada5 - lula/lula.psb using Guid(b4d7af660c83fc747a2b0f026be12d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dcd1dd97eb6fbe4709d98a47aafce66') in 0.492510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Sprites/Boss/Camada2 - arraia/barriga/arraiaF.psb
+  artifactKey: Guid(9c6d1311b12786d4cb45fd35eaf3ca1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Boss/Camada2 - arraia/barriga/arraiaF.psb using Guid(9c6d1311b12786d4cb45fd35eaf3ca1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21f82cf50ea240e73216ed4818df6c7b') in 0.294457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/Vibora/Vibora.psb
+  artifactKey: Guid(f6f8b06db8d03fc4ba23f676c9a5bad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/Vibora/Vibora.psb using Guid(f6f8b06db8d03fc4ba23f676c9a5bad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca0659fb6b6bc7926e9276047118740') in 0.258634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/Verme/Verme.psb
+  artifactKey: Guid(c1b23c8bb5e86b54d94e99aa0c03f3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/Verme/Verme.psb using Guid(c1b23c8bb5e86b54d94e99aa0c03f3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19bd0dc8d61211879360e22b1b86a2e8') in 0.202939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.663628 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/Mask Group.prefab
+  artifactKey: Guid(68d03026fe55a2f4c8384aaf16a8dac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/Mask Group.prefab using Guid(68d03026fe55a2f4c8384aaf16a8dac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b232a93700c9ca6921e0a782df6990de') in 0.069768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.869503 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab
+  artifactKey: Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab using Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b64cc0da1ff15d833f572779b5e2c4b1') in 0.152039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.666819 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab
+  artifactKey: Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab using Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089af75321724a6ed405b4e3a70d8f65') in 0.059197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.664356 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Mask Group.prefab
+  artifactKey: Guid(530a1aa504f1bc547a447131ac2edabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Mask Group.prefab using Guid(530a1aa504f1bc547a447131ac2edabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3bd67d561f7fb35c5aea8910a4265b9') in 0.029718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab
+  artifactKey: Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab using Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a16db0a365e2e5f196e4cf2a284523e5') in 0.075717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.230416 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab
+  artifactKey: Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Pelicano.prefab using Guid(7a64017e632ef8947bc2fefc528f47ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8081f56edfaa9d052e411e856dea471') in 0.143181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.463439 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Mask Group.prefab
+  artifactKey: Guid(530a1aa504f1bc547a447131ac2edabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Mask Group.prefab using Guid(530a1aa504f1bc547a447131ac2edabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be605bb9f87ca9388d3a535c3d56a104') in 0.033176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1047.845890 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/pelicano.xcf
+  artifactKey: Guid(b790ce2516a19754b9655897fb698f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/pelicano.xcf using Guid(b790ce2516a19754b9655897fb698f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef13774d9e01177a5e857b59e634c123') in 0.010112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.508085 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/caracol/caracol.psb
+  artifactKey: Guid(11950e2d860b38c46988fca215eb4aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/caracol/caracol.psb using Guid(11950e2d860b38c46988fca215eb4aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87ac692a3a951b05ca323b1fd50c1b1') in 0.254356 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 412.247067 seconds.
+  path: Assets/Scenes/Cenas auxiliares/CanvasTester.unity
+  artifactKey: Guid(74b71dc7f54759a4b940c56384762e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas auxiliares/CanvasTester.unity using Guid(74b71dc7f54759a4b940c56384762e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a9cbf3e0ad222ec4e2a775515f8ad92') in 0.020596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.592140 seconds.
+  path: Assets/Scenes/Cenas auxiliares/Fase3.unity
+  artifactKey: Guid(74b9fe30e62bae94fa842dd0d98e9b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas auxiliares/Fase3.unity using Guid(74b9fe30e62bae94fa842dd0d98e9b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f8623548e22390c64f6badad6fc80ff') in 0.028185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.445877 seconds.
+  path: Assets/Scenes/Cenas auxiliares/New Scene.unity
+  artifactKey: Guid(31f9388ecdc7b0f4c99eb66d1e1b78c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cenas auxiliares/New Scene.unity using Guid(31f9388ecdc7b0f4c99eb66d1e1b78c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c3df699285179241efa39bdaa0eccb') in 0.014221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1118.293762 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/dragao/peixe dragao.psb
+  artifactKey: Guid(6195980b6d124404ca9b5183dc7abd8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/dragao/peixe dragao.psb using Guid(6195980b6d124404ca9b5183dc7abd8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ca3c7bae714f12249d9f93826895a44') in 0.216817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 147.420028 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb
+  artifactKey: Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb using Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26147994bf380b43b8418ceb31a06a96') in 0.197129 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 117.393810 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb
+  artifactKey: Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb using Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d92b78582eab22ef2ed926e89d2d7f9') in 0.514231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 214.782272 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb
+  artifactKey: Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb using Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7fede9a653c6c619ec7b59145e0ca8') in 0.307881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.738889 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.prefab
+  artifactKey: Guid(8e26dd6b1fe8a9f4abcf4385f5ecc0fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.prefab using Guid(8e26dd6b1fe8a9f4abcf4385f5ecc0fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff35c6346cbcebda1df2b2bf3b0576f') in 0.057962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.563378 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.prefab
+  artifactKey: Guid(8e26dd6b1fe8a9f4abcf4385f5ecc0fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.prefab using Guid(8e26dd6b1fe8a9f4abcf4385f5ecc0fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53c3067fd502031379e22f6f2471fc18') in 0.034557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 532.121724 seconds.
+  path: Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb
+  artifactKey: Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inimigos/PSB/Inimigos/pelicano/enguia.psb using Guid(a3ec3029caa4a17498f572898781eb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613a13d23d113fd4a3554c486203e120') in 0.167110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1380.256962 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c93bdb871de5c9f9ac616e2cc13794') in 0.184338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.294292 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f982e1e94f7a481351867106daae2ba') in 0.046623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.035963 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0afeabc48379fdc455cd560dd97727') in 0.034835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.757151 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '854f93f3712a15b74facef5fe515f7ad') in 0.038651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.314146 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02aab98e0aeba291846246fc7e2bc35') in 0.041985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.072829 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e870e724e29d9e9e3eb18d9ba762121a') in 0.069096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.297688 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d068e9194c5d16a96f22199921b4137') in 0.044741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.322688 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Eletrical Attack
+  artifactKey: Guid(e5f56da3acd54284f888841a1937cc43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Eletrical Attack using Guid(e5f56da3acd54284f888841a1937cc43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c5286c50ce13f376bec1b49fd3c7f7a') in 0.014346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.154474 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/Eletrical Attack/Lightning.prefab
+  artifactKey: Guid(340f8dbd584b4d642bd0ba90712514ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/Eletrical Attack/Lightning.prefab using Guid(340f8dbd584b4d642bd0ba90712514ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b5c6b76e4ac16e8b75975981d01779') in 0.057082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.906498 seconds.
+  path: Assets/Prefabs/Utils/Inimigos/Eletric Attack/impulse.mat
+  artifactKey: Guid(b758615a31fdf9e4eb7afc15661274d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Utils/Inimigos/Eletric Attack/impulse.mat using Guid(b758615a31fdf9e4eb7afc15661274d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2130f04a82eec44963866f861a7803b4') in 0.106366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.339612 seconds.
+  path: Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab
+  artifactKey: Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inimigos/Camada 4/Pelicano/enguia.prefab using Guid(0264e3a2aba9c1b418f528e6cabd142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eaa0bdeb9420bf800855005cb2ddafd') in 0.049080 seconds 
