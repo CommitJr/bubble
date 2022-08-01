@@ -14,8 +14,8 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject footer;
     [SerializeField] private Image[] lives;
     [SerializeField] private Animator scene_transition;
-    [SerializeField] private GameObject loadingScreen;
-    [SerializeField] private Slider slider;
+   // [SerializeField] private GameObject loadingScreen;
+   // [SerializeField] private Slider slider;
 
 
     private GameObject timer;
@@ -216,18 +216,12 @@ public class GeneralFunctions : MonoBehaviour
     }
     private IEnumerator load(string nome)
     {
-       
-      //  yield return new WaitForSeconds(1f);
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(nome);
+        Time.timeScale = 1f;
         scene_transition.SetTrigger("start");
-        loadingScreen.SetActive(true);
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .1f);
-            slider.value = progress;
-            yield return null;
-        }
+
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(nome);
     }
 
     #endregion

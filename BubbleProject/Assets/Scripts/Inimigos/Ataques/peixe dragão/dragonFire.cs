@@ -28,6 +28,7 @@ public class dragonFire : MonoBehaviour
         // Debug.Log(Vector2.Distance(centro.position, player.position));
         if (playerController.FindPlayer(centro, 7))
         {
+            Debug.Log("player");
             part.Play();
             dragonSound.Play();
 
@@ -37,6 +38,7 @@ public class dragonFire : MonoBehaviour
             if (!part.isPlaying)
             {
                 part.Stop();
+                dragonSound.Stop();
             }
         }
         
@@ -46,6 +48,7 @@ public class dragonFire : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("ATAQUE ELETRICO");
             playerController.KillPlayer();
         }
     }
