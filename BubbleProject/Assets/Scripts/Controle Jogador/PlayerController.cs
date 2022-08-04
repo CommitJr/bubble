@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     #region SCOPE
     private int health;
     private bool _isControlled;
+    private bool _isPressed;
 
 
     private Collider2D colliderTouch;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private LevelManager levelManager;
 
     [SerializeField] private GameObject death;
+    [SerializeField] private GameObject rippleWater;
     private Transform player;
     #endregion
 
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
         health = saveData.GetPlayerHealth();
         _isControlled = true;
+        _isPressed = false;
         
         if ((SceneManager.GetActiveScene().name.Contains("Fase")) || (SceneManager.GetActiveScene().name == "Tutorial"))
         {
@@ -171,12 +174,20 @@ public class PlayerController : MonoBehaviour
         Vector3 pontoZ = new Vector3(ponto.x, ponto.y, wavePropagation.transform.position.z);
         transform.position = pontoZ;
 
+        rippleWater.transform.position = pontoZ;
+        if (!_isPressed)
+        {
+            rippleWater.GetComponent<ParticleSystem>().Play();
+            _isPressed = true;
+        }
+
         colliderTouch.enabled = true;
     }
 
     private void TouchKeyUp()
     {
         colliderTouch.enabled = false;
+        _isPressed = false;
     }
     #endregion
 
