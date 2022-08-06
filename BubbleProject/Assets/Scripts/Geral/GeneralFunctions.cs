@@ -80,12 +80,13 @@ public class GeneralFunctions : MonoBehaviour
 
     private void DefineStartLevels()
     {
-        bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
-        timer = GameObject.FindWithTag("Timer");
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             canvasTutorial = GameObject.FindWithTag("CanvasTutorial");
         }
+
+        bubbleController = GameObject.FindWithTag("Player").GetComponent<BubbleController>();
+        timer = GameObject.FindWithTag("Timer");
     }
     #endregion
 
