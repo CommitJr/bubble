@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaiacuAttack : MonoBehaviour
 {
@@ -11,18 +12,26 @@ public class BaiacuAttack : MonoBehaviour
     public float velocidadeInchado;
     private PlayerController playerController;
     private AudioSource baiacuSound;
+    private bool _isLevel;
 
     void Start()
     {
         baiacuSound = GetComponent<AudioSource>();
         baiacuSound.Stop();
-        playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
+        if (SceneManager.GetActiveScene().name != "Camada2")
+        {
+            playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
+            _isLevel = true;
+        } else
+        {
+            _isLevel = false;
+        }
 
     }
     void Update()
     {
         Move();
-        Infla();
+        if(_isLevel) Infla();
     }
 
     void Move()
