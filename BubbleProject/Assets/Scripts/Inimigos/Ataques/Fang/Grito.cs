@@ -23,7 +23,7 @@ public class Grito : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerController.FindPlayer(this.transform, 10))
+        if (playerController.FindPlayer(this.transform, 20))
         {
             if (contador.RepeatCountTime())
             {

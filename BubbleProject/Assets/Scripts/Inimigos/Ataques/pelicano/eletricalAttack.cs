@@ -14,20 +14,17 @@ public class eletricalAttack : MonoBehaviour
     void Start()
     {
         part = GetComponent<ParticleSystem>();
-        collisionEvents = new List<ParticleCollisionEvent>();
-        //wave = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
+        wave = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
         eletrical = GetComponent<AudioSource>();
     }
 
     private void OnParticleCollision(GameObject other)
     {
         //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-        if (other.tag == "Player")
+        if (other.tag == "BolhaRastreio")
         {
-           
-            //other
             wave.enabled = false;
-            //Debug.Log(wave.enabled);
+            Debug.Log("choque");
             Invoke("choque", 3f);
         }
     }

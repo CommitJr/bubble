@@ -12,6 +12,7 @@ public class Colecionaveis : MonoBehaviour
     void Start()
     {
         metros = 0;
+        playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerController>();
         player = GameObject.FindWithTag("BolhaRastreio");
         nexus = GameObject.FindWithTag("Nexus");
     }
@@ -20,7 +21,8 @@ public class Colecionaveis : MonoBehaviour
     void Update()
     {
         metros = ((int)Vector3.Distance(player.transform.position, nexus.transform.position));
-        if (metros > 1)
+        
+        if (metros < 3)
         {
             Debug.Log("colecionavel coletado");
             if (playerController.GetHealth() < 3)
