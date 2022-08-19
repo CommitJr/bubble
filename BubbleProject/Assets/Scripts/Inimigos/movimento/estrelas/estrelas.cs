@@ -8,14 +8,13 @@ public class estrelas : MonoBehaviour
     [SerializeField] private float velocity;
     private Contador contador;
     private Rigidbody2D rg2D;
-    private float rate;
+    [SerializeField] private float rate;
     [SerializeField] private GameObject estrelaPrefab;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
         rg2D = GetComponent<Rigidbody2D>();
         rg2D.gravityScale = 0f;
-        rate = 3f;
         contador = new Contador(rate);
         //Debug.Log(transform.parent.transform.position);
     }
