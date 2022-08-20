@@ -48,7 +48,6 @@ public class dragonFire : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("ATAQUE ELETRICO");
             playerController.KillPlayer();
         }
     }

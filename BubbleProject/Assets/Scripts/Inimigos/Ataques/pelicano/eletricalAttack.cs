@@ -6,7 +6,7 @@ public class eletricalAttack : MonoBehaviour
 {
    
     private ParticleSystem part;
-    private PlayerController wave;
+    private PlayerController playerController;
     private List<ParticleCollisionEvent> collisionEvents;
     private AudioSource eletrical;
 
@@ -14,17 +14,17 @@ public class eletricalAttack : MonoBehaviour
     void Start()
     {
         part = GetComponent<ParticleSystem>();
-        wave = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
+        playerController = GameObject.FindGameObjectWithTag("PlayerController").GetComponent< PlayerController>();
         eletrical = GetComponent<AudioSource>();
     }
 
     private void OnParticleCollision(GameObject other)
     {
-        //  int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-        if (other.tag == "BolhaRastreio")
-        {
-            wave.enabled = false;
-            Debug.Log("choque");
+        if (other.tag == "Player")
+        { 
+            playerController.enabled = false;
+            Debug.Log( playerController.enabled); 
+            eletrical.Play();
             Invoke("choque", 3f);
         }
     }
@@ -32,7 +32,6 @@ public class eletricalAttack : MonoBehaviour
     
     void choque()
     {
-        wave.enabled = true;
-        eletrical.Play();
+        playerController.enabled = true;
     }
 }
