@@ -6,11 +6,11 @@ public class WaitPlayer : MonoBehaviour
 {
     private Transform player;
     [SerializeField] private Transform centro;
-    private viboraAttack attackScript;
+    private tubaraoAttack attackScript;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("BolhaRastreio").GetComponent<Transform>();
-        attackScript = gameObject.GetComponent<viboraAttack>();
+        attackScript = gameObject.GetComponent<tubaraoAttack>();
     }
     void Update()
     {
