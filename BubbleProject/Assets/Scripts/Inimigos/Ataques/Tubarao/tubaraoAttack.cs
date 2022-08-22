@@ -28,7 +28,7 @@ public class tubaraoAttack : MonoBehaviour
     {
         if (parede.transform.tag == "parede")
         {
-            Debug.Log("Aqui " + gameObject.name);
+           // Debug.Log("Aqui " + gameObject.name);
             direcao *= -1;
             transform.eulerAngles = new Vector2(0f, 180);
             if (direcao == -1)
