@@ -9,13 +9,13 @@ D:\Unity\Editor\2021.2.8f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker0
 -projectPath
 P:/Git/GitHub/bubble/BubbleProject
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker0.log
 -srvPort
-37598
+50584
 Successfully changed project path to: P:/Git/GitHub/bubble/BubbleProject
 P:/Git/GitHub/bubble/BubbleProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ P:/Git/GitHub/bubble/BubbleProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 83.19 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 99.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
 [Subsystems] Discovering subsystems at path D:/Unity/Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,119 +63,96 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Editor/2021.2.8f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56872
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: D:/Unity/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Unity/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002828 seconds.
+Registered in 0.003261 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 76.96 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 106.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.594 seconds
+- Completed reload, in  0.793 seconds
 Domain Reload Profiling:
-	ReloadAssembly (595ms)
-		BeginReloadAssembly (83ms)
+	ReloadAssembly (794ms)
+		BeginReloadAssembly (88ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (435ms)
-			LoadAssemblies (83ms)
+		EndReloadAssembly (606ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (106ms)
+			SetupTypeCache (165ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (254ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (333ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (28ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (77ms)
+				RefreshPlugins (107ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (118ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
+				ProcessInitializeOnLoadAttributes (152ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004683 seconds.
+Registered in 0.004854 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 82.76 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 78.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path P:\Git\GitHub\bubble\BubbleProject\ProjectSettings\GvhProjectSettings.xml
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <47ab72e0328040438980f9c23608e1ec>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <47ab72e0328040438980f9c23608e1ec>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean useAsync) [0x00000] in <47ab72e0328040438980f9c23608e1ec>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,bool)
-  at System.Xml.XmlWriterSettings.CreateWriter (System.String outputFileName) [0x00051] in <aa1fe74ca5954bc898ee12b95d842b6a>:0 
-  at System.Xml.XmlWriter.Create (System.String outputFileName, System.Xml.XmlWriterSettings settings) [0x0000a] in <aa1fe74ca5954bc898ee12b95d842b6a>:0 
-  at Google.ProjectSettings.Save () [0x0006d] in /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:821 , Project settings were not saved!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Google.Logger:Log (string,Google.LogLevel) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/Logger.cs:136)
-Google.ProjectSettings:Save () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:844)
-Google.ProjectSettings:SetBool (string,bool,Google.SettingsLocation) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:485)
-Google.ProjectSettings:SetBool (string,bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:497)
-Google.IOSResolver:set_VerboseLoggingEnabled (bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:998)
-Google.IOSResolver:.cctor () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:692)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 844)
-
 Mono: successfully reloaded assembly
-- Completed reload, in  1.652 seconds
+- Completed reload, in  2.028 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1653ms)
-		BeginReloadAssembly (116ms)
+	ReloadAssembly (2029ms)
+		BeginReloadAssembly (132ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1452ms)
-			LoadAssemblies (93ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (1807ms)
+			LoadAssemblies (134ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (236ms)
+			SetupTypeCache (365ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (75ms)
-			SetupLoadedEditorAssemblies (1028ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (1169ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (17ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (83ms)
-				BeforeProcessingInitializeOnLoad (86ms)
-				ProcessInitializeOnLoadAttributes (752ms)
-				ProcessInitializeOnLoadMethodAttributes (88ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				RefreshPlugins (79ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (860ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4655 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 86 unused Assets / (0.6 MB). Loaded Objects now: 5084.
-Memory consumption went from 200.0 MB to 199.4 MB.
-Total: 4.219400 ms (FindLiveObjects: 0.355600 ms CreateObjectMapping: 0.299400 ms MarkObjects: 3.285500 ms  DeleteObjects: 0.276800 ms)
+Unloading 86 unused Assets / (0.6 MB). Loaded Objects now: 5086.
+Memory consumption went from 200.1 MB to 199.4 MB.
+Total: 6.919900 ms (FindLiveObjects: 0.435500 ms CreateObjectMapping: 0.555700 ms MarkObjects: 5.643000 ms  DeleteObjects: 0.283900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
