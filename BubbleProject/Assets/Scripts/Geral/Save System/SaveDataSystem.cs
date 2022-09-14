@@ -53,7 +53,7 @@ public static class SaveDataSystem
 
     public static void SaveJson(SaveData saveData)
     {
-        string json = JsonUtility.ToJson(saveData);
+        string json = JsonUtility.ToJson(saveData, true);
 
         using (StreamWriter streamWriter = new StreamWriter(PathJson))
         {
