@@ -138,6 +138,12 @@ public class SaveDataFile
                             LevelAdds.SetStatus(true);
                             LevelAdds.SetPlayerScore(3);
                         }
+                        else if(j == 1)
+                        {
+                            LevelAdds.SetName("Fase " + i + "_" + (j));
+                            LevelAdds.SetStatus(true);
+                            LevelAdds.SetPlayerScore(0);
+                        } 
                         else
                         {
                             LevelAdds.SetName("Fase " + i + "_" + (j));
@@ -149,8 +155,15 @@ public class SaveDataFile
                     }
                     break;
             }
-            
-            WolrdAdds.SetUnlockedLevels(1);
+
+            if (i == 5)
+            {
+                WolrdAdds.SetUnlockedLevels(2);
+            }
+            else
+            {
+                WolrdAdds.SetUnlockedLevels(1);
+            }
 
             
 

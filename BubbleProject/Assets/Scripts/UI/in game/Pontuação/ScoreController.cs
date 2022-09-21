@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreController : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class ScoreController : MonoBehaviour
     #region SCORE
     private void FinalScoreController()
     {
-        switch (timer.GetComponent<Timer>().GetScore())
+        int score = (SceneManager.GetActiveScene().name == "Tutorial") ? 3 : timer.GetComponent<Timer>().GetScore();
+        switch (score)
         {
             case 0:
                 DisplayShell0();

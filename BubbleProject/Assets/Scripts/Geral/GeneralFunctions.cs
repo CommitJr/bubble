@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 public class GeneralFunctions : MonoBehaviour
 {
@@ -14,8 +15,9 @@ public class GeneralFunctions : MonoBehaviour
     [SerializeField] private GameObject footer;
     [SerializeField] private Image[] lives;
     [SerializeField] private Animator scene_transition;
-   // [SerializeField] private GameObject loadingScreen;
-   // [SerializeField] private Slider slider;
+    [SerializeField] private ParticleSystem[] particles;
+    // [SerializeField] private GameObject loadingScreen;
+    // [SerializeField] private Slider slider;
 
 
     private GameObject timer;
@@ -356,6 +358,8 @@ public class GeneralFunctions : MonoBehaviour
     public void GoToEnd()
     {
         playerController.SetControllerActivate(false);
+        particles[0].Play();
+        particles[1].Play();
 
         time.GetComponent<Timer>().StopCounter();   
         //Debug.Log("Salvando Progresso..");
