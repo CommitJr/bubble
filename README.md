@@ -2,9 +2,9 @@
 [![Logo Bubble](https://play-lh.googleusercontent.com/_EY60qxLc1KWexQNDVv0HzPAc01F2QgPhJD220PEXU6yqlUP4v1hVv4TSI5x9e0SVSw=w240-h480-rw)](https://play.google.com/store/apps/details?id=com.commitjr.Bubble)
 <br>
 <br>
-Desenvolvido por Java Gang.
+Developed by Java Gang.
 <br>
-Em Bubble você assume o controle de uma bolha que tenta subir do fundo do mar para a superfície, mas no meio do caminho você enfrentará diversos inimigos. Seu objetivo é levar nossa querida bolhinha até o final de sua jornada.
+In Bubble you take control of a bubble that tries to rise from the bottom of the sea to the surface, but along the way you will face several enemies. Your goal is to take our beloved little bubble to the end of its journey.
 <br>
 <br>
 Disponivel para Android 
