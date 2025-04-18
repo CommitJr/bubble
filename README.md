@@ -10,7 +10,7 @@ In Bubble you take control of a bubble that tries to rise from the bottom of the
 Disponivel para Android 
 <br>
 <br>
-[![Google Play](https://kstatic.googleusercontent.com/files/b377cfe3a210378883dc803bb257e9ff65d4ab3b4bdf2a0de61700e78520457da803d37cdf23089f5991064b1a2bae5a83025006c3da18ed4f375c701fa838b1)](https://play.google.com/store/apps/details?id=com.commitjr.Bubble)
+[![Google Play](https://kstatic.googleusercontent.com/files/b377cfe3a210378883dc803bb257e9ff65d4ab3b4bdf2a0de61700e78520457da803d37cdf23089f5991064b1a2bae5a83025006c3da18ed4f375c701fa838b1)](https://github.com/CommitJr/bubble/blob/main/APK.zip)
 <br>
 <br>
 <br>
