@@ -40,13 +40,13 @@ Meet the minds behind the project:
   <tr>
     <td align="center">
       <a href="https://github.com/pixel-debug">
-        <img src="https://github.com/pixel-debug.png" width="100px;" style="border-radius: 50%;" alt="Marina Diniz Profile Picture"/><br />
+        <img src="https://github.com/pixel-debug.png" width="100px;" class="circle" alt="Marina Diniz Profile Picture"/><br />
         <sub><b>Marina Diniz</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/matheustheus27">
-        <img src="https://github.com/matheustheus27.png" width="100px;" style="border-radius: 50%;" alt="Matheus Ferreira Profile Picture"/><br />
+        <img src="https://github.com/matheustheus27.png" width="100px;" class="circle" alt="Matheus Ferreira Profile Picture"/><br />
         <sub><b>Matheus Ferreira</b></sub>
       </a>
     </td>
